@@ -1,0 +1,115 @@
+# depslib dependency file v1.0
+1779674794 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\afiliado.cpp
+	<iostream>
+	"Afiliado.h"
+
+1779654934 c:\users\barbi\desktop\progra 2\base_proyecto_01\afiliado.h
+	"Persona.h"
+	"Fecha.h"
+
+1779651437 c:\users\barbi\desktop\progra 2\base_proyecto_01\persona.h
+	<cstring>
+
+1779655258 c:\users\barbi\desktop\progra 2\base_proyecto_01\fecha.h
+
+1779651128 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\afiliadoarchivo.cpp
+	<iostream>
+	<cstring>
+	"Afiliado.h"
+	"AfiliadoArchivo.h"
+
+1779650866 c:\users\barbi\desktop\progra 2\base_proyecto_01\afiliadoarchivo.h
+	"Afiliado.h"
+
+1779674795 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\afiliadomanager.cpp
+	<iostream>
+	"Afiliado.h"
+	"AfiliadoArchivo.h"
+	"AfiliadoManager.h"
+
+1777952586 c:\users\barbi\desktop\progra 2\base_proyecto_01\afiliadomanager.h
+
+1779651532 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\configuracionmanager.cpp
+	<fstream>
+	<cstring>
+	<cstdlib>
+	"ConfiguracionManager.h"
+	"ObraSocialArchivo.h"
+	"MedicoArchivo.h"
+	"AfiliadoArchivo.h"
+
+1779651532 c:\users\barbi\desktop\progra 2\base_proyecto_01\configuracionmanager.h
+
+1779650866 c:\users\barbi\desktop\progra 2\base_proyecto_01\obrasocialarchivo.h
+	"ObraSocial.h"
+
+1779229393 c:\users\barbi\desktop\progra 2\base_proyecto_01\obrasocial.h
+
+1777954326 c:\users\barbi\desktop\progra 2\base_proyecto_01\medicoarchivo.h
+	"Medico.h"
+
+1777954706 c:\users\barbi\desktop\progra 2\base_proyecto_01\medico.h
+	"Persona.h"
+
+1777954986 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\especialidad.cpp
+	<iostream>
+	"Especialidad.h"
+
+1777952586 c:\users\barbi\desktop\progra 2\base_proyecto_01\especialidad.h
+
+1779655258 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1779839437 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\main.cpp
+	<iostream>
+	"Fecha.h"
+	"Persona.h"
+	"Medico.h"
+	"Afiliado.h"
+	"OrdenMedica.h"
+	"AfiliadoManager.h"
+	"ObraSocialManager.h"
+
+1777952586 c:\users\barbi\desktop\progra 2\base_proyecto_01\ordenmedica.h
+	"Fecha.h"
+
+1779231065 c:\users\barbi\desktop\progra 2\base_proyecto_01\obrasocialmanager.h
+	"ObraSocialArchivo.h"
+
+1778013288 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\medico.cpp
+	<iostream>
+	"Medico.h"
+
+1777955250 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\medicoarchivo.cpp
+	<iostream>
+	<cstring>
+	"Medico.h"
+	"MedicoArchivo.h"
+
+1780354283 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\obrasocial.cpp
+	<iostream>
+	"Afiliado.h"
+	"ObraSocial.h"
+
+1779650866 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\obrasocialarchivo.cpp
+	<iostream>
+	<cstring>
+	"ObraSocial.h"
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+
+1777783755 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\ordenmedica.cpp
+	<iostream>
+	"OrdenMedica.h"
+
+1779674794 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\persona.cpp
+	<iostream>
+	"Persona.h"
+
+1780354203 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\obrasocialmanager.cpp
+	<iostream>
+	"ObraSocial.h"
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+

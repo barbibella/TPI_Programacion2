@@ -102,7 +102,7 @@ void AfiliadoManager::Eliminar() {
             // 5. Cambiamos el estado a false (baja logica)
             obj.setEstado(false);
 
-            // 6. Impactamos el cambio en el disco usando tu funcion modificar
+            // 6. Impactamos el cambio en el disco usando funcion modificar
             if (arch.modificar(obj, pos)) {
                 cout << "Afiliado dado de baja correctamente." << endl;
             } else {

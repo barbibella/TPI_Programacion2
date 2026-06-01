@@ -6,6 +6,7 @@ using namespace std;
 
 /**
 en el case 1, debo de poner las opciones, osea un switch con las 10 opciones de OBRAS SOCIALES,
+01/06- solamente puse como para q escriba, luego hago el switch
 */
 
 void ObraSocialManager::Menu(){

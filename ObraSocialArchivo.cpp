@@ -7,7 +7,7 @@
 using namespace std;
 
 ObraSocialArchivo::ObraSocialArchivo() {
-    strcpy(nombreArchivo, "ObraSocial.dat");// Acá le asignamos el nombre físico al archivo
+    strcpy(nombreArchivo, "ObraSocial.dat");// Aca le asignamos el nombre físico al archivo
 }
 
 bool ObraSocialArchivo::guardar(ObraSocial reg){
@@ -24,7 +24,7 @@ bool ObraSocialArchivo::modificar(ObraSocial reg, int pos){
     FILE* p=fopen("ObraSocial.dat", "rb+");
     if (p == NULL) return false;
 
-    fseek(p, pos * sizeof(ObraSocial), SEEK_SET);           // Nos movemos a la posición exacta del registro que queremos cambiar
+    fseek(p, pos * sizeof(ObraSocial), SEEK_SET);           // Nos movemos a la posicion exacta del registro que queremos cambiar
     bool escribio = fwrite(&reg, sizeof(ObraSocial), 1, p); // Sobrescribimos el registro con la nueva información
 
     fclose(p);
@@ -49,7 +49,7 @@ int ObraSocialArchivo::contarRegistros(){
     if (p == NULL) return 0;
 
     fseek(p, 0, SEEK_END); //Ir al final del archivo
-    int bytes = ftell(p);  //Cuántos bytes mide el archivo?
+    int bytes = ftell(p);  //Cuantos bytes mide el archivo?
     fclose(p);             // ftell te dice en que bytes esta el cursor
 
     return bytes/ sizeof(ObraSocial);

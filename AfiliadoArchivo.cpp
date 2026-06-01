@@ -6,7 +6,7 @@
 using namespace std;
 
 AfiliadoArchivo::AfiliadoArchivo() {
-    strcpy(nombreArchivo, "afiliados.dat");// Acá le asignamos el nombre físico al archivo
+    strcpy(nombreArchivo, "afiliados.dat");// Aca le asignamos el nombre físico al archivo
 }
 
 bool AfiliadoArchivo::guardar(Afiliado reg){
@@ -47,7 +47,7 @@ int AfiliadoArchivo::contarRegistros(){
     FILE* p= fopen("afiliados.dat", "rb");
 
     fseek(p, 0, SEEK_END); //Ir al final del archivo
-    int bytes = ftell(p);  //Cuántos bytes mide el archivo?
+    int bytes = ftell(p);  //Cuantos bytes mide el archivo?
     fclose(p);             // ftell te dice en que bytes esta el cursor
 
     return bytes;
