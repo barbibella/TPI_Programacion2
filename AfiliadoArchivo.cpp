@@ -1,0 +1,111 @@
+#include <iostream>
+#include <cstring>
+#include "Afiliado.h"
+#include "AfiliadoArchivo.h"
+
+using namespace std;
+
+AfiliadoArchivo::AfiliadoArchivo() {
+    strcpy(nombreArchivo, "afiliados.dat");// Acá le asignamos el nombre físico al archivo
+}
+
+bool AfiliadoArchivo::guardar(Afiliado reg){
+    FILE* p= fopen("afiliados.dat", "ab"); //Abrir para agregar
+    if (p == NULL) return false;
+
+    bool escribio = fwrite(&reg, sizeof(Afiliado), 1, p);
+
+    fclose(p);
+    return escribio;
+}
+
+bool AfiliadoArchivo::modificar(Afiliado reg, int pos){
+    FILE* p=fopen("afiliados.dat", "rb+");
+    if (p == NULL) return false;
+
+    fseek(p, pos * sizeof(Afiliado), SEEK_SET);           // Nos movemos a la posición exacta del registro que queremos cambiar
+    bool escribio = fwrite(&reg, sizeof(Afiliado), 1, p); // Sobrescribimos el registro con la nueva información
+
+    fclose(p);
+    return escribio;
+}
+
+Afiliado AfiliadoArchivo::leer(int pos){
+    Afiliado reg;
+    FILE* p = fopen("afiliados.dat", "rb");// Abrir para lectura
+    if(p ==NULL) return reg;
+
+    fseek(p, pos * sizeof(Afiliado), SEEK_SET);
+
+    fread(&reg, sizeof(Afiliado), 1, p);
+
+    fclose(p);
+    return reg;
+}
+
+int AfiliadoArchivo::contarRegistros(){
+    FILE* p= fopen("afiliados.dat", "rb");
+
+    fseek(p, 0, SEEK_END); //Ir al final del archivo
+    int bytes = ftell(p);  //Cuántos bytes mide el archivo?
+    fclose(p);             // ftell te dice en que bytes esta el cursor
+
+    return bytes;
+}
+
+int AfiliadoArchivo::buscar(const char* dniBuscado){
+    Afiliado reg;
+    int pos=0;
+    FILE* p= fopen("afiliados.dat", "rb");
+    if(p == NULL) return 412;
+
+    while(fread(&reg, sizeof(Afiliado), 1, p)==1){
+        if(strcmp(reg.getDni(), dniBuscado) == 0){ // strcmp devuelve 0 si las cadenas son iguales
+            fclose(p);
+        return pos;
+        }
+        pos++;
+    }
+    fclose(p);
+    return 413;
+}
+
+void AfiliadoArchivo::listarTodo(){
+    Afiliado reg;
+    FILE* p = fopen(nombreArchivo, "rb");
+    if (p == NULL) {
+        cout << "No hay registros cargados todavia." << endl;
+        return;
+    }
+
+    while (fread(&reg, sizeof(Afiliado), 1, p) == 1) {
+        // Solo mostramos si el registro es "valido"
+        if (reg.getEstado() == true) {
+            reg.Mostrar();
+            cout << "-------------------------------" << endl;
+        }
+    }
+    fclose(p);
+}
+
+Afiliado AfiliadoArchivo::buscarPorDNI(const char* dniBuscado) {
+    Afiliado reg;
+    int pos = buscar(dniBuscado);
+
+    if (pos == 412 || pos == 413) {
+        reg.setDni("-1");
+        return reg;
+    }
+
+    FILE* p = fopen("afiliados.dat", "rb");
+    if (p == NULL) {
+        reg.setDni("-1");
+        return reg;
+    }
+
+    fseek(p, pos * sizeof(Afiliado), SEEK_SET);
+    fread(&reg, sizeof(Afiliado), 1, p);
+    fclose(p);
+
+    return reg;
+}
