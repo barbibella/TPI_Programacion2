@@ -19,7 +19,7 @@ void ObraSocial::Cargar(){
         cout << "| UNION PERSONAL            |" << endl;
         cout << "| OSEP                      |" << endl;
     cout << "Ingrese el Nombre de la Obra Social: " << endl;
-
+/// cout << "Ingrese el numero de su Obra Social:";
     cin.getline(nombre, 30);
     estado = true;
 }
