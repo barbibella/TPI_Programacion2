@@ -6,7 +6,7 @@
 using namespace std;
 
 AfiliadoArchivo::AfiliadoArchivo() {
-    strcpy(nombreArchivo, "afiliados.dat");// Aca le asignamos el nombre físico al archivo
+    strcpy(nombreArchivo, "afiliados.dat");// Aca le asignamos el nombre fisico al archivo
 }
 
 bool AfiliadoArchivo::guardar(Afiliado reg){
@@ -23,8 +23,8 @@ bool AfiliadoArchivo::modificar(Afiliado reg, int pos){
     FILE* p=fopen("afiliados.dat", "rb+");
     if (p == NULL) return false;
 
-    fseek(p, pos * sizeof(Afiliado), SEEK_SET);           // Nos movemos a la posición exacta del registro que queremos cambiar
-    bool escribio = fwrite(&reg, sizeof(Afiliado), 1, p); // Sobrescribimos el registro con la nueva información
+    fseek(p, pos * sizeof(Afiliado), SEEK_SET);           // Nos movemos a la posicion exacta del registro que queremos cambiar
+    bool escribio = fwrite(&reg, sizeof(Afiliado), 1, p); // Sobrescribimos el registro con la nueva informacion
 
     fclose(p);
     return escribio;
@@ -45,12 +45,11 @@ Afiliado AfiliadoArchivo::leer(int pos){
 
 int AfiliadoArchivo::contarRegistros(){
     FILE* p= fopen("afiliados.dat", "rb");
-
-    fseek(p, 0, SEEK_END); //Ir al final del archivo
-    int bytes = ftell(p);  //Cuantos bytes mide el archivo?
-    fclose(p);             // ftell te dice en que bytes esta el cursor
-
-    return bytes;
+    if (p == NULL) return 0;
+    fseek(p, 0, SEEK_END);
+    int bytes = ftell(p);
+    fclose(p);
+    return bytes  / sizeof(Afiliado);
 }
 
 int AfiliadoArchivo::buscar(const char* dniBuscado){
@@ -74,7 +73,7 @@ void AfiliadoArchivo::listarTodo(){
     Afiliado reg;
     FILE* p = fopen(nombreArchivo, "rb");
     if (p == NULL) {
-        cout << "No hay registros cargados todavia." << endl;
+        cout << "No hay registros cargados todavia" << endl;
         return;
     }
 

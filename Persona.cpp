@@ -28,7 +28,7 @@ void Persona::Cargar(){
 
 void Persona::Mostrar(){
     cout << endl;
-    cout << "Usted ingreso: " <<endl;
+    cout << "El numero de DNI pertenece a: " <<endl;
     cout<<nombre<<" "<<apellido<<endl;
     cout<<"DNI: "<<dni<<endl;
 }

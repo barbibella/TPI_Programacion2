@@ -41,7 +41,7 @@ void AfiliadoManager::Agregar(){
     obj.Cargar(nuevoNumero);
 
     if(arch.guardar(obj)){
-        cout << "afiliado guardado" << endl;
+        cout << "Afiliado guardado" << endl;
     }else{
         cout << "Errror al abrir el archivo" << endl;
     }

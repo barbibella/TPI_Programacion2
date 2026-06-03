@@ -7,7 +7,7 @@
 using namespace std;
 
 ObraSocialArchivo::ObraSocialArchivo() {
-    strcpy(nombreArchivo, "ObraSocial.dat");// Aca le asignamos el nombre físico al archivo
+    strcpy(nombreArchivo, "ObraSocial.dat");// Aca le asignamos el nombre fisico al archivo
 }
 
 bool ObraSocialArchivo::guardar(ObraSocial reg){
@@ -25,7 +25,7 @@ bool ObraSocialArchivo::modificar(ObraSocial reg, int pos){
     if (p == NULL) return false;
 
     fseek(p, pos * sizeof(ObraSocial), SEEK_SET);           // Nos movemos a la posicion exacta del registro que queremos cambiar
-    bool escribio = fwrite(&reg, sizeof(ObraSocial), 1, p); // Sobrescribimos el registro con la nueva información
+    bool escribio = fwrite(&reg, sizeof(ObraSocial), 1, p); // Sobrescribimos el registro con la nueva informacion
 
     fclose(p);
     return escribio;
@@ -89,3 +89,4 @@ void ObraSocialArchivo::listarTodo(){
     }
     fclose(p);
 }
+

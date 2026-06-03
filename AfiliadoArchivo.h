@@ -8,11 +8,11 @@ private:
 public:
     AfiliadoArchivo();
 
-    bool guardar(Afiliado reg);            // Escribir al final
-    bool modificar(Afiliado reg, int pos); // Sobrescribir uno existente
-    Afiliado leer(int pos);                // Leer un registro específico
-    int contarRegistros();                 // Saber cuántos hay en total
-    int buscar(const char* dni);           // Buscar por ID y devolver la posición
+    bool guardar(Afiliado reg);
+    bool modificar(Afiliado reg, int pos);
+    Afiliado leer(int pos);
+    int contarRegistros();
+    int buscar(const char* dni);
     void listarTodo();
     Afiliado buscarPorDNI(const char* dni);
 };

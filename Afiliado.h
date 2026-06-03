@@ -12,7 +12,7 @@ class Afiliado: public Persona{
     void Cargar(int nroAuto);
     void Mostrar();
 
-
     int getNroDeAfiliado() { return nroDeAfiliado; }
     int getIDObraSocial() { return idObraSocial; }
+    void setIdObraSocial(int id);
 };
