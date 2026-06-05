@@ -59,7 +59,7 @@ int ObraSocialArchivo::buscar(int idBuscado){
     ObraSocial reg;
     int pos=0;
     FILE* p= fopen("ObraSocial.dat", "rb");
-    if(p == NULL) return 412;
+    if(p == NULL) return -412;
 
     while(fread(&reg, sizeof(ObraSocial), 1, p)==1){
         if (reg.getId() == idBuscado) {
@@ -69,7 +69,7 @@ int ObraSocialArchivo::buscar(int idBuscado){
         pos++;
     }
     fclose(p);
-    return 413;
+    return -413;
 }
 
 void ObraSocialArchivo::listarTodo(){
@@ -89,4 +89,3 @@ void ObraSocialArchivo::listarTodo(){
     }
     fclose(p);
 }
-

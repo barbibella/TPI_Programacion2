@@ -91,6 +91,29 @@ void ObraSocialManager::BuscarPorID(){
     }
 }
 
+void ObraSocialArchivo::crearObrasSocialesPredeterminadas() {
+    if (contarRegistros() > 0) return;
+
+    FILE* p = fopen("obrasociales.dat", "wb");
+    if (p == NULL) return;
+
+    const char* nombresObras[] = {
+        "IOMA", "OSDE", "SWISS MEDICAL", "OSECAC", "GALENO",
+        "MEDICUS", "SANCOR SALUD", "UNION PERSONAL", "OSEP", "PAMI"
+    };
+
+    ObraSocial reg;
+    for (int i = 0; i < 10; i++) {
+        reg.setIdObraSocial(i + 1);      // IDs del 1 al 10
+        reg.setNombre(nombresObras[i]);  // Asigna el nombre
+        reg.setEstado(true);
+
+        fwrite(&reg, sizeof(ObraSocial), 1, p);
+    }
+
+    fclose(p);
+}
+
 int obrasSocialesCant(){
     cout << "OBRAS SOCIALES CON MAYOR CANTIDAD DE AFILIADOS ATENDIDOS" << endl << endl;
 

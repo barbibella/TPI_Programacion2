@@ -16,12 +16,12 @@ ObraSocial.h/.cpp, ObraSocialArchivo.h/.cpp, y ObraSocialManager.h/.cpp
 
 int main()
 {
-  AfiliadoManager manager;
-   //  ObraSocialManager manager1;
+  //  AfiliadoManager manager;
+   ObraSocialManager manager1;
 
 
-   manager.Menu();
-     //manager1.Menu();
+  // manager.Menu();
+     manager1.Menu();
   /* Fecha fecha;      // Crear objeto
    Persona persona;
    Medico medico;

@@ -5,21 +5,10 @@
 using namespace std;
 
 void ObraSocial::Cargar(){
+    cout << "--- AGREGAR OBRA SOCIAL ---" << endl << endl;
     cout << "Ingrese su ID: " << endl;
     cin>>idObraSocial;
     cin.ignore();
-    cout << "OBRAS SOCIALES DISPONIBLES." << endl;
-        cout << "| IOMA                      |" << endl;
-        cout << "| OSDE                      |" << endl;
-        cout << "| SWISS MEDICAL             |" << endl;
-        cout << "| OSECAC                    |" << endl;
-        cout << "| GALENO                    |" << endl;
-        cout << "| MEDICUS                   |" << endl;
-        cout << "| SANCOR SALUD              |" << endl;
-        cout << "| UNION PERSONAL            |" << endl;
-        cout << "| OSEP                      |" << endl;
-    cout << "Ingrese el Nombre de la Obra Social: " << endl;
-/// cout << "Ingrese el numero de su Obra Social:";
     cin.getline(nombre, 30);
     estado = true;
 }
@@ -29,3 +18,13 @@ void ObraSocial::Mostrar(){
     cout << "Nombre: " << nombre << endl;
     cout << "Estado: " << (estado ? "Activo" : "Inactivo") << endl;
 }
+
+void ObraSocial::setIdObraSocial(int id){
+    idObraSocial = id;
+    }
+void ObraSocial::setNombre(const char* n){
+    strcpy(nombre, n);
+    }
+void ObraSocial::setEstado(bool e){
+    estado = e;
+    }

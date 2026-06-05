@@ -13,6 +13,7 @@ void AfiliadoManager::Menu(){
         cout << "1. AGREGAR AFILIADO" << endl;
         cout << "2. LISTAR TODOS" << endl;
         cout << "3. BUSCAR POR DNI" << endl;
+        cout << "4. ELIMINAR" << endl;
         cout << "0. VOLVER AL MENU PRINCIPAL" << endl;
         cout << "OPCION: ";
         cin >> opcion;
@@ -24,6 +25,8 @@ void AfiliadoManager::Menu(){
             case 2: ListarTodos();
             break;
             case 3: BuscarPorDNI();
+            break;
+            case 4: Eliminar();
             break;
             default: cout << "OPCION INCORRECTA" << endl;
 
@@ -47,12 +50,14 @@ void AfiliadoManager::Agregar(){
     }
 }
 void AfiliadoManager::ListarTodos(){
+    cout << "--- LISTA DE AFILIADO ---" << endl << endl;
     AfiliadoArchivo arch;
     arch.listarTodo();
 }
 void AfiliadoManager::BuscarPorDNI(){
     AfiliadoArchivo arch;
     char dni[15];
+    cout << "--- BUSCAR AFILIADO POR DNI ---" << endl << endl;
     cout << "Ingrese el DNI a buscar: ";
     cin >> dni;
 
@@ -75,22 +80,17 @@ void AfiliadoManager::Eliminar() {
     cout << "Ingrese el DNI del afiliado a dar de baja: ";
     cin >> dni;
 
-    // 1. Buscamos la posicion del afiliado en el archivo binario
     int pos = arch.buscar(dni);
 
-    // Verificamos si existe (asumiendo tus codigos de error 412 y 413)
-    if (pos >= 0 && pos != 412 && pos != 413) {
+    if (pos >= 0 && pos != -412 && pos != -413) {
 
-        // 2. Leemos el registro completo de esa posicion
         Afiliado obj = arch.leer(pos);
 
-        // 3. Controlamos si ya estaba dado de baja previamente
         if (obj.getEstado() == false) {
-            cout << "El afiliado ya se encuentra dado de baja en el sistema." << endl;
+            cout << "El afiliado ya se encuentra dado de baja en el sistema" << endl;
             return;
         }
 
-        // 4. Le mostramos los datos al usuario para que confirme que es la persona correcta
         cout << "Se borrara el siguiente registro:" << endl;
         obj.Mostrar();
 
@@ -99,20 +99,18 @@ void AfiliadoManager::Eliminar() {
         cin >> confirmacion;
 
         if (confirmacion == 'S' || confirmacion == 's') {
-            // 5. Cambiamos el estado a false (baja logica)
             obj.setEstado(false);
 
-            // 6. Impactamos el cambio en el disco usando funcion modificar
             if (arch.modificar(obj, pos)) {
-                cout << "Afiliado dado de baja correctamente." << endl;
+                cout << "Afiliado dado de baja correctamente" << endl;
             } else {
-                cout << "No se pudo actualizar el archivo." << endl;
+                cout << "No se pudo actualizar el archivo" << endl;
             }
         } else {
-            cout << "Operacion cancelada por el usuario." << endl;
+            cout << "Operacion cancelada por el usuario" << endl;
         }
 
     } else {
-        cout << "No se encontro ningun afiliado con el DNI ingresado." << endl;
+        cout << "No se encontro ningun afiliado con el DNI ingresado" << endl;
     }
 }

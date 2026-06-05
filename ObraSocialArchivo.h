@@ -14,4 +14,5 @@ public:
     int contarRegistros();
     int buscar (int idBuscado);
     void listarTodo();
+    void crearObrasSocialesPredeterminadas();
 };

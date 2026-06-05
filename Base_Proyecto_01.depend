@@ -113,7 +113,7 @@
 	"ObraSocialArchivo.h"
 	"ObraSocialManager.h"
 
-1780436949 source:c:\users\barbi\documents\github\tpi_programacion2\afiliado.cpp
+1780604246 source:c:\users\barbi\documents\github\tpi_programacion2\afiliado.cpp
 	<iostream>
 	"Afiliado.h"
 	"ObraSocialArchivo.h"
@@ -128,7 +128,7 @@
 
 1779655258 c:\users\barbi\documents\github\tpi_programacion2\fecha.h
 
-1780431842 source:c:\users\barbi\documents\github\tpi_programacion2\afiliadoarchivo.cpp
+1780601442 source:c:\users\barbi\documents\github\tpi_programacion2\afiliadoarchivo.cpp
 	<iostream>
 	<cstring>
 	"Afiliado.h"
@@ -137,7 +137,7 @@
 1780427637 c:\users\barbi\documents\github\tpi_programacion2\afiliadoarchivo.h
 	"Afiliado.h"
 
-1780433913 source:c:\users\barbi\documents\github\tpi_programacion2\afiliadomanager.cpp
+1780600988 source:c:\users\barbi\documents\github\tpi_programacion2\afiliadomanager.cpp
 	<iostream>
 	"Afiliado.h"
 	"AfiliadoArchivo.h"
@@ -156,10 +156,10 @@
 
 1779651532 c:\users\barbi\documents\github\tpi_programacion2\configuracionmanager.h
 
-1779650866 c:\users\barbi\documents\github\tpi_programacion2\obrasocialarchivo.h
+1780603967 c:\users\barbi\documents\github\tpi_programacion2\obrasocialarchivo.h
 	"ObraSocial.h"
 
-1779229393 c:\users\barbi\documents\github\tpi_programacion2\obrasocial.h
+1780603967 c:\users\barbi\documents\github\tpi_programacion2\obrasocial.h
 
 1777954326 c:\users\barbi\documents\github\tpi_programacion2\medicoarchivo.h
 	"Medico.h"
@@ -177,7 +177,7 @@
 	<iostream>
 	"Fecha.h"
 
-1780427637 source:c:\users\barbi\documents\github\tpi_programacion2\main.cpp
+1780602269 source:c:\users\barbi\documents\github\tpi_programacion2\main.cpp
 	<iostream>
 	"Fecha.h"
 	"Persona.h"
@@ -203,19 +203,19 @@
 	"Medico.h"
 	"MedicoArchivo.h"
 
-1780357032 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocial.cpp
+1780604246 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocial.cpp
 	<iostream>
 	"Afiliado.h"
 	"ObraSocial.h"
 
-1780431940 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocialarchivo.cpp
+1780603967 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocialarchivo.cpp
 	<iostream>
 	<cstring>
 	"ObraSocial.h"
 	"ObraSocialArchivo.h"
 	"ObraSocialManager.h"
 
-1780436949 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocialmanager.cpp
+1780603967 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocialmanager.cpp
 	<iostream>
 	"ObraSocial.h"
 	"ObraSocialArchivo.h"
@@ -225,7 +225,7 @@
 	<iostream>
 	"OrdenMedica.h"
 
-1780431842 source:c:\users\barbi\documents\github\tpi_programacion2\persona.cpp
+1780600988 source:c:\users\barbi\documents\github\tpi_programacion2\persona.cpp
 	<iostream>
 	"Persona.h"
 

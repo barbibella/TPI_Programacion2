@@ -6,6 +6,7 @@
 using namespace std;
 
 void Afiliado::Cargar(int nroAuto){
+    cout << "--- AGREGAR AFILIADO ---" << endl << endl;
     Persona::Cargar();
     nroDeAfiliado = nroAuto;
     ObraSocialArchivo archObraSocial;
@@ -26,6 +27,7 @@ void Afiliado::Cargar(int nroAuto){
             cout << "--- ASIGNAR OBRA SOCIAL ---" << endl;
             cout << "Paciente: " << apellido << ", " << nombre << " (Nro: " << nroDeAfiliado << ")" << endl << endl;
         } else {
+            if (idObraSocial >= 1 && idObraSocial <= 10) {
             int posObra = archObraSocial.buscar(idObraSocial);
 
             if (posObra >= 0) {
@@ -34,6 +36,7 @@ void Afiliado::Cargar(int nroAuto){
                 cout << "Error: El ID ingresado no existe. Intente de nuevo" << endl;
                 system("pause");
             }
+          }
         }
     }
     cout << "MAIL: "<< endl;
