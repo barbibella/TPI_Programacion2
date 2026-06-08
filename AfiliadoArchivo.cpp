@@ -56,7 +56,7 @@ int AfiliadoArchivo::buscar(const char* dniBuscado){
     Afiliado reg;
     int pos=0;
     FILE* p= fopen("afiliados.dat", "rb");
-    if(p == NULL) return -412;
+    if(p == NULL) return -1;
 
     while(fread(&reg, sizeof(Afiliado), 1, p)==1){
         if(strcmp(reg.getDni(), dniBuscado) == 0){ // strcmp devuelve 0 si las cadenas son iguales
@@ -66,7 +66,7 @@ int AfiliadoArchivo::buscar(const char* dniBuscado){
         pos++;
     }
     fclose(p);
-    return -413;
+    return -1;
 }
 
 void AfiliadoArchivo::listarTodo(){
@@ -91,7 +91,7 @@ Afiliado AfiliadoArchivo::buscarPorDNI(const char* dniBuscado) {
     Afiliado reg;
     int pos = buscar(dniBuscado);
 
-    if (pos == -412 || pos == -413) {
+    if (pos == -1 || pos == -1) {
         reg.setDni("-1");
         return reg;
     }

@@ -28,10 +28,15 @@ void AfiliadoManager::Menu(){
             break;
             case 4: Eliminar();
             break;
+            case 0:
+            break;
             default: cout << "OPCION INCORRECTA" << endl;
-
+            system("pause");
+            break;
         }
-        system("pause");
+        if (opcion != 0 && opcion >= 1 && opcion <= 4) {
+            system("pause");
+        }
     }while(opcion != 0);
 }
 void AfiliadoManager::Agregar(){
@@ -82,8 +87,7 @@ void AfiliadoManager::Eliminar() {
 
     int pos = arch.buscar(dni);
 
-    if (pos >= 0 && pos != -412 && pos != -413) {
-
+    if (pos >= 0) {
         Afiliado obj = arch.leer(pos);
 
         if (obj.getEstado() == false) {

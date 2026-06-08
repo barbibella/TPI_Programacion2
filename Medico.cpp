@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Medico.h"
-
 using namespace std;
+
 
 void Medico::Cargar(){
     Persona::Cargar();
@@ -12,8 +12,9 @@ void Medico::Cargar(){
 }
 
 void Medico::Mostrar(){
-    if(estado = true){
+    if(estado == true){
     Persona::Mostrar();
     cout << "La matricula es: " << matricula << " y su especialidad es: " << especialidad << endl;
     }
 }
+

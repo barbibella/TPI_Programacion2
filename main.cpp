@@ -5,6 +5,7 @@
 #include "Afiliado.h"
 #include "OrdenMedica.h"
 #include "AfiliadoManager.h"
+#include "ObraSocialArchivo.h"
 #include "ObraSocialManager.h"
 
 using namespace std;
@@ -16,13 +17,15 @@ ObraSocial.h/.cpp, ObraSocialArchivo.h/.cpp, y ObraSocialManager.h/.cpp
 
 int main()
 {
-  //  AfiliadoManager manager;
-   ObraSocialManager manager1;
+    AfiliadoManager manager;
+    manager.Menu();
+ /*
+    ObraSocialArchivo archObra;
+    archObra.crearObrasSocialesPredeterminadas();
+    ObraSocialManager manager1;
+    manager1.Menu();
 
-
-  // manager.Menu();
-     manager1.Menu();
-  /* Fecha fecha;      // Crear objeto
+  Fecha fecha;      // Crear objeto
    Persona persona;
    Medico medico;
    Afiliado afiliado;

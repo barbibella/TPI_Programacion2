@@ -14,30 +14,11 @@ class Fecha{
     void Cargar();
     void Mostrar();
 
-    void setDia(int d){
-        if(d>=1 && d<=31) {
-            dia=d;
-        }
-        else{
-            dia=0;
-        }
-    }
-    void setMes(int m){
-        if(m>0 && m<=12){
-                mes=m;
-        }
-        else{
-            m=0;
-        }
-    }
-    void setAnio(int a){
-        if(a>=ANIOACTUAL && a<=ANIOFIN){
-                anio=a;
-        }
-    }
-
-    int getDia(){return dia;}
-    int getMes(){return mes;}
-    int getAnio(){return anio;}
+    void setDia(int d);
+    void setMes(int m);
+    void setAnio(int a);
+    int getDia();
+    int getMes();
+    int getAnio();
 };
 

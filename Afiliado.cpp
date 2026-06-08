@@ -27,7 +27,7 @@ void Afiliado::Cargar(int nroAuto){
             cout << "--- ASIGNAR OBRA SOCIAL ---" << endl;
             cout << "Paciente: " << apellido << ", " << nombre << " (Nro: " << nroDeAfiliado << ")" << endl << endl;
         } else {
-            if (idObraSocial >= 1 && idObraSocial <= 10) {
+            if (idObraSocial >= 1 && idObraSocial <= 10){
             int posObra = archObraSocial.buscar(idObraSocial);
 
             if (posObra >= 0) {
@@ -56,3 +56,8 @@ void Afiliado::Mostrar(){
          << " Y MAIL: " << email << endl;
     }
 }
+
+int Afiliado::getNroDeAfiliado(){
+    return nroDeAfiliado; }
+int Afiliado::getIDObraSocial(){
+    return idObraSocial; }

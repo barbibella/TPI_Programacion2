@@ -21,7 +21,6 @@ void ObraSocialManager::Menu(){
         cout << "OPCION: ";
         cin >> opcion;
         system("cls");
-        cin.ignore();
 
         switch(opcion){
             case 1: Agregar();
@@ -30,24 +29,56 @@ void ObraSocialManager::Menu(){
             break;
             case 3: BuscarPorID();
             break;
+            case 0:
+            break;
             default: cout << "OPCION INCORRECTA" << endl;
+            system("pause");
+            break;
         }
-        system("pause");
+        if(opcion !=0){
+           system("pause");
+        }
     }while(opcion != 0);
 }
 
 void ObraSocialManager::Agregar(){
     ObraSocial obj;
     ObraSocialArchivo arch;
+    int idIngresado;
+    bool idValido = false;
+
+    system("cls");
+    cout << "--- AGREGAR OBRA SOCIAL ---" << endl << endl;
+
+    while (!idValido) {
+        cout << "Ingrese ID de la nueva Obra Social: ";
+        cin >> idIngresado;
+
+        int pos = arch.buscar(idIngresado);
+
+        if (idIngresado <= 0) {
+            cout << "Error: El ID debe ser un numero positivo mayor a cero" << endl;
+            cout << "----------------------------------------------------------------------" << endl;
+        }
+        else if (pos >= 0) {
+            cout << "Error: El ID " << idIngresado << " ya esta registrado. Intente con otro" << endl;
+            cout << "----------------------------------------------------------------------" << endl;
+        }
+        else {
+            idValido = true; // Si no es cero/negativo y tampoco existe, ¡es válido!
+            obj.setIdObraSocial(idIngresado);
+        }
+    }
 
     obj.Cargar();
 
     if(arch.guardar(obj)){
-        cout << "Obra Social guardada" << endl;
-    }else{
-        cout << "Errror al abrir el archivo" << endl;
+        cout << "Obra Social guardada exitosamente." << endl;
+    } else {
+        cout << "Error al guardar en el archivo." << endl;
     }
 }
+
 void ObraSocialManager::ListarTodas(){
     system("cls");
     cout << "==========================================" << endl;
@@ -57,16 +88,7 @@ void ObraSocialManager::ListarTodas(){
     ObraSocialArchivo arch;
     int cantidad = arch.contarRegistros();
     if (cantidad == 0) {
-    cout << "| 1- PAMI                      |" << endl;
-    cout << "| 2- IOMA                      |" << endl;
-    cout << "| 3- OSDE                      |" << endl;
-    cout << "| 4- SWISS MEDICAL             |" << endl;
-    cout << "| 5- OSECAC                    |" << endl;
-    cout << "| 6- GALENO                    |" << endl;
-    cout << "| 7- MEDICUS                   |" << endl;
-    cout << "| 8- SANCOR SALUD              |" << endl;
-    cout << "| 9- UNION PERSONAL            |" << endl;
-    cout << "| 10-OSEP                      |" << endl;
+        cout << "No hay Obras Sociales registradas en el disco" << endl;
     } else {
         arch.listarTodo();
     }
@@ -83,7 +105,7 @@ void ObraSocialManager::BuscarPorID(){
 
     int pos = arch.buscar(id);
 
-    if(pos >= 0 && pos != 412 && pos != 413){
+    if(pos >= 0){
         obj = arch.leer(pos);
         obj.Mostrar();
     }else{
@@ -94,7 +116,7 @@ void ObraSocialManager::BuscarPorID(){
 void ObraSocialArchivo::crearObrasSocialesPredeterminadas() {
     if (contarRegistros() > 0) return;
 
-    FILE* p = fopen("obrasociales.dat", "wb");
+    FILE* p = fopen("ObraSocial.dat", "wb");
     if (p == NULL) return;
 
     const char* nombresObras[] = {
@@ -116,6 +138,16 @@ void ObraSocialArchivo::crearObrasSocialesPredeterminadas() {
 
 int obrasSocialesCant(){
     cout << "OBRAS SOCIALES CON MAYOR CANTIDAD DE AFILIADOS ATENDIDOS" << endl << endl;
+    cout << "| 1- PAMI                      |" << endl;
+    cout << "| 2- IOMA                      |" << endl;
+    cout << "| 3- OSDE                      |" << endl;
+    cout << "| 4- SWISS MEDICAL             |" << endl;
+    cout << "| 5- OSECAC                    |" << endl;
+    cout << "| 6- GALENO                    |" << endl;
+    cout << "| 7- MEDICUS                   |" << endl;
+    cout << "| 8- SANCOR SALUD              |" << endl;
+    cout << "| 9- UNION PERSONAL            |" << endl;
+    cout << "| 10-OSEP                      |" << endl;
 
     cout << "+==========================================+" << endl;
     cout << "|        OBRA SOCIAL        |   CANTIDAD   |" << endl;

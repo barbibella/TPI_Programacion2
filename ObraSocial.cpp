@@ -1,15 +1,17 @@
 #include <iostream>
+#include <cstring>
 #include "Afiliado.h"
 #include "ObraSocial.h"
+#include "ObraSocialArchivo.h"
 
 using namespace std;
 
 void ObraSocial::Cargar(){
-    cout << "--- AGREGAR OBRA SOCIAL ---" << endl << endl;
-    cout << "Ingrese su ID: " << endl;
-    cin>>idObraSocial;
     cin.ignore();
+
+    cout << "Ingrese el Nombre de la Obra Social: ";
     cin.getline(nombre, 30);
+
     estado = true;
 }
 
@@ -27,4 +29,10 @@ void ObraSocial::setNombre(const char* n){
     }
 void ObraSocial::setEstado(bool e){
     estado = e;
+    }
+int ObraSocial::getId(){
+    return idObraSocial;
+    }
+bool ObraSocial::getEstado(){
+    return estado;
     }

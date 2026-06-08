@@ -9,9 +9,9 @@ class ObraSocial{
         void Cargar();
         void Mostrar();
 
-        int getId() { return idObraSocial; }
+        int getId();
         void setNombre(const char* n);
         void setIdObraSocial(int id);
         void setEstado(bool e);
-        bool getEstado() { return estado; }
+        bool getEstado();
 };

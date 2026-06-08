@@ -11,7 +11,7 @@ ObraSocialArchivo::ObraSocialArchivo() {
 }
 
 bool ObraSocialArchivo::guardar(ObraSocial reg){
-    FILE* p= fopen("ObraSocial.dat", "ab"); //Abrir para agregar
+    FILE* p= fopen(nombreArchivo, "ab"); //Abrir para agregar
     if (p == NULL) return false;
 
     bool escribio = fwrite(&reg, sizeof(ObraSocial), 1, p);
@@ -21,7 +21,7 @@ bool ObraSocialArchivo::guardar(ObraSocial reg){
 }
 
 bool ObraSocialArchivo::modificar(ObraSocial reg, int pos){
-    FILE* p=fopen("ObraSocial.dat", "rb+");
+    FILE* p=fopen(nombreArchivo, "rb+");
     if (p == NULL) return false;
 
     fseek(p, pos * sizeof(ObraSocial), SEEK_SET);           // Nos movemos a la posicion exacta del registro que queremos cambiar
@@ -33,7 +33,7 @@ bool ObraSocialArchivo::modificar(ObraSocial reg, int pos){
 
 ObraSocial ObraSocialArchivo::leer(int pos){
     ObraSocial reg;
-    FILE* p = fopen("ObraSocial.dat", "rb");// Abrir para lectura
+    FILE* p = fopen(nombreArchivo, "rb");// Abrir para lectura
     if(p ==NULL) return reg;
 
     fseek(p, pos * sizeof(ObraSocial), SEEK_SET);
@@ -45,7 +45,7 @@ ObraSocial ObraSocialArchivo::leer(int pos){
 }
 
 int ObraSocialArchivo::contarRegistros(){
-    FILE* p= fopen("ObraSocial.dat", "rb");
+    FILE* p= fopen(nombreArchivo, "rb");
     if (p == NULL) return 0;
 
     fseek(p, 0, SEEK_END); //Ir al final del archivo
@@ -58,8 +58,8 @@ int ObraSocialArchivo::contarRegistros(){
 int ObraSocialArchivo::buscar(int idBuscado){
     ObraSocial reg;
     int pos=0;
-    FILE* p= fopen("ObraSocial.dat", "rb");
-    if(p == NULL) return -412;
+    FILE* p= fopen(nombreArchivo, "rb");
+    if(p == NULL) return -1;
 
     while(fread(&reg, sizeof(ObraSocial), 1, p)==1){
         if (reg.getId() == idBuscado) {
@@ -69,7 +69,7 @@ int ObraSocialArchivo::buscar(int idBuscado){
         pos++;
     }
     fclose(p);
-    return -413;
+    return -1;
 }
 
 void ObraSocialArchivo::listarTodo(){

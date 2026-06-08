@@ -12,8 +12,8 @@ class Persona{
         void Cargar();
         void Mostrar();
 
-    const char* getDni() { return dni; }
-    void setDni(const char* d) { strcpy(dni, d); }
-    bool getEstado() { return estado; }
-    void setEstado(bool e) { estado = e; }
+    const char* getDni();
+    void setDni(const char* d);
+    bool getEstado();
+    void setEstado(bool e);
 };

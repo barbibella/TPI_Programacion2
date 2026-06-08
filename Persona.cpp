@@ -5,8 +5,7 @@ using namespace std;
 
 void Persona::Cargar(){
     cout << "Buenas, podria ingresar sus datos personales: " << endl;
-    cout<<"NOMBRE ";
-    //cin.ignore();
+    cout<<"NOMBRE Y ";
     cin.getline(nombre, 30);
 
     cout << "APELLIDO: ";
@@ -31,3 +30,16 @@ void Persona::Mostrar(){
     cout << "NOMBRE Y APELLIDO: " << nombre << " " << apellido << endl;
     cout << "DNI: " << dni << " | ";
 }
+
+
+const char* Persona::getDni(){
+return dni;}
+
+void Persona::setDni(const char* d){
+    strcpy(dni, d); }
+
+bool Persona::getEstado(){
+    return estado; }
+
+void Persona::setEstado(bool e){
+    estado = e; }

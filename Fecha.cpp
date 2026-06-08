@@ -60,4 +60,30 @@ Fecha::Fecha(int d,int m, int a){
     mes=m;
     anio=a;
 }
-
+void Fecha::setDia(int d){
+        if(d>=1 && d<=31) {
+            dia=d;
+        }
+        else{
+            dia=0;
+        }
+    }
+void Fecha::setMes(int m){
+        if(m>0 && m<=12){
+                mes=m;
+        }
+        else{
+            m=0;
+        }
+    }
+void Fecha::setAnio(int a){
+        if(a>=ANIOACTUAL && a<=ANIOFIN){
+                anio=a;
+        }
+    }
+int Fecha::getDia(){
+    return dia;}
+int Fecha::getMes(){
+    return mes;}
+int Fecha::getAnio(){
+    return anio;}

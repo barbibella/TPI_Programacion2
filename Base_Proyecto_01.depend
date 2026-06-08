@@ -1,134 +1,28 @@
 # depslib dependency file v1.0
-1779674794 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\afiliado.cpp
-	<iostream>
-	"Afiliado.h"
-
-1779654934 c:\users\barbi\desktop\progra 2\base_proyecto_01\afiliado.h
-	"Persona.h"
-	"Fecha.h"
-
-1779651437 c:\users\barbi\desktop\progra 2\base_proyecto_01\persona.h
-	<cstring>
-
-1779655258 c:\users\barbi\desktop\progra 2\base_proyecto_01\fecha.h
-
-1779651128 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\afiliadoarchivo.cpp
-	<iostream>
-	<cstring>
-	"Afiliado.h"
-	"AfiliadoArchivo.h"
-
-1779650866 c:\users\barbi\desktop\progra 2\base_proyecto_01\afiliadoarchivo.h
-	"Afiliado.h"
-
-1779674795 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\afiliadomanager.cpp
-	<iostream>
-	"Afiliado.h"
-	"AfiliadoArchivo.h"
-	"AfiliadoManager.h"
-
-1777952586 c:\users\barbi\desktop\progra 2\base_proyecto_01\afiliadomanager.h
-
-1779651532 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\configuracionmanager.cpp
-	<fstream>
-	<cstring>
-	<cstdlib>
-	"ConfiguracionManager.h"
-	"ObraSocialArchivo.h"
-	"MedicoArchivo.h"
-	"AfiliadoArchivo.h"
-
-1779651532 c:\users\barbi\desktop\progra 2\base_proyecto_01\configuracionmanager.h
-
-1779650866 c:\users\barbi\desktop\progra 2\base_proyecto_01\obrasocialarchivo.h
-	"ObraSocial.h"
-
-1779229393 c:\users\barbi\desktop\progra 2\base_proyecto_01\obrasocial.h
-
-1777954326 c:\users\barbi\desktop\progra 2\base_proyecto_01\medicoarchivo.h
-	"Medico.h"
-
-1777954706 c:\users\barbi\desktop\progra 2\base_proyecto_01\medico.h
-	"Persona.h"
-
-1777954986 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\especialidad.cpp
-	<iostream>
-	"Especialidad.h"
-
-1777952586 c:\users\barbi\desktop\progra 2\base_proyecto_01\especialidad.h
-
-1779655258 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\fecha.cpp
-	<iostream>
-	"Fecha.h"
-
-1779839437 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\main.cpp
-	<iostream>
-	"Fecha.h"
-	"Persona.h"
-	"Medico.h"
-	"Afiliado.h"
-	"OrdenMedica.h"
-	"AfiliadoManager.h"
-	"ObraSocialManager.h"
-
-1777952586 c:\users\barbi\desktop\progra 2\base_proyecto_01\ordenmedica.h
-	"Fecha.h"
-
-1779231065 c:\users\barbi\desktop\progra 2\base_proyecto_01\obrasocialmanager.h
-	"ObraSocialArchivo.h"
-
-1778013288 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\medico.cpp
-	<iostream>
-	"Medico.h"
-
-1777955250 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\medicoarchivo.cpp
-	<iostream>
-	<cstring>
-	"Medico.h"
-	"MedicoArchivo.h"
-
-1780354283 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\obrasocial.cpp
-	<iostream>
-	"Afiliado.h"
-	"ObraSocial.h"
-
-1779650866 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\obrasocialarchivo.cpp
-	<iostream>
-	<cstring>
-	"ObraSocial.h"
-	"ObraSocialArchivo.h"
-	"ObraSocialManager.h"
-
-1777783755 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\ordenmedica.cpp
-	<iostream>
-	"OrdenMedica.h"
-
-1779674794 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\persona.cpp
-	<iostream>
-	"Persona.h"
-
-1780354203 source:c:\users\barbi\desktop\progra 2\base_proyecto_01\obrasocialmanager.cpp
-	<iostream>
-	"ObraSocial.h"
-	"ObraSocialArchivo.h"
-	"ObraSocialManager.h"
-
-1780604246 source:c:\users\barbi\documents\github\tpi_programacion2\afiliado.cpp
+1780865511 source:c:\users\barbi\documents\github\tpi_programacion2\afiliado.cpp
 	<iostream>
 	"Afiliado.h"
 	"ObraSocialArchivo.h"
 	"ObraSocialManager.h"
 
-1780436949 c:\users\barbi\documents\github\tpi_programacion2\afiliado.h
+1780856066 c:\users\barbi\documents\github\tpi_programacion2\afiliado.h
 	"Persona.h"
 	"Fecha.h"
 
-1779651437 c:\users\barbi\documents\github\tpi_programacion2\persona.h
+1780856066 c:\users\barbi\documents\github\tpi_programacion2\persona.h
 	<cstring>
 
-1779655258 c:\users\barbi\documents\github\tpi_programacion2\fecha.h
+1780856101 c:\users\barbi\documents\github\tpi_programacion2\fecha.h
 
-1780601442 source:c:\users\barbi\documents\github\tpi_programacion2\afiliadoarchivo.cpp
+1780603967 c:\users\barbi\documents\github\tpi_programacion2\obrasocialarchivo.h
+	"ObraSocial.h"
+
+1780856066 c:\users\barbi\documents\github\tpi_programacion2\obrasocial.h
+
+1779231065 c:\users\barbi\documents\github\tpi_programacion2\obrasocialmanager.h
+	"ObraSocialArchivo.h"
+
+1780863487 source:c:\users\barbi\documents\github\tpi_programacion2\afiliadoarchivo.cpp
 	<iostream>
 	<cstring>
 	"Afiliado.h"
@@ -137,7 +31,7 @@
 1780427637 c:\users\barbi\documents\github\tpi_programacion2\afiliadoarchivo.h
 	"Afiliado.h"
 
-1780600988 source:c:\users\barbi\documents\github\tpi_programacion2\afiliadomanager.cpp
+1780863487 source:c:\users\barbi\documents\github\tpi_programacion2\afiliadomanager.cpp
 	<iostream>
 	"Afiliado.h"
 	"AfiliadoArchivo.h"
@@ -145,27 +39,7 @@
 
 1777952586 c:\users\barbi\documents\github\tpi_programacion2\afiliadomanager.h
 
-1779651532 source:c:\users\barbi\documents\github\tpi_programacion2\configuracionmanager.cpp
-	<fstream>
-	<cstring>
-	<cstdlib>
-	"ConfiguracionManager.h"
-	"ObraSocialArchivo.h"
-	"MedicoArchivo.h"
-	"AfiliadoArchivo.h"
-
-1779651532 c:\users\barbi\documents\github\tpi_programacion2\configuracionmanager.h
-
-1780603967 c:\users\barbi\documents\github\tpi_programacion2\obrasocialarchivo.h
-	"ObraSocial.h"
-
-1780603967 c:\users\barbi\documents\github\tpi_programacion2\obrasocial.h
-
-1777954326 c:\users\barbi\documents\github\tpi_programacion2\medicoarchivo.h
-	"Medico.h"
-
-1777954706 c:\users\barbi\documents\github\tpi_programacion2\medico.h
-	"Persona.h"
+1780864287 source:c:\users\barbi\documents\github\tpi_programacion2\configuracionmanager.cpp
 
 1777954986 source:c:\users\barbi\documents\github\tpi_programacion2\especialidad.cpp
 	<iostream>
@@ -173,11 +47,11 @@
 
 1777952586 c:\users\barbi\documents\github\tpi_programacion2\especialidad.h
 
-1779655258 source:c:\users\barbi\documents\github\tpi_programacion2\fecha.cpp
+1780856066 source:c:\users\barbi\documents\github\tpi_programacion2\fecha.cpp
 	<iostream>
 	"Fecha.h"
 
-1780602269 source:c:\users\barbi\documents\github\tpi_programacion2\main.cpp
+1780865142 source:c:\users\barbi\documents\github\tpi_programacion2\main.cpp
 	<iostream>
 	"Fecha.h"
 	"Persona.h"
@@ -185,38 +59,38 @@
 	"Afiliado.h"
 	"OrdenMedica.h"
 	"AfiliadoManager.h"
+	"ObraSocialArchivo.h"
 	"ObraSocialManager.h"
+
+1777954706 c:\users\barbi\documents\github\tpi_programacion2\medico.h
+	"Persona.h"
 
 1777952586 c:\users\barbi\documents\github\tpi_programacion2\ordenmedica.h
 	"Fecha.h"
 
-1779231065 c:\users\barbi\documents\github\tpi_programacion2\obrasocialmanager.h
-	"ObraSocialArchivo.h"
-
-1778013288 source:c:\users\barbi\documents\github\tpi_programacion2\medico.cpp
+1780862833 source:c:\users\barbi\documents\github\tpi_programacion2\medico.cpp
 	<iostream>
 	"Medico.h"
 
-1777955250 source:c:\users\barbi\documents\github\tpi_programacion2\medicoarchivo.cpp
+1780862826 source:c:\users\barbi\documents\github\tpi_programacion2\medicoarchivo.cpp
 	<iostream>
 	<cstring>
 	"Medico.h"
 	"MedicoArchivo.h"
 
-1780604246 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocial.cpp
-	<iostream>
-	"Afiliado.h"
-	"ObraSocial.h"
+1777954326 c:\users\barbi\documents\github\tpi_programacion2\medicoarchivo.h
+	"Medico.h"
 
-1780603967 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocialarchivo.cpp
+1780864648 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocial.cpp
 	<iostream>
 	<cstring>
+	"Afiliado.h"
 	"ObraSocial.h"
 	"ObraSocialArchivo.h"
-	"ObraSocialManager.h"
 
-1780603967 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocialmanager.cpp
+1780863487 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocialarchivo.cpp
 	<iostream>
+	<cstring>
 	"ObraSocial.h"
 	"ObraSocialArchivo.h"
 	"ObraSocialManager.h"
@@ -225,7 +99,13 @@
 	<iostream>
 	"OrdenMedica.h"
 
-1780600988 source:c:\users\barbi\documents\github\tpi_programacion2\persona.cpp
+1780865747 source:c:\users\barbi\documents\github\tpi_programacion2\persona.cpp
 	<iostream>
 	"Persona.h"
+
+1780865135 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocialmanager.cpp
+	<iostream>
+	"ObraSocial.h"
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
 
