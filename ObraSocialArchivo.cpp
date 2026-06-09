@@ -7,11 +7,11 @@
 using namespace std;
 
 ObraSocialArchivo::ObraSocialArchivo() {
-    strcpy(nombreArchivo, "ObraSocial.dat");// Aca le asignamos el nombre fisico al archivo
+    strcpy(nombreArchivo, "ObraSocial.dat");
 }
 
 bool ObraSocialArchivo::guardar(ObraSocial reg){
-    FILE* p= fopen(nombreArchivo, "ab"); //Abrir para agregar
+    FILE* p= fopen(nombreArchivo, "ab");
     if (p == NULL) return false;
 
     bool escribio = fwrite(&reg, sizeof(ObraSocial), 1, p);
@@ -24,8 +24,8 @@ bool ObraSocialArchivo::modificar(ObraSocial reg, int pos){
     FILE* p=fopen(nombreArchivo, "rb+");
     if (p == NULL) return false;
 
-    fseek(p, pos * sizeof(ObraSocial), SEEK_SET);           // Nos movemos a la posicion exacta del registro que queremos cambiar
-    bool escribio = fwrite(&reg, sizeof(ObraSocial), 1, p); // Sobrescribimos el registro con la nueva informacion
+    fseek(p, pos * sizeof(ObraSocial), SEEK_SET);
+    bool escribio = fwrite(&reg, sizeof(ObraSocial), 1, p);
 
     fclose(p);
     return escribio;
@@ -48,9 +48,9 @@ int ObraSocialArchivo::contarRegistros(){
     FILE* p= fopen(nombreArchivo, "rb");
     if (p == NULL) return 0;
 
-    fseek(p, 0, SEEK_END); //Ir al final del archivo
-    int bytes = ftell(p);  //Cuantos bytes mide el archivo?
-    fclose(p);             // ftell te dice en que bytes esta el cursor
+    fseek(p, 0, SEEK_END);
+    int bytes = ftell(p);
+    fclose(p);
 
     return bytes/ sizeof(ObraSocial);
 }
@@ -81,7 +81,6 @@ void ObraSocialArchivo::listarTodo(){
     }
 
     while (fread(&reg, sizeof(ObraSocial), 1, p) == 1) {
-        // Solo mostramos si el registro es "valido"
         if (reg.getEstado() == true) {
             reg.Mostrar();
             cout << "-------------------------------" << endl;

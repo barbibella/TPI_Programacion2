@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstring>
-#include<Autorizacion.h>
+#include "Autorizacion.h"
 using namespace std;
 
 

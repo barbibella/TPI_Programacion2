@@ -38,6 +38,10 @@
 		<Unit filename="AfiliadoArchivo.h" />
 		<Unit filename="AfiliadoManager.cpp" />
 		<Unit filename="AfiliadoManager.h" />
+		<Unit filename="Autorizacion.cpp" />
+		<Unit filename="Autorizacion.h" />
+		<Unit filename="AutorizacionArchivo.cpp" />
+		<Unit filename="AutorizacionArchivo.h" />
 		<Unit filename="ConfiguracionManager.cpp" />
 		<Unit filename="ConfiguracionManager.h" />
 		<Unit filename="Especialidad.cpp" />

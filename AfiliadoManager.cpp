@@ -90,7 +90,7 @@ void AfiliadoManager::Eliminar() {
     if (pos >= 0) {
         Afiliado obj = arch.leer(pos);
 
-        if (obj.getEstado() == false) {
+        if (obj.getEstado() == false){
             cout << "El afiliado ya se encuentra dado de baja en el sistema" << endl;
             return;
         }
@@ -105,16 +105,16 @@ void AfiliadoManager::Eliminar() {
         if (confirmacion == 'S' || confirmacion == 's') {
             obj.setEstado(false);
 
-            if (arch.modificar(obj, pos)) {
+            if (arch.modificar(obj, pos)){
                 cout << "Afiliado dado de baja correctamente" << endl;
-            } else {
+            }else {
                 cout << "No se pudo actualizar el archivo" << endl;
             }
-        } else {
+        }else {
             cout << "Operacion cancelada por el usuario" << endl;
         }
 
-    } else {
+    }else {
         cout << "No se encontro ningun afiliado con el DNI ingresado" << endl;
     }
 }

@@ -22,7 +22,7 @@
 1779231065 c:\users\barbi\documents\github\tpi_programacion2\obrasocialmanager.h
 	"ObraSocialArchivo.h"
 
-1780863487 source:c:\users\barbi\documents\github\tpi_programacion2\afiliadoarchivo.cpp
+1781043552 source:c:\users\barbi\documents\github\tpi_programacion2\afiliadoarchivo.cpp
 	<iostream>
 	<cstring>
 	"Afiliado.h"
@@ -31,7 +31,7 @@
 1780427637 c:\users\barbi\documents\github\tpi_programacion2\afiliadoarchivo.h
 	"Afiliado.h"
 
-1780863487 source:c:\users\barbi\documents\github\tpi_programacion2\afiliadomanager.cpp
+1781043552 source:c:\users\barbi\documents\github\tpi_programacion2\afiliadomanager.cpp
 	<iostream>
 	"Afiliado.h"
 	"AfiliadoArchivo.h"
@@ -51,8 +51,14 @@
 	<iostream>
 	"Fecha.h"
 
-1780865142 source:c:\users\barbi\documents\github\tpi_programacion2\main.cpp
+1781043552 source:c:\users\barbi\documents\github\tpi_programacion2\main.cpp
 	<iostream>
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+	"AfiliadoManager.h"
+	"OrdenMedicaManager.h"
+	"TipoDeOrdenManager.h"
+	"OrigenDeLaOrdenManager.h"
 	"Fecha.h"
 	"Persona.h"
 	"Medico.h"
@@ -65,8 +71,9 @@
 1777954706 c:\users\barbi\documents\github\tpi_programacion2\medico.h
 	"Persona.h"
 
-1777952586 c:\users\barbi\documents\github\tpi_programacion2\ordenmedica.h
+1781048305 c:\users\barbi\documents\github\tpi_programacion2\ordenmedica.h
 	"Fecha.h"
+	<string>
 
 1780862833 source:c:\users\barbi\documents\github\tpi_programacion2\medico.cpp
 	<iostream>
@@ -88,16 +95,18 @@
 	"ObraSocial.h"
 	"ObraSocialArchivo.h"
 
-1780863487 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocialarchivo.cpp
+1781043552 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocialarchivo.cpp
 	<iostream>
 	<cstring>
 	"ObraSocial.h"
 	"ObraSocialArchivo.h"
 	"ObraSocialManager.h"
 
-1777783755 source:c:\users\barbi\documents\github\tpi_programacion2\ordenmedica.cpp
+1781022674 source:c:\users\barbi\documents\github\tpi_programacion2\ordenmedica.cpp
 	<iostream>
 	"OrdenMedica.h"
+	<string>
+	<cstring>
 
 1780865747 source:c:\users\barbi\documents\github\tpi_programacion2\persona.cpp
 	<iostream>
@@ -108,4 +117,92 @@
 	"ObraSocial.h"
 	"ObraSocialArchivo.h"
 	"ObraSocialManager.h"
+
+1781022674 source:c:\users\barbi\documents\github\tpi_programacion2\ordenmedicaarchivo.cpp
+	<iostream>
+	<cstring>
+	"OrdenMedica.h"
+	"OrdenMedicaArchivo.h"
+
+1781022674 c:\users\barbi\documents\github\tpi_programacion2\ordenmedicaarchivo.h
+	"OrdenMedica.h"
+
+1781022674 source:c:\users\barbi\documents\github\tpi_programacion2\ordenmedicamanager.cpp
+	<iostream>
+	<cstring>
+	"OrdenMedica.h"
+	"OrdenMedicaArchivo.h"
+	"OrdenMedicaManager.h"
+
+1781022674 c:\users\barbi\documents\github\tpi_programacion2\ordenmedicamanager.h
+
+1781022674 source:c:\users\barbi\documents\github\tpi_programacion2\origendelaorden.cpp
+	<iostream>
+	"OrigenDeLaOrden.h"
+	<string>
+	<cstring>
+
+1781022674 c:\users\barbi\documents\github\tpi_programacion2\origendelaorden.h
+	<string>
+
+1781022674 source:c:\users\barbi\documents\github\tpi_programacion2\origendelaordenarchivo.cpp
+	<iostream>
+	<cstring>
+	"OrigenDeLaOrden.h"
+	"OrigenDeLaOrdenArchivo.h"
+
+1781022674 c:\users\barbi\documents\github\tpi_programacion2\origendelaordenarchivo.h
+	"OrigenDeLaOrden.h"
+
+1781022674 source:c:\users\barbi\documents\github\tpi_programacion2\origendelaordenmanager.cpp
+	<iostream>
+	<cstring>
+	"OrigenDeLaOrden.h"
+	"OrigenDeLaOrdenArchivo.h"
+	"OrigenDeLaOrdenManager.h"
+
+1781022674 c:\users\barbi\documents\github\tpi_programacion2\origendelaordenmanager.h
+
+1781022674 source:c:\users\barbi\documents\github\tpi_programacion2\tipodeorden.cpp
+	<iostream>
+	"TipoDeOrden.h"
+	<string>
+	<cstring>
+
+1781022674 c:\users\barbi\documents\github\tpi_programacion2\tipodeorden.h
+	<string>
+
+1781024670 c:\users\barbi\documents\github\tpi_programacion2\tipodeordenmanager.h
+
+1781022674 source:c:\users\barbi\documents\github\tpi_programacion2\tipodeordenarchivo.cpp
+	<iostream>
+	<cstring>
+	"TipoDeOrden.h"
+	"TipoDeOrdenArchivo.h"
+
+1781022674 c:\users\barbi\documents\github\tpi_programacion2\tipodeordenarchivo.h
+	"TipoDeOrden.h"
+
+1781022674 source:c:\users\barbi\documents\github\tpi_programacion2\tipodeordenmanager.cpp
+	<iostream>
+	<cstring>
+	"TipoDeOrden.h"
+	"TipoDeOrdenArchivo.h"
+	"TipoDeOrdenManager.h"
+
+1781038493 source:c:\users\barbi\documents\github\tpi_programacion2\autorizacion.cpp
+	<iostream>
+	<cstring>
+	"Autorizacion.h"
+
+1781038500 c:\users\barbi\documents\github\tpi_programacion2\autorizacion.h
+	"fecha.h"
+
+1781038139 source:c:\users\barbi\documents\github\tpi_programacion2\autorizacionarchivo.cpp
+	<cstring>
+	<iostream>
+	"AutorizacionArchivo.h"
+
+1781038139 c:\users\barbi\documents\github\tpi_programacion2\autorizacionarchivo.h
+	"Autorizacion.h"
 

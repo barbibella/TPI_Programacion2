@@ -7,8 +7,6 @@ class TipoDeOrdenManager{
         void altaTipo();
         void bajaTipo();
         void modificarTipo();
-
         void buscarPorId();
-
         void listarTipos();
 };
