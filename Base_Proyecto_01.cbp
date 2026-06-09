@@ -55,10 +55,30 @@
 		<Unit filename="ObraSocialManager.cpp" />
 		<Unit filename="ObraSocialManager.h" />
 		<Unit filename="OrdenMedica.cpp" />
+		<Unit filename="OrdenMedica.dat" />
 		<Unit filename="OrdenMedica.h" />
+		<Unit filename="OrdenMedicaArchivo.cpp" />
+		<Unit filename="OrdenMedicaArchivo.h" />
+		<Unit filename="OrdenMedicaManager.cpp" />
+		<Unit filename="OrdenMedicaManager.h" />
+		<Unit filename="OrigenDeLaOrden.cpp" />
+		<Unit filename="OrigenDeLaOrden.dat" />
+		<Unit filename="OrigenDeLaOrden.h" />
+		<Unit filename="OrigenDeLaOrdenArchivo.cpp" />
+		<Unit filename="OrigenDeLaOrdenArchivo.h" />
+		<Unit filename="OrigenDeLaOrdenManager.cpp" />
+		<Unit filename="OrigenDeLaOrdenManager.h" />
 		<Unit filename="Persona.cpp" />
 		<Unit filename="Persona.h" />
+		<Unit filename="README.md" />
+		<Unit filename="TipoDeOrden.cpp" />
+		<Unit filename="TipoDeOrden.h" />
+		<Unit filename="TipoDeOrdenArchivo.cpp" />
+		<Unit filename="TipoDeOrdenArchivo.h" />
+		<Unit filename="TipoDeOrdenManager.cpp" />
+		<Unit filename="TipoDeOrdenManager.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="tipoDeOrden.dat" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
