@@ -111,14 +111,14 @@ void OrdenMedicaManager::eliminar(){
     int pos = archivo.buscarId(id);
 
     if(pos == -1){
-        cout << "No existe una orden con ese ID." << endl;
+        cout << "No existe una orden con ese ID" << endl;
         return;
     }
 
     OrdenMedica reg = archivo.leer(pos);
 
     if(!reg.getEstado()){
-        cout << "La orden ya se encuentra dada de baja." << endl;
+        cout << "La orden ya se encuentra dada de baja" << endl;
         return;
     }
 
@@ -133,14 +133,14 @@ void OrdenMedicaManager::eliminar(){
         reg.setEstado(false);
 
         if(archivo.modificar(reg, pos)){
-            cout << "Orden dada de baja correctamente." << endl;
+            cout << "Orden dada de baja correctamente" << endl;
         }
         else{
-            cout << "Error al actualizar la orden." << endl;
+            cout << "Error al actualizar la orden" << endl;
         }
     }
     else{
-        cout << "Operacion cancelada." << endl;
+        cout << "Operacion cancelada" << endl;
     }
 }
 

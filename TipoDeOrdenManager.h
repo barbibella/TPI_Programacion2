@@ -1,12 +1,14 @@
 #pragma once
 
 class TipoDeOrdenManager{
+     private:
+        bool existeId(int id);
+        int generarId();
+
     public:
         void menu();
-
-        void altaTipo();
-        void bajaTipo();
-        void modificarTipo();
-        void buscarPorId();
-        void listarTipos();
+        void agregar();
+        void listarTodos();
+        void buscaPorID();
+        void eliminar();
 };

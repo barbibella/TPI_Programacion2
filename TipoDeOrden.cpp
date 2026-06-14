@@ -44,9 +44,6 @@ void TipoDeOrden::setEstado(bool estado){
 void TipoDeOrden::cargar(){
     string descripcion;
 
-    cout << "ID tipo de orden: ";
-    cin >> _idTipoOrden;
-
     cout << "Descripcion del tipo de orden: ";
     cin >> descripcion;
 

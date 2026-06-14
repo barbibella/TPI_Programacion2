@@ -44,9 +44,6 @@ void OrigenDeLaOrden::setEstado(bool estado){
 void OrigenDeLaOrden::cargar(){
     string descripcion;
 
-    cout << "ID Origen de la orden: ";
-    cin >> _idOrigen;
-
     cout << "Descripcion del origen de la orden: ";
     cin >> descripcion;
 

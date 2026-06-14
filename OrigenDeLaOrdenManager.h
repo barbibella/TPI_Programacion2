@@ -1,14 +1,14 @@
 #pragma once
 
 class OrigenDeLaOrdenManager{
+    private:
+        bool existeId(int id);
+        int generarId();
+
     public:
         void menu();
-
-        void altaOrigen();
-        void bajaOrigen();
-        void modificarOrigen();
-
-        void buscarPorId();
-
-        void listarOrigenes();
+        void agregar();
+        void listarTodos();
+        void buscaPorID();
+        void eliminar();
 };

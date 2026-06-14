@@ -14,11 +14,8 @@ void TipoDeOrdenManager::menu(){
         cout << "===== TIPOS DE ORDENES =====" << endl;
         cout << "1. LISTAR TODOS LOS TIPOS DE ORDENES" << endl;
         cout << "2. AGREGAR UN TIPO DE ORDEN" << endl;
-        cout << "3. ELIMINAR UN TIPO DE ORDEN" << endl;
-        cout << "4. MODIFICAR UN TIPO DE ORDEN" << endl;
-        cout << "5. BUSCAR POR ID" << endl;
-        cout << "6. LISTADOS" << endl;
-        cout << "7. CONSULTAS" << endl;
+        cout << "3. BUSCAR POR ID" << endl;
+        cout << "4. ELIMINAR UN TIPO DE ORDEN" << endl;
         cout << "0. SALIR" << endl;
         cout << "OPCION: ";
 
@@ -27,20 +24,17 @@ void TipoDeOrdenManager::menu(){
 
         switch(opcion){
             case 1:
-                listarTipos();
+                listarTodos();
                 break;
             case 2:
-                altaTipo();
+                agregar();
                 break;
-            /* case 3:
-                bajaOrden();
+            case 3:
+                buscaPorID();
                 break;
             case 4:
-                modificarOrden();
+                eliminar();
                 break;
-            case 5:
-                buscarPorId();
-                break; */
             default:
                 cout << "OPCION INCORRECTA" << endl;
                 break;
@@ -49,7 +43,7 @@ void TipoDeOrdenManager::menu(){
     }while(opcion != 0);
 }
 
-void TipoDeOrdenManager::listarTipos(){
+void TipoDeOrdenManager::listarTodos(){
     TipoDeOrdenArchivo archivo;
 
     int cantidad = archivo.contarRegistros();
@@ -65,20 +59,88 @@ void TipoDeOrdenManager::listarTipos(){
     }
 }
 
-void TipoDeOrdenManager::altaTipo(){
+void TipoDeOrdenManager::agregar(){
     TipoDeOrdenArchivo archivo;
-
     TipoDeOrden reg;
 
+    reg.setIdTipoOrden(generarId());
     reg.cargar();
 
     if(archivo.guardar(reg)){
-        cout << "La orden medica se guardo correctamente!" << endl;
+        cout << "El tipo de orden se guardo correctamente!" << endl;
     } else {
-        cout << "Error al guardar la orden" << endl;
+        cout << "Error al guardar el tipo de orden" << endl;
+    }
+}
+
+int TipoDeOrdenManager::generarId(){
+    TipoDeOrdenArchivo archivo;
+
+    int cantidad = archivo.contarRegistros();
+
+    return cantidad + 1;
+}
+
+void TipoDeOrdenManager::buscaPorID(){
+    TipoDeOrdenArchivo archivo;
+
+    int id;
+    cout << "Ingrese el ID: " << endl;
+    cin >> id;
+
+    int pos = archivo.buscarId(id);
+
+    if(pos == -1){
+        cout << "No existe un tipo de orden con ese ID" << endl;
+        return;
     }
 
-
+    TipoDeOrden reg = archivo.leer(pos);
+    reg.mostrar();
 }
+
+void TipoDeOrdenManager::eliminar(){
+    TipoDeOrdenArchivo archivo;
+
+    int id;
+    cout << "Ingrese el ID: ";
+    cin >> id;
+
+    int pos = archivo.buscarId(id);
+
+    if(pos == -1){
+        cout << "No existe un tipo de orden con ese ID" << endl;
+        return;
+    }
+
+    TipoDeOrden reg = archivo.leer(pos);
+
+    if(!reg.getEstado()){
+        cout << "El tipo de orden ya se encuentra dado de baja" << endl;
+        return;
+    }
+
+    reg.mostrar();
+
+    cout << endl;
+    char opcion;
+    cout << "Esta seguro que desea dar de baja este tipo de orden? (S/N): ";
+    cin >> opcion;
+
+    if(opcion == 'S' || opcion == 's'){
+        reg.setEstado(false);
+
+        if(archivo.modificar(reg, pos)){
+            cout << "Tipo de orden dado de baja correctamente" << endl;
+        }
+        else{
+            cout << "Error al actualizar el tipo de orden" << endl;
+        }
+    }
+    else{
+        cout << "Operacion cancelada" << endl;
+    }
+}
+
 
 

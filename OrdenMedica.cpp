@@ -81,7 +81,6 @@ void OrdenMedica::setEstado(bool estado){
     _estado = estado;
 }
 
-
 void OrdenMedica::cargar(){
     string dni;
 

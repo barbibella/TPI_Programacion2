@@ -12,11 +12,10 @@ void OrigenDeLaOrdenManager::menu(){
     do{
         system("cls");
         cout << "===== ORIGEN DE LAS ORDENES MEDICAS =====" << endl;
-        cout << "1. LISTAR DE DONDE PUEDE VENIR CADA ORDEN MEDICA" << endl;
+        cout << "1. LISTAR ORIGEN DE ORDENES MEDICAS" << endl;
         cout << "2. AGREGAR UN ORIGEN" << endl;
-        cout << "3. ELIMINAR UN ORIGEN" << endl;
-        cout << "4. MODIFICAR UN ORIGEN" << endl;
-        cout << "5. BUSCAR POR ID" << endl;
+        cout << "3. BUSCAR POR ID" << endl;
+        cout << "4. ELIMINAR" << endl;
         cout << "0. SALIR" << endl;
         cout << "OPCION: ";
 
@@ -25,20 +24,17 @@ void OrigenDeLaOrdenManager::menu(){
 
         switch(opcion){
             case 1:
-                listarOrigenes();
+                listarTodos();
                 break;
             case 2:
-                altaOrigen();
+                agregar();
                 break;
-            /* case 3:
-                bajaOrden();
+            case 3:
+                buscaPorID();
                 break;
             case 4:
-                modificarOrden();
+                eliminar();
                 break;
-            case 5:
-                buscarPorId();
-                break; */
             default:
                 cout << "OPCION INCORRECTA" << endl;
                 break;
@@ -47,7 +43,7 @@ void OrigenDeLaOrdenManager::menu(){
     }while(opcion != 0);
 }
 
-void OrigenDeLaOrdenManager::listarOrigenes(){
+void OrigenDeLaOrdenManager::listarTodos(){
     OrigenDeLaOrdenArchivo archivo;
 
     int cantidad = archivo.contarRegistros();
@@ -63,20 +59,85 @@ void OrigenDeLaOrdenManager::listarOrigenes(){
     }
 }
 
-void OrigenDeLaOrdenManager::altaOrigen(){
+void OrigenDeLaOrdenManager::agregar(){
     OrigenDeLaOrdenArchivo archivo;
-
     OrigenDeLaOrden reg;
 
+    reg.setIdOrigen(generarId());
     reg.cargar();
 
     if(archivo.guardar(reg)){
-        cout << "La orden medica se guardo correctamente!" << endl;
+        cout << "El origen se guardo correctamente!" << endl;
     } else {
-        cout << "Error al guardar la orden" << endl;
+        cout << "Error al guardar" << endl;
     }
-
-
 }
 
+int OrigenDeLaOrdenManager::generarId(){
+    OrigenDeLaOrdenArchivo archivo;
 
+    int cantidad = archivo.contarRegistros();
+
+    return cantidad + 1;
+}
+
+void OrigenDeLaOrdenManager::buscaPorID(){
+    OrigenDeLaOrdenArchivo archivo;
+
+    int id;
+    cout << "Ingrese el ID: ";
+    cin >> id;
+
+    int pos = archivo.buscarId(id);
+
+    if(pos == -1){
+        cout << "No existe un origen de ordenes con ese ID" << endl;
+        return;
+    }
+
+    OrigenDeLaOrden reg = archivo.leer(pos);
+    reg.mostrar();
+}
+
+void OrigenDeLaOrdenManager::eliminar(){
+    OrigenDeLaOrdenArchivo archivo;
+
+    int id;
+    cout << "Ingrese el ID: ";
+    cin >> id;
+
+    int pos = archivo.buscarId(id);
+
+    if(pos == -1){
+        cout << "No existe un origen con ese ID" << endl;
+        return;
+    }
+
+    OrigenDeLaOrden reg = archivo.leer(pos);
+
+    if(!reg.getEstado()){
+        cout << "El origen ya se encuentra dada de baja" << endl;
+        return;
+    }
+
+    reg.mostrar();
+
+    cout << endl;
+    char opcion;
+    cout << "Esta seguro que desea dar de baja este origen? (S/N): ";
+    cin >> opcion;
+
+    if(opcion == 'S' || opcion == 's'){
+        reg.setEstado(false);
+
+        if(archivo.modificar(reg, pos)){
+            cout << "Orden dada de baja correctamente" << endl;
+        }
+        else{
+            cout << "Error al actualizar el origen" << endl;
+        }
+    }
+    else{
+        cout << "Operacion cancelada" << endl;
+    }
+}
