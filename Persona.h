@@ -3,17 +3,26 @@
 
 class Persona{
   protected:
-    char nombre[30], apellido[30];
-    char dni[15], telefono [20];
-
-    bool estado;
+    char _nombre[30], _apellido[30];
+    char _dni[15], _telefono [20];
+// el "_" se utiliza para identificar los atributos con mayor facilidad. - Mai
+    bool _estado;
 
   public:
-        void Cargar();
-        void Mostrar();
+        Persona();
+        Persona(string nombre, string apellido, string dni, string telefono, bool estado);
 
-    const char* getDni();
-    void setDni(const char* d);
-    bool getEstado();
-    void setEstado(bool e);
+  //SETTERS - Mai
+  void setNombre(string nombre);
+  void setApellido (string apellido);
+  void setDni (string dni);
+  void setTelefono (string telefono);
+  void setEstado (bool estado=true);
+
+  //GETTERS - Mai
+  string getNombre () const;
+  string getApellido () const;
+  string getDni () const;
+  string getTelefono () const;
+  bool getEstado () const;
 };

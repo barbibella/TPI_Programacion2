@@ -15,4 +15,5 @@ public:
     int buscar (int idBuscado);
     void listarTodo();
     void crearObrasSocialesPredeterminadas();
+    int leerTodos(ObraSocial vObra[], int cantidad);
 };

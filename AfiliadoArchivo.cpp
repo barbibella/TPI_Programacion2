@@ -10,7 +10,7 @@ AfiliadoArchivo::AfiliadoArchivo() {
 }
 
 bool AfiliadoArchivo::guardar(Afiliado reg){
-    FILE* p= fopen("afiliados.dat", "ab");
+    FILE* p = fopen(nombreArchivo, "ab");
     if (p == NULL) return false;
 
     bool escribio = fwrite(&reg, sizeof(Afiliado), 1, p);
@@ -20,7 +20,7 @@ bool AfiliadoArchivo::guardar(Afiliado reg){
 }
 
 bool AfiliadoArchivo::modificar(Afiliado reg, int pos){
-    FILE* p=fopen("afiliados.dat", "rb+");
+    FILE* p = fopen(nombreArchivo, "rb+");
     if (p == NULL) return false;
 
     fseek(p, pos * sizeof(Afiliado), SEEK_SET);
@@ -32,36 +32,46 @@ bool AfiliadoArchivo::modificar(Afiliado reg, int pos){
 
 Afiliado AfiliadoArchivo::leer(int pos){
     Afiliado reg;
-    FILE* p = fopen("afiliados.dat", "rb");
-    if(p ==NULL) return reg;
+    FILE* p = fopen(nombreArchivo, "rb");
+    if(p == NULL) return reg;
 
     fseek(p, pos * sizeof(Afiliado), SEEK_SET);
-
     fread(&reg, sizeof(Afiliado), 1, p);
 
     fclose(p);
     return reg;
 }
 
-int AfiliadoArchivo::contarRegistros(){
-    FILE* p= fopen("afiliados.dat", "rb");
+int AfiliadoArchivo::leerTodos(Afiliado vAfiliado[], int cantidad){
+    FILE* p = fopen(nombreArchivo, "rb");
     if (p == NULL) return 0;
+
+    int result = fread(vAfiliado, sizeof(Afiliado), cantidad, p);
+    fclose(p);
+    return result;
+}
+
+int AfiliadoArchivo::contarRegistros(){
+    FILE* p = fopen(nombreArchivo, "rb");
+    if (p == NULL) return 0;
+
     fseek(p, 0, SEEK_END);
     int bytes = ftell(p);
     fclose(p);
-    return bytes  / sizeof(Afiliado);
+    return bytes / sizeof(Afiliado);
 }
 
-int AfiliadoArchivo::buscar(const char* dniBuscado){
+int AfiliadoArchivo::buscar(string dniBuscado){
     Afiliado reg;
-    int pos=0;
-    FILE* p= fopen("afiliados.dat", "rb");
+    int pos = 0;
+    FILE* p = fopen(nombreArchivo, "rb");
     if(p == NULL) return -1;
 
-    while(fread(&reg, sizeof(Afiliado), 1, p)==1){
-        if(strcmp(reg.getDni(), dniBuscado) == 0){
+    while(fread(&reg, sizeof(Afiliado), 1, p) == 1){
+        // .c_str() para comparar el string con el char[] de Persona
+        if(strcmp(reg.getDni(), dniBuscado.c_str()) == 0){
             fclose(p);
-        return pos;
+            return pos;
         }
         pos++;
     }
@@ -86,16 +96,16 @@ void AfiliadoArchivo::listarTodo(){
     fclose(p);
 }
 
-Afiliado AfiliadoArchivo::buscarPorDNI(const char* dniBuscado) {
+Afiliado AfiliadoArchivo::buscarPorDNI(string dniBuscado) {
     Afiliado reg;
     int pos = buscar(dniBuscado);
 
-    if (pos == -1 || pos == -1) {
+    if (pos == -1) {
         reg.setDni("-1");
         return reg;
     }
 
-    FILE* p = fopen("afiliados.dat", "rb");
+    FILE* p = fopen(nombreArchivo, "rb");
     if (p == NULL) {
         reg.setDni("-1");
         return reg;

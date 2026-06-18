@@ -1,4 +1,5 @@
 #pragma once
+#include <cstring>
 #include "Afiliado.h"
 
 class AfiliadoArchivo{
@@ -12,8 +13,7 @@ public:
     bool modificar(Afiliado reg, int pos);
     Afiliado leer(int pos);
     int contarRegistros();
-    int buscar(const char* dni);
+    int buscar(std::string dni);
     void listarTodo();
-    Afiliado buscarPorDNI(const char* dni);
+    Afiliado buscarPorDNI(std::string dni)
 };
-

@@ -1,10 +1,24 @@
 #pragma once
+#include "AfiliadoArchivo.h"
+#include "Afiliado.h"
 
-class AfiliadoManager{
-    public:
-        void Menu();
-        void Agregar();
-        void ListarTodos();
-        void BuscarPorDNI();
-        void Eliminar();
+class AfiliadoManager {
+private:
+    Afiliado crearAfiliado();
+    void mostrarAfiliado(Afiliado reg);
+
+    AfiliadoArchivo _repoAfiliado;
+
+public:
+    AfiliadoManager();
+
+    void Menu();
+    void Agregar();
+    void ListarTodos();
+    void ListarActivos();
+    void ListarInactivos();
+    void Modificar();
+    void Eliminar();
+    void AltaAfiliado();
+    void BuscarPorDNI();
 };
