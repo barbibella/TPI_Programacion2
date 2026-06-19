@@ -2,7 +2,6 @@
 #include <cstring>
 #include "ObraSocial.h"
 #include "ObraSocialArchivo.h"
-#include "ObraSocialManager.h"
 
 using namespace std;
 
@@ -44,6 +43,16 @@ ObraSocial ObraSocialArchivo::leer(int pos){
     return reg;
 }
 
+int ObraSocialArchivo::leerTodos(ObraSocial vObra[], int cantidad){
+    FILE* p = fopen(nombreArchivo, "rb");
+    if (p == NULL) return 0;
+
+    int result = fread(vObra, sizeof(ObraSocial), cantidad, p);
+
+    fclose(p);
+    return result;
+}
+
 int ObraSocialArchivo::contarRegistros(){
     FILE* p= fopen(nombreArchivo, "rb");
     if (p == NULL) return 0;
@@ -75,7 +84,7 @@ int ObraSocialArchivo::buscar(int idBuscado){
 void ObraSocialArchivo::listarTodo(){
     ObraSocial reg;
     FILE* p = fopen(nombreArchivo, "rb");
-    if (p == NULL) {
+    if (p == NULL){
         cout << "No hay registros cargados todavia." << endl;
         return;
     }
@@ -85,6 +94,27 @@ void ObraSocialArchivo::listarTodo(){
             reg.Mostrar();
             cout << "-------------------------------" << endl;
         }
+    }
+    fclose(p);
+}
+
+void ObraSocialArchivo::crearObrasSocialesPredeterminadas(){
+    if (contarRegistros() > 0) return;
+
+    FILE* p = fopen(nombreArchivo, "wb");
+    if (p == NULL) return;
+
+    const char* nombresObras[] = {
+        "IOMA", "OSDE", "SWISS MEDICAL", "OSECAC", "GALENO",
+        "MEDICUS", "SANCOR SALUD", "UNION PERSONAL", "OSEP", "PAMI"
+    };
+
+    ObraSocial reg;
+    for (int i = 0; i < 10; i++) {
+        reg.setIdObraSocial(i + 1);
+        reg.setNombre(nombresObras[i]);
+        reg.setEstado(true);
+        fwrite(&reg, sizeof(ObraSocial), 1, p);
     }
     fclose(p);
 }

@@ -6,12 +6,14 @@
 
 using namespace std;
 
+ObraSocial::ObraSocial() : idObraSocial(-1), estado(false) {
+    strcpy(nombre, "");
+}
+
 void ObraSocial::Cargar(){
-    cin.ignore();
-
     cout << "Ingrese el Nombre de la Obra Social: ";
+    cin.ignore();
     cin.getline(nombre, 30);
-
     estado = true;
 }
 
@@ -24,15 +26,18 @@ void ObraSocial::Mostrar(){
 void ObraSocial::setIdObraSocial(int id){
     idObraSocial = id;
     }
-void ObraSocial::setNombre(const char* n){
-    strcpy(nombre, n);
+void ObraSocial::setNombre(string char* n){
+    strcpy(nombre, n.c_str());
     }
 void ObraSocial::setEstado(bool e){
     estado = e;
     }
-int ObraSocial::getId(){
+int ObraSocial::getId()const{
     return idObraSocial;
     }
-bool ObraSocial::getEstado(){
+std::string ObraSocial::getNombre() const {
+    return nombre;
+}
+bool ObraSocial::getEstado()const{
     return estado;
     }
