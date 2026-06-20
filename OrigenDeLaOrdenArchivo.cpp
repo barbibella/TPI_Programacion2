@@ -82,7 +82,7 @@ int OrigenDeLaOrdenArchivo::buscarId(int idOrigen){
     pFile = fopen("origenDeLaOrden.dat", "rb");
 
     if(pFile == nullptr){
-        return 0;
+        return -1;
     }
 
     while(fread(&registro, sizeof(OrigenDeLaOrden), 1, pFile)==1){
@@ -93,5 +93,5 @@ int OrigenDeLaOrdenArchivo::buscarId(int idOrigen){
         pos++;
     }
     fclose(pFile);
-    return 0;
+    return -1;
 }

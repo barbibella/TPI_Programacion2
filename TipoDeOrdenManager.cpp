@@ -16,6 +16,7 @@ void TipoDeOrdenManager::menu(){
         cout << "2. AGREGAR UN TIPO DE ORDEN" << endl;
         cout << "3. BUSCAR POR ID" << endl;
         cout << "4. ELIMINAR UN TIPO DE ORDEN" << endl;
+        cout << "5. REACTIVAR UN TIPO DE ORDEN" << endl;
         cout << "0. SALIR" << endl;
         cout << "OPCION: ";
 
@@ -34,6 +35,9 @@ void TipoDeOrdenManager::menu(){
                 break;
             case 4:
                 eliminar();
+                break;
+            case 5:
+                reactivar();
                 break;
             default:
                 cout << "OPCION INCORRECTA" << endl;
@@ -142,5 +146,34 @@ void TipoDeOrdenManager::eliminar(){
     }
 }
 
+void TipoDeOrdenManager::reactivar(){
+    TipoDeOrdenArchivo archivo;
 
+    int id;
+
+    cout << "Ingrese el id del tipo de orden: ";
+    cin >> id;
+
+    int pos = archivo.buscarId(id);
+
+    if(pos == -1){
+        cout << "No existe un tipo de orden con ese ID" << endl;
+        return;
+    }
+
+    TipoDeOrden reg = archivo.leer(pos);
+
+    if(reg.getEstado()){
+        cout << "El tipo de orden ya se encuentra activo" << endl;
+        return;
+    }
+
+    reg.setEstado(true);
+
+    if(archivo.modificar(reg, pos)){
+        cout << "Tipo de orden reactivado correctamente" << endl;
+    } else {
+        cout << "Error  al reactivar el tipo de orden" << endl;
+    }
+}
 

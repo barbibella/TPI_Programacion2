@@ -11,4 +11,5 @@ class OrigenDeLaOrdenManager{
         void listarTodos();
         void buscaPorID();
         void eliminar();
+        void reactivar();
 };

@@ -98,5 +98,5 @@ int OrdenMedicaArchivo::buscarId(int idOrden){
     }
 
     fclose(pFile);
-    return 0;
+    return -1;
 }
