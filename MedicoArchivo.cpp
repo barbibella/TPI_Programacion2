@@ -2,84 +2,173 @@
 #include <cstring>
 #include "Medico.h"
 #include "MedicoArchivo.h"
-
+//--- MAI ---
 using namespace std;
 
-MedicoArchivo::MedicoArchivo() {
-    strcpy(nombreArchivo, "medicos.dat");
-}
+MedicoArchivo::MedicoArchivo(string nombreArchivo)
+: _nombreArchivo (nombreArchivo){}
 
-bool MedicoArchivo::guardar(Medico reg){
-    FILE* p= fopen("medicos.dat", "ab"); //Abrir para agregar
-    if (p == NULL) return false;
+bool MedicoArchivo::crear (const Medico &reg){
+FILE *pFile;
+    bool result;
 
-    bool escribio = fwrite(&reg, sizeof(Medico), 1, p);
+    pFile = fopen(_nombreArchivo.c_str(), "ab");
 
-    fclose(p);
-    return escribio;
-}
+    if (pFile == nullptr){
+        return false;
+    }
 
-bool MedicoArchivo::modificar(Medico reg, int pos){
-    FILE* p=fopen("medicos.dat", "rb+");
-    if (p == NULL) return false;
+    result = fwrite(&reg, sizeof(Medico), 1, pFile);
 
-    fseek(p, pos * sizeof(Medico), SEEK_SET);           // Nos movemos a la posición exacta del registro que queremos cambiar
-    bool escribio = fwrite(&reg, sizeof(Medico), 1, p); // Sobrescribimos el registro con la nueva información
+    fclose(pFile);
 
-    fclose(p);
-    return escribio;
+    return result;
+    }
+
+bool MedicoArchivo::actualizar (int pos, const Medico &reg){
+FILE *pFile;
+    bool result;
+
+    pFile = fopen(_nombreArchivo.c_str(), "rb+");
+
+    if (pFile == nullptr){
+        return false;
+    }
+    fseek(pFile, pos*sizeof(Medico), SEEK_SET);   //MAI - pone el puntero en la posicion que recibe multiplicado por los bytes que pesa el objeto medico.
+    result = fwrite(&reg, sizeof(Medico), 1, pFile);
+
+    fclose(pFile);
+
+    return result;
+
 }
 
 Medico MedicoArchivo::leer(int pos){
+FILE *pFile;
     Medico reg;
-    FILE* p = fopen("medicos.dat", "rb");// Abrir para lectura
-    if(p ==NULL) return reg;
 
-    fseek(p, pos * sizeof(Medico), SEEK_SET);
+    reg.setMatricula(-1);
 
-    fread(&reg, sizeof(Medico), 1, p);
+    pFile = fopen(_nombreArchivo.c_str(), "rb");
 
-    fclose(p);
+    if (pFile == nullptr){
+        return reg;
+    }
+
+    fseek(pFile, pos*sizeof(Medico), SEEK_SET);
+
+    fread(&reg, sizeof(Medico), 1, pFile);
+
+    fclose(pFile);
+
     return reg;
 }
 
-int MedicoArchivo::contarRegistros(){
-    FILE* p= fopen("medicos.dat", "rb");
+int MedicoArchivo::leerTodos(Medico vMedico[], int cantidad){
+FILE *pFile;
+    int result;
 
-    fseek(p, 0, SEEK_END); //Ir al final del archivo
-    int bytes = ftell(p);  //Cuántos bytes mide el archivo?
-    fclose(p);
+    pFile = fopen(_nombreArchivo.c_str(), "rb");
 
-    return bytes;
+    if (pFile == nullptr){
+        return 0;
+    }
+
+    result = fread(vMedico, sizeof(Medico), cantidad, pFile);
+
+    fclose(pFile);
+
+    return result;
 }
 
-int MedicoArchivo::buscar(int matriculaBuscada){
-    Medico reg;
-    int pos=0;
-    FILE* p= fopen("medicos.dat", "rb");
-    if(p == NULL) return 412;
+int MedicoArchivo::getCantidadRegistros(){
+FILE *pFile;
+    int cant;
 
-    while(fread(&reg, sizeof(Medico), 1, p)==1){
-        if(reg.getMatricula() == matriculaBuscada){
-            fclose(p);
-        return pos;
+    pFile = fopen(_nombreArchivo.c_str(), "rb");
+
+    if (pFile == nullptr){
+        return 0;
+    }
+
+    fseek(pFile, 0, SEEK_END);
+
+    cant = ftell(pFile) / sizeof(Medico); //Mai - obtiene cant bytes del archivo y lo divide por lo que pesa obj Medico. Te dice la cant de registros que tenés
+
+    fclose(pFile);
+
+    return cant;
+}
+
+int MedicoArchivo::buscarMatricula(int matricula){
+FILE *pFile;
+    Medico reg;
+    int result = -1, pos = 0;
+
+    pFile = fopen(_nombreArchivo.c_str(), "rb");
+
+    if (pFile == nullptr){
+        return -1;
+    }
+
+    while (fread(&reg, sizeof(Medico), 1, pFile)){
+        if (reg.getMatricula() == matricula){
+            result = pos;
+            break;
         }
+
         pos++;
     }
-    fclose(p);
-    return 413;
+
+    fclose(pFile);
+
+    return result;
 }
-void MedicoArchivo::listarTodo(){
+
+bool MedicoArchivo::existeMatricula(int matricula){
+FILE *pFile;
     Medico reg;
-    int cantidad = contarRegistros();
 
-    cout << "El listado de medicos es: " << endl;
+    pFile = fopen(_nombreArchivo.c_str(), "rb");
 
-    for(int i = 0; i < cantidad; i++){
-        reg = leer(i); // Leemos el registro en la posicion i
+    if(pFile == nullptr){
+        return false;
+    }
 
-        if(reg.getEstado() == true){
-            reg.Mostrar();
+    while(fread(&reg, sizeof(Medico), 1, pFile)){
+        if(reg.getMatricula() == matricula){
+            fclose(pFile);
+            return true;
         }
     }
+
+    fclose(pFile);
+
+    return false;
+
+}
+
+int MedicoArchivo::buscarDni(std::string dni){
+    FILE *pFile;
+    Medico reg;
+    int result = -1, pos = 0;
+
+    pFile = fopen(_nombreArchivo.c_str(), "rb");
+
+    if (pFile == nullptr){
+        return -1;
+    }
+
+    while (fread(&reg, sizeof(Medico), 1, pFile)){
+        if (reg.getDni() == dni){
+            result = pos;
+            break;
+        }
+
+        pos++;
+    }
+
+    fclose(pFile);
+
+    return result;
 }
