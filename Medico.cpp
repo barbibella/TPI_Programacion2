@@ -2,18 +2,49 @@
 #include "Medico.h"
 
 using namespace std;
+//MAI
+//CONSTRUCTOR - MAI
+Medico::Medico()
+:  _matricula(-1), _especialidad(-1), Persona(){}
 
-void Medico::Cargar() {
-    cout << "Ingrese su numero de matricula: " << endl;
-//    cin >> _matricula; // Recordá usar los atributos con o sin guion bajo según los declararon en Medico.h
-    cout << "Ingrese su ID especialidad: " << endl;
-//    cin >> _especialidad;
+Medico::Medico(int matricula, int especialidad, string nombre, string apellido, string dni, string telefono, bool estado)
+: Persona(nombre, apellido, dni, telefono, estado){
+    setMatricula(matricula);
+    setEspecialidad(especialidad);
+
 }
 
-void Medico::Mostrar() {
-    if (_estado == true) {
-        cout << "Nombre: " << getNombre() << " | Apellido: " << getApellido() << " | DNI: " << getDni() << endl;
-//        cout << "La matricula es: " << _matricula << " y su especialidad es: " << _especialidad << endl;
+//SETTERS - MAI
+void Medico::setMatricula(int matricula){
+    if (matricula>0) {
+            _matricula=matricula;
+    }
+    else { _matricula= -1 ;
     }
 }
 
+void Medico::setEspecialidad(int especialidad){
+  if (especialidad>0) {
+            _especialidad=especialidad;
+    }
+    else { _especialidad= -1 ;
+    }
+}
+
+//GETTERS - MAI
+int Medico::getMatricula () const{return _matricula;}
+string Medico::getEspecialidad () const{ return _especialidad;}
+
+
+/* ===< ESPECIALIDADES >===
+1 - Medicina clinica
+2 - Pediatria
+3 - Traumatologia
+4 - Oftalmologia
+5 - Cirugia
+6 - Neumonologia
+7 - Cardiologia
+8 - Neurologia
+9 - Gastroenterologia
+10- Ginecologia
+*/

@@ -1,14 +1,25 @@
 #pragma once
 #include "Persona.h"
+#include "auxiliares.h"
+#include <cstring>
 
+using namespace std;
+// MAI
 class Medico: public Persona{
    private:
-      int matricula, especialidad;
+      int _matricula, _especialidad;
 
-   public:
-      void Cargar();
-      void Mostrar();
+    public:
+        Medico();
+        Medico(int matricula, int especialidad, string nombre, string apellido, string dni, string telefono, bool estado);
 
+//SETTERS - MAI
+    void setMatricula (int matricula);
+    void setEspecialidad (int especialidad);
 
-      getMatricula(){ return matricula;}
+//GETTERS - MAI
+    int getMatricula () const;
+    string getEspecialidad() const;
 };
+
+

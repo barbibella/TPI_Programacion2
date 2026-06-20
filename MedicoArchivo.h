@@ -1,16 +1,22 @@
 #pragma once
 #include "Medico.h"
+#include <cstring>
+//--- MAI ---
+using namespace std;
+
 class MedicoArchivo{
 private:
-    char nombreArchivo[30];
+    string _nombreArchivo;
+
 
 public:
-    MedicoArchivo();
-
-    bool guardar(Medico reg);            // Escribir al final
-    bool modificar(Medico reg, int pos); // Sobrescribir uno existente
-    Medico leer(int pos);                // Leer un registro específico
-    int contarRegistros();                 // Saber cuántos hay en total
-    int buscar(int nroMedico);           // Buscar por ID y devolver la posición
-    void listarTodo();
+    MedicoArchivo(string nombreArchivo="medico.dat");
+    int buscarMatricula(int matricula);
+    int buscarDni(string dni);
+    int getCantidadRegistros();
+    int leerTodos(Medico vMedico[], int cantidad);
+    bool crear(const Medico &reg);
+    bool actualizar(int pos, const Medico &reg);
+    bool existeMatricula (int matricula);
+    Medico leer (int pos);
 };
