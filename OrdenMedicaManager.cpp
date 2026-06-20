@@ -39,11 +39,14 @@ void OrdenMedicaManager::menu(){
             case 5:
                 reactivar();
                 break;
+            case 0:
+                cout << "Saliendo.." << endl;
+                break;
             default:
                 cout << "OPCION INCORRECTA" << endl;
+                system("pause");
                 break;
         }
-        system("pause");
     }while(opcion != 0);
 }
 
