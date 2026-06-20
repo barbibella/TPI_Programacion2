@@ -19,5 +19,4 @@ public:
 
     int buscar(int codAutorizacion);
 
-    void listarTodo();
 };

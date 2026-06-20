@@ -42,6 +42,8 @@
 		<Unit filename="Autorizacion.h" />
 		<Unit filename="AutorizacionArchivo.cpp" />
 		<Unit filename="AutorizacionArchivo.h" />
+		<Unit filename="AutorizacionManager.cpp" />
+		<Unit filename="AutorizacionManager.h" />
 		<Unit filename="ConfiguracionManager.cpp" />
 		<Unit filename="ConfiguracionManager.h" />
 		<Unit filename="Especialidad.cpp" />
