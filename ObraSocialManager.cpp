@@ -143,7 +143,7 @@ void ObraSocialManager::BuscarPorID(){
     cout << "Ingrese el ID a buscar: ";
     cin >> id;
 
-    int pos = arch.buscar(id);
+    int pos = archivo.buscar(id);
 
     if(pos >= 0){
         ObraSocial obj = archivo.leer(pos);
@@ -163,7 +163,7 @@ void ObraSocialManager::Modificar(){
         cout << "El ID no existe." << endl;
         return;
     }
-    ObraSocial reg = archivo.read(pos); // o archivo.leer(pos)
+    ObraSocial reg = archivo.leer(pos);
     mostrarObraSocial(reg);
 
     cout << "Desea modificar esta Obra Social? 1-Si 0-No: ";

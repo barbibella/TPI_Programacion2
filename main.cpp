@@ -33,27 +33,27 @@ int main() {
         cin >> opcion;
 
         switch (opcion) {
-            case 1: {
+            case 1:{
                 AfiliadoManager am;
                 am.Menu();
                 break;
             }
-            case 2: {
+            case 2:{
                 ObraSocialManager osm;
                 osm.Menu();
                 break;
             }
-            case 3: {
+            case 3:{
                 OrdenMedicaManager omm;
                 omm.menu();
                 break;
             }
-            case 4: {
+            case 4:{
                 TipoDeOrdenManager tom;
                 tom.menu();
                 break;
             }
-            case 5: {
+            case 5:{
                 OrigenDeLaOrdenManager oom;
                 oom.menu();
                 break;
@@ -70,62 +70,3 @@ int main() {
 
     return 0;
 }
-/**#include <iostream>
-#include "Fecha.h"
-#include "Persona.h"
-#include "Medico.h"
-#include "Afiliado.h"
-#include "OrdenMedica.h"
-#include "AfiliadoManager.h"
-#include "ObraSocialArchivo.h"
-#include "ObraSocialManager.h"
-
-using namespace std;
-/**
-El Gestor de Pacientes y Coberturas (Afiliados y Obras Sociales)
-Archivos a cargo: Afiliado.h/.cpp, AfiliadoArchivo.h/.cpp, AfiliadoManager.h/.cpp,
-ObraSocial.h/.cpp, ObraSocialArchivo.h/.cpp, y ObraSocialManager.h/.cpp
-
-
-int main()
-{
-    AfiliadoManager manager;
-    manager.Menu();
- /*
-    ObraSocialArchivo archObra;
-    archObra.crearObrasSocialesPredeterminadas();
-    ObraSocialManager manager1;
-    manager1.Menu();
-
-  Fecha fecha;      // Crear objeto
-   Persona persona;
-   Medico medico;
-   Afiliado afiliado;
-   OrdenMedica ordenm;
-
-    persona.Cargar();   // Llamar método
-    persona.Mostrar();  // Mostrar
-    cout << endl;
-    cout << endl;
-    cout << endl;
-    medico.Cargar();
-   // medico.Mostrar();
-    cout << endl;
-    cout << endl;
-    cout << endl;
-    afiliado.Cargar();   // Llamar método
-    afiliado.Mostrar();
-    cout << endl;
-    cout << endl;
-    cout << endl;
-    ordenm.Cargar();   // Llamar método
-    ordenm.Mostrar();
-    cout << endl;
-    cout << endl;
-    cout << endl;
-    fecha.Cargar();   // Llamar método
-    fecha.Mostrar();  // Mostrar
-
-    return 0;
-}
-*/

@@ -1,20 +1,19 @@
 #include <iostream>
 #include "Medico.h"
+
 using namespace std;
 
-
-void Medico::Cargar(){
-    Persona::Cargar();
+void Medico::Cargar() {
     cout << "Ingrese su numero de matricula: " << endl;
-    cin>>matricula;
-    cout <<"Ingrese su ID especialidad: " << endl;
-    cin>>especialidad;
+//    cin >> _matricula; // Recordá usar los atributos con o sin guion bajo según los declararon en Medico.h
+    cout << "Ingrese su ID especialidad: " << endl;
+//    cin >> _especialidad;
 }
 
-void Medico::Mostrar(){
-    if(estado == true){
-    Persona::Mostrar();
-    cout << "La matricula es: " << matricula << " y su especialidad es: " << especialidad << endl;
+void Medico::Mostrar() {
+    if (_estado == true) {
+        cout << "Nombre: " << getNombre() << " | Apellido: " << getApellido() << " | DNI: " << getDni() << endl;
+//        cout << "La matricula es: " << _matricula << " y su especialidad es: " << _especialidad << endl;
     }
 }
 

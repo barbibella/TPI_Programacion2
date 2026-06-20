@@ -18,7 +18,7 @@ class Afiliado: public Persona {
     void Cargar(int nroAuto);
     void Mostrar();
 
-    int getNroDeAfiliado();
-    int getIDObraSocial();
+    int getNroDeAfiliado() const;
+    int getIDObraSocial() const;
     void setIdObraSocial(int id);
 };

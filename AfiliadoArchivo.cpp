@@ -69,7 +69,7 @@ int AfiliadoArchivo::buscar(string dniBuscado){
 
     while(fread(&reg, sizeof(Afiliado), 1, p) == 1){
         // .c_str() para comparar el string con el char[] de Persona
-        if(strcmp(reg.getDni(), dniBuscado.c_str()) == 0){
+         if(reg.getDni() == dniBuscado){
             fclose(p);
             return pos;
         }

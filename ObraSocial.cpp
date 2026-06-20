@@ -26,7 +26,7 @@ void ObraSocial::Mostrar(){
 void ObraSocial::setIdObraSocial(int id){
     idObraSocial = id;
     }
-void ObraSocial::setNombre(string char* n){
+void ObraSocial::setNombre(std::string n){
     strcpy(nombre, n.c_str());
     }
 void ObraSocial::setEstado(bool e){

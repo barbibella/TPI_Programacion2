@@ -24,16 +24,13 @@ Afiliado::Afiliado(int nroAfiliado, int idObra, string mail, Fecha fechaNac,
 }
 
 void Afiliado::Cargar(int nroAuto){
-    cout << "--- AGREGAR AFILIADO ---" << endl << endl;
-    Persona::Cargar();
     nroDeAfiliado = nroAuto;
     ObraSocialArchivo archObraSocial;
     ObraSocialManager managerObraSocial;
-    cout << "SU NUMERO DE AFILIADO ES: " << nroDeAfiliado << endl;
     bool idValido = false;
 
     while (!idValido) {
-        cout << "Ingrese ID de Obra Social (o 0 para ver codigos disponibles): ";
+        cout << "Ingrese ID de Obra Social (o 0 para ver las Obras disponibles): ";
         cin >> idObraSocial;
 
         if (idObraSocial == 0) {
@@ -43,7 +40,7 @@ void Afiliado::Cargar(int nroAuto){
             system("cls");
 
             cout << "--- ASIGNAR OBRA SOCIAL ---" << endl;
-            cout << "Paciente: " << apellido << ", " << nombre << " (Nro: " << nroDeAfiliado << ")" << endl << endl;
+            cout << "Paciente: " << _apellido << ", " << _nombre << " (Nro: " << nroDeAfiliado << ")" << endl << endl;
         } else {
             if (idObraSocial >= 1 && idObraSocial <= 10){
                 int posObra = archObraSocial.buscar(idObraSocial);
@@ -57,7 +54,7 @@ void Afiliado::Cargar(int nroAuto){
             }
         }
     }
-    cout << "MAIL: "<< endl;
+    cout << "MAIL: ";
     cin >> email;
     while (strlen(email) <= 5 || strchr(email, '@') == NULL) {
         cout << "Mail invalido (Debe tener mas de 5 letras y contener '@'). Ingrese nuevamente: ";
@@ -67,11 +64,20 @@ void Afiliado::Cargar(int nroAuto){
 }
 
 void Afiliado::Mostrar(){
-    if(estado == true){
-        Persona::Mostrar();
-        cout << "AFILIADO: " << nroDeAfiliado
-             << ", ID: " << idObraSocial
-             << " Y MAIL: " << email << endl;
+    if(_estado == true){
+       cout << "Nombre: " << getNombre() << endl;
+        cout << "Apellido: " << getApellido() << endl;
+        cout << "DNI: " << getDni() << endl;
+        cout << "Telefono: " << getTelefono() << endl;
+
+        cout << "AFILIADO: #" << nroDeAfiliado
+             << " | ID Obra Social: " << idObraSocial
+             << " | MAIL: " << email << endl;
+
+        if (getEstado() == false) {
+        cout << " ❌ [DADO DE BAJA]";
+        }
+         cout << endl << "-----------------------------------------" << endl;
     }
 }
 
