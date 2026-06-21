@@ -208,12 +208,12 @@
 1781038500 c:\users\barbi\documents\github\tpi_programacion2\autorizacion.h
 	"fecha.h"
 
-1781038139 source:c:\users\barbi\documents\github\tpi_programacion2\autorizacionarchivo.cpp
+1782009610 source:c:\users\barbi\documents\github\tpi_programacion2\autorizacionarchivo.cpp
 	<cstring>
 	<iostream>
 	"AutorizacionArchivo.h"
 
-1781038139 c:\users\barbi\documents\github\tpi_programacion2\autorizacionarchivo.h
+1782009610 c:\users\barbi\documents\github\tpi_programacion2\autorizacionarchivo.h
 	"Autorizacion.h"
 
 1781999065 c:\users\barbi\documents\github\tpi_programacion2\auxiliares.h
