@@ -11,61 +11,55 @@ void OrigenDeLaOrdenManager::menu(){
 
     do{
         system("cls");
-        cout << "===== ORIGEN DE LAS ORDENES MEDICAS =====" << endl;
-        cout << "1. LISTAR ORIGEN DE ORDENES MEDICAS" << endl;
-        cout << "2. AGREGAR UN ORIGEN" << endl;
-        cout << "3. BUSCAR POR ID" << endl;
-        cout << "4. ELIMINAR" << endl;
-        cout << "0. SALIR" << endl;
+        cout << "===== ORDENES MEDICAS =====" << endl;
+        cout << "1. AGREGAR UNA ORDEN" << endl;
+        cout << "2. LISTAR TODOS" << endl;
+        cout << "3. LISTAR ACTIVOS" << endl;
+        cout << "4. LISTAR INACTIVOS" << endl;
+        cout << "5. BUSCAR POR ID" << endl;
+        cout << "6. MODIFICAR ORDEN MEDICA" << endl;
+        cout << "7. ELIMINAR UNA ORDEN" << endl;
+        cout << "8. REACTIVAR UNA ORDEN" << endl;
+        cout << "-------------------------" << endl;
+        cout << "0. VOLVER AL MENU PRINCIPAL" << endl;
         cout << "OPCION: ";
-
         cin >> opcion;
         system("cls");
 
         switch(opcion){
             case 1:
-                listarTodos();
-                break;
-            case 2:
                 agregar();
                 break;
+            case 2:
+                listarTodos();
+                break;
             case 3:
-                buscaPorID();
+                listarActivos();
                 break;
             case 4:
+                listarInactivos();
+                break;
+            case 5:
+                buscaPorID();
+                break;
+            //case 6:
+                //modificar();
+               // break;
+            case 7:
                 eliminar();
                 break;
-<<<<<<< Updated upstream
-            case 5:
+            case 8:
                 reactivar();
                 break;
             case 0:
                 cout << "Saliendo.." << endl;
                 break;
-=======
->>>>>>> Stashed changes
             default:
                 cout << "OPCION INCORRECTA" << endl;
                 system("pause");
                 break;
         }
     }while(opcion != 0);
-}
-
-void OrigenDeLaOrdenManager::listarTodos(){
-    OrigenDeLaOrdenArchivo archivo;
-
-    int cantidad = archivo.contarRegistros();
-
-    for(int i = 0; i < cantidad; i++){
-        OrigenDeLaOrden reg;
-
-        reg = archivo.leer(i);
-
-        if(reg.getEstado()){
-            reg.mostrar();
-        }
-    }
 }
 
 void OrigenDeLaOrdenManager::agregar(){
@@ -80,6 +74,57 @@ void OrigenDeLaOrdenManager::agregar(){
     } else {
         cout << "Error al guardar" << endl;
     }
+}
+
+void OrigenDeLaOrdenManager::listarTodos(){
+    OrigenDeLaOrdenArchivo archivo;
+
+    int cantidad = archivo.contarRegistros();
+
+    for(int i = 0; i < cantidad; i++){
+        OrigenDeLaOrden reg;
+
+        reg = archivo.leer(i);
+        reg.mostrar();
+    }
+
+    system("pause");
+}
+
+void OrigenDeLaOrdenManager::listarActivos(){
+    OrigenDeLaOrdenArchivo archivo;
+
+    int cantidad = archivo.contarRegistros();
+
+    for(int i = 0; i < cantidad; i++){
+        OrigenDeLaOrden reg;
+
+        reg = archivo.leer(i);
+
+        if(reg.getEstado()){
+            reg.mostrar();
+        }
+    }
+
+    system("pause");
+}
+
+void OrigenDeLaOrdenManager::listarInactivos(){
+    OrigenDeLaOrdenArchivo archivo;
+
+    int cantidad = archivo.contarRegistros();
+
+    for(int i=0; i < cantidad; i++){
+        OrigenDeLaOrden reg;
+
+        reg = archivo.leer(i);
+
+        if(!reg.getEstado()){
+            reg.mostrar();
+        }
+    }
+
+    system("pause");
 }
 
 int OrigenDeLaOrdenManager::generarId(){
@@ -150,3 +195,35 @@ void OrigenDeLaOrdenManager::eliminar(){
         cout << "Operacion cancelada" << endl;
     }
 }
+
+void OrigenDeLaOrdenManager::reactivar(){
+    OrigenDeLaOrdenArchivo archivo;
+
+    int id;
+
+    cout << "Ingrese el ID del origen de la orden: ";
+    cin >> id;
+
+    int pos = archivo.buscarId(id);
+
+    if(pos == -1){
+        cout << "No existe un origen de orden con ese ID" << endl;
+        return;
+    }
+
+    OrigenDeLaOrden reg = archivo.leer(pos);
+
+    if(reg.getEstado()){
+        cout << "El origen de la orden ya se encuentra activo" << endl;
+        return;
+    }
+
+    reg.setEstado(true);
+
+    if(archivo.modificar(reg, pos)){
+        cout << "Origen reactivado correctamente" << endl;
+    } else {
+        cout << "Error  al reactivar el orgien de la orden" << endl;
+    }
+}
+

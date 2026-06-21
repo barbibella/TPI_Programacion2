@@ -11,32 +11,44 @@ void TipoDeOrdenManager::menu(){
 
     do{
         system("cls");
-        cout << "===== TIPOS DE ORDENES =====" << endl;
-        cout << "1. LISTAR TODOS LOS TIPOS DE ORDENES" << endl;
-        cout << "2. AGREGAR UN TIPO DE ORDEN" << endl;
-        cout << "3. BUSCAR POR ID" << endl;
-        cout << "4. ELIMINAR UN TIPO DE ORDEN" << endl;
-        cout << "5. REACTIVAR UN TIPO DE ORDEN" << endl;
-        cout << "0. SALIR" << endl;
+        cout << "===== ORDENES MEDICAS =====" << endl;
+        cout << "1. AGREGAR UNA ORDEN" << endl;
+        cout << "2. LISTAR TODOS" << endl;
+        cout << "3. LISTAR ACTIVOS" << endl;
+        cout << "4. LISTAR INACTIVOS" << endl;
+        cout << "5. BUSCAR POR ID" << endl;
+        cout << "6. MODIFICAR ORDEN MEDICA" << endl;
+        cout << "7. ELIMINAR UNA ORDEN" << endl;
+        cout << "8. REACTIVAR UNA ORDEN" << endl;
+        cout << "-------------------------" << endl;
+        cout << "0. VOLVER AL MENU PRINCIPAL" << endl;
         cout << "OPCION: ";
-
         cin >> opcion;
         system("cls");
 
         switch(opcion){
             case 1:
-                listarTodos();
-                break;
-            case 2:
                 agregar();
                 break;
+            case 2:
+                listarTodos();
+                break;
             case 3:
-                buscaPorID();
+                listarActivos();
                 break;
             case 4:
-                eliminar();
+                listarInactivos();
                 break;
             case 5:
+                buscaPorID();
+                break;
+            //case 6:
+                //modificar();
+               // break;
+            case 7:
+                eliminar();
+                break;
+            case 8:
                 reactivar();
                 break;
             case 0:
@@ -48,22 +60,6 @@ void TipoDeOrdenManager::menu(){
                 break;
         }
     }while(opcion != 0);
-}
-
-void TipoDeOrdenManager::listarTodos(){
-    TipoDeOrdenArchivo archivo;
-
-    int cantidad = archivo.contarRegistros();
-
-    for(int i = 0; i < cantidad; i++){
-        TipoDeOrden reg;
-
-        reg = archivo.leer(i);
-
-        if(reg.getEstado()){
-            reg.mostrar();
-        }
-    }
 }
 
 void TipoDeOrdenManager::agregar(){
@@ -78,6 +74,57 @@ void TipoDeOrdenManager::agregar(){
     } else {
         cout << "Error al guardar el tipo de orden" << endl;
     }
+}
+
+void TipoDeOrdenManager::listarTodos(){
+    TipoDeOrdenArchivo archivo;
+
+    int cantidad = archivo.contarRegistros();
+
+    for(int i = 0; i < cantidad; i++){
+        TipoDeOrden reg;
+
+        reg = archivo.leer(i);
+        reg.mostrar();
+    }
+
+    system("pause");
+}
+
+void TipoDeOrdenManager::listarActivos(){
+    TipoDeOrdenManager archivo;
+
+    int cantidad = archivo.contarRegistros();
+
+    for(int i = 0; i < cantidad; i++){
+        TipoDeOrden reg;
+
+        reg = archivo.leer(i);
+
+        if(reg.getEstado()){
+            reg.mostrar();
+        }
+    }
+
+    system("pause");
+}
+
+void TipoDeOrdenManager::listarInactivos(){
+    TipoDeOrdenArchivo archivo;
+
+    int cantidad = archivo.contarRegistros();
+
+    for(int i=0; i < cantidad; i++){
+        TipoDeOrden reg;
+
+        reg = archivo.leer(i);
+
+        if(!reg.getEstado()){
+            reg.mostrar();
+        }
+    }
+
+    system("pause");
 }
 
 int TipoDeOrdenManager::generarId(){

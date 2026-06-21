@@ -9,7 +9,10 @@ class TipoDeOrdenManager{
         void menu();
         void agregar();
         void listarTodos();
+        void listarActivos();
+        void listarInactivos();
         void buscaPorID();
+        void modificar();
         void eliminar();
         void reactivar();
 };
