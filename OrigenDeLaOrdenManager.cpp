@@ -16,6 +16,7 @@ void OrigenDeLaOrdenManager::menu(){
         cout << "2. AGREGAR UN ORIGEN" << endl;
         cout << "3. BUSCAR POR ID" << endl;
         cout << "4. ELIMINAR" << endl;
+        cout << "5. REACTIVAR" << endl;
         cout << "0. SALIR" << endl;
         cout << "OPCION: ";
 
@@ -35,11 +36,17 @@ void OrigenDeLaOrdenManager::menu(){
             case 4:
                 eliminar();
                 break;
+            case 5:
+                reactivar();
+                break;
+            case 0:
+                cout << "Saliendo.." << endl;
+                break;
             default:
                 cout << "OPCION INCORRECTA" << endl;
+                system("pause");
                 break;
         }
-        system("pause");
     }while(opcion != 0);
 }
 
@@ -141,3 +148,35 @@ void OrigenDeLaOrdenManager::eliminar(){
         cout << "Operacion cancelada" << endl;
     }
 }
+
+void OrigenDeLaOrdenManager::reactivar(){
+    OrigenDeLaOrdenArchivo archivo;
+
+    int id;
+
+    cout << "Ingrese el ID del origen de la orden: ";
+    cin >> id;
+
+    int pos = archivo.buscarId(id);
+
+    if(pos == -1){
+        cout << "No existe un origen de orden con ese ID" << endl;
+        return;
+    }
+
+    OrigenDeLaOrden reg = archivo.leer(pos);
+
+    if(reg.getEstado()){
+        cout << "El origen de la orden ya se encuentra activo" << endl;
+        return;
+    }
+
+    reg.setEstado(true);
+
+    if(archivo.modificar(reg, pos)){
+        cout << "Origen reactivado correctamente" << endl;
+    } else {
+        cout << "Error  al reactivar el orgien de la orden" << endl;
+    }
+}
+

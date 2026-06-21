@@ -15,5 +15,6 @@ public:
     int contarRegistros();
     int buscar(std::string dni);
     void listarTodo();
-    Afiliado buscarPorDNI(std::string dni)
+    Afiliado buscarPorDNI(std::string dni);
+    int leerTodos(Afiliado vAfiliado[], int cantidad);
 };

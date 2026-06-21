@@ -1,9 +1,13 @@
 #include <iostream>
 #include <cstring>
 #include <string>
+#include "ObraSocial.h"
 #include "Afiliado.h"
 #include "AfiliadoArchivo.h"
 #include "AfiliadoManager.h"
+#include "ObraSocialArchivo.h"
+#include "ObraSocialManager.h"
+#include "Fecha.h"
 
 using namespace std;
 
@@ -46,7 +50,7 @@ void AfiliadoManager::Menu(){
     }while(opcion != 0);
 }
 
-Afiliado AfiliadoManager::crearAfiliado(){
+Afiliado AfiliadoManager::crearAfiliado() {
     string nombre, apellido, dni, telefono, mail;
     int idObraSocial, nuevoNumero;
     Fecha fNac;
@@ -54,23 +58,50 @@ Afiliado AfiliadoManager::crearAfiliado(){
     int cantidad = _repoAfiliado.contarRegistros();
     nuevoNumero = 1000 + cantidad;
 
-    cout << "--- CARGA DE DATOS AFILIADO ---" << endl;
-    cout << "SU NUMERO DE AFILIADO ASIGNADO ES: " << nuevoNumero << endl;
-
+    cout << "--- NUEVA ALTA DE AFILIADO ---" << endl << endl;
     cout << "Ingrese Nombre: ";
-    cin.ignore();
-    getline(cin, nombre);
+    cin >> nombre;
     cout << "Ingrese Apellido: ";
-    getline(cin, apellido);
+    cin >> apellido;
     cout << "Ingrese DNI: ";
     cin >> dni;
+    cout << "SU NUMERO DE AFILIADO ES: " << nuevoNumero << endl;
     cout << "Ingrese Telefono: ";
     cin >> telefono;
 
-    Afiliado reg(nuevoNumero, 0, "", fNac, nombre, apellido, dni, telefono, true);
-    reg.Cargar(nuevoNumero);
+    ObraSocialArchivo archObraSocial;
+    ObraSocialManager managerObraSocial;
 
-    return reg;
+   bool idValido = false;
+    while (!idValido) {
+        cout << "Ingrese ID de Obra Social (o 0 para ver codigos disponibles): ";
+        cin >> idObraSocial;
+
+        if (idObraSocial == 0) {
+            system("cls");
+            managerObraSocial.ListarTodas();
+            system("pause");
+            system("cls");
+
+            cout << "--- NUEVA ALTA DE AFILIADO ---" << endl << endl;
+            cout << "Paciente: " << apellido << ", " << nombre << " (Nro: " << nuevoNumero << ")" << endl << endl;
+        } else {
+            if (archObraSocial.buscar(idObraSocial) >= 0) {
+                idValido = true;
+            } else {
+                cout << "Error: El ID ingresado no existe. Intente de nuevo." << endl;
+                system("pause");
+                cout << "--------------------------------------------------" << endl;
+            }
+        }
+    }
+
+    cout << "MAIL: ";
+    cin >> mail;
+    fNac.Cargar();
+    Afiliado nuevoAfiliado(nuevoNumero, idObraSocial, mail, fNac, nombre, apellido, dni, telefono, true);
+
+    return nuevoAfiliado;
 }
 
 void AfiliadoManager::Agregar(){
@@ -86,8 +117,8 @@ void AfiliadoManager::ListarTodos(){
     cout << "--- LISTA GENERAL DE AFILIADOS ---" << endl << endl;
     int cantidad = _repoAfiliado.contarRegistros();
     for (int i = 0; i < cantidad; i++){
-        Afiliado a = _repoAfiliado.leer(i);
-        mostrarAfiliado(a);
+        Afiliado obj = _repoAfiliado.leer(i);
+        obj.Mostrar();
     }
 }
 
@@ -95,9 +126,9 @@ void AfiliadoManager::ListarActivos(){
     cout << "--- AFILIADOS ACTIVOS ---" << endl << endl;
     int cantidad = _repoAfiliado.contarRegistros();
     for (int i = 0; i < cantidad; i++){
-        Afiliado a = _repoAfiliado.leer(i);
-        if(a.getEstado() == true){
-           mostrarAfiliado(a);
+        Afiliado obj = _repoAfiliado.leer(i);
+        if(obj.getEstado() == true){
+           obj.Mostrar();
         }
     }
 }

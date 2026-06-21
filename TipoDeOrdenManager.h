@@ -11,4 +11,5 @@ class TipoDeOrdenManager{
         void listarTodos();
         void buscaPorID();
         void eliminar();
+        void reactivar();
 };

@@ -16,7 +16,7 @@ public:
     void Agregar();
     void ListarTodos();
     void ListarActivos();
-    void ListarInactivos();
+    bool ListarInactivos();
     void Modificar();
     void Eliminar();
     void AltaAfiliado();

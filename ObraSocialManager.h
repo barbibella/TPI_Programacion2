@@ -11,7 +11,7 @@ public:
     void Agregar();
     void ListarTodas();
     void ListarActivas();
-    void ListarInactivas();
+    bool ListarInactivas();
     void Modificar();
     void Eliminar();
     void AltaObraSocial();

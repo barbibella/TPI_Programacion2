@@ -82,7 +82,7 @@ int TipoDeOrdenArchivo::buscarId(int idTipoDeOrden){
     pFile = fopen("tipoDeOrden.dat", "rb");
 
     if(pFile == nullptr){
-        return 0;
+        return -1;
     }
 
     while(fread(&registro, sizeof(TipoDeOrden), 1, pFile)==1){
@@ -93,5 +93,5 @@ int TipoDeOrdenArchivo::buscarId(int idTipoDeOrden){
         pos++;
     }
     fclose(pFile);
-    return 0;
+    return -1;
 }

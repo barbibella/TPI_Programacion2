@@ -16,6 +16,7 @@ void OrdenMedicaManager::menu(){
         cout << "2. AGREGAR UNA ORDEN" << endl;
         cout << "3. BUSCAR POR ID UNA ORDEN" << endl;
         cout << "4. ELIMINAR UNA ORDEN" << endl;
+        cout << "5. REACTIVAR UNA ORDEN" << endl;
         cout << "0. SALIR" << endl;
         cout << "OPCION: ";
 
@@ -35,11 +36,17 @@ void OrdenMedicaManager::menu(){
             case 4:
                 eliminar();
                 break;
+            case 5:
+                reactivar();
+                break;
+            case 0:
+                cout << "Saliendo.." << endl;
+                break;
             default:
                 cout << "OPCION INCORRECTA" << endl;
+                system("pause");
                 break;
         }
-        system("pause");
     }while(opcion != 0);
 }
 
@@ -144,3 +151,33 @@ void OrdenMedicaManager::eliminar(){
     }
 }
 
+void OrdenMedicaManager::reactivar(){
+    OrdenMedicaArchivo archivo;
+
+    int id;
+
+    cout << "Ingrese el ID de la orden: ";
+    cin >> id;
+
+    int pos = archivo.buscarId(id);
+
+    if(pos == -1){
+        cout << "No existe una orden con ese ID" << endl;
+        return;
+    }
+
+    OrdenMedica reg = archivo.leer(pos);
+
+    if(reg.getEstado()){
+        cout << "La orden ya se encuentra activa" << endl;
+        return;
+    }
+
+    reg.setEstado(true);
+
+    if(archivo.modificar(reg,pos)){
+        cout << "Orden reactivada correctamente" << endl;
+    } else {
+        cout << "Error  al reactivar la orden" << endl;
+    }
+}
