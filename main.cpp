@@ -5,6 +5,7 @@
 #include "OrdenMedicaManager.h"
 #include "TipoDeOrdenManager.h"
 #include "OrigenDeLaOrdenManager.h"
+#include "AutorizacionManager.h"
 // #include "InformeManager.h"
 
 using namespace std;

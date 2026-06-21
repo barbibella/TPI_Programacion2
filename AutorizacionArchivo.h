@@ -19,4 +19,6 @@ public:
 
     int buscar(int codAutorizacion);
 
+    // void listarTodo() no hace falta porque lo tenemos en el manager
+
 };

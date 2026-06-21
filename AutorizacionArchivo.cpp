@@ -125,7 +125,21 @@ int AutorizacionArchivo::buscar(int codAutorizacion){
 
 
 /////////////////listar todo
+/*
+en el manager esta el listado
 
+void AutorizacionArchivo::listarTodo(){
+
+    int cant = contarRegistros();
+
+    for(int i = 0; i < cant; i++){
+
+        leer(i).Mostrar();
+        cout << endl;
+    }
+}
+
+/*
 
 
 
