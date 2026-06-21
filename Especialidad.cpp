@@ -16,7 +16,7 @@ Especialidad::Especialidad(int IdEspecialidad){
 void Especialidad::setIdEspecialidad()
 
 //GETTERS - MAI
-int:: Especialidad::getEspecialidad() const{return _IdEspecialidad;}
+int Especialidad::getEspecialidad() const{return _IdEspecialidad;}
 
 /*
 IdEspecialidad

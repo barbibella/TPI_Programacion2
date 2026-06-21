@@ -26,6 +26,7 @@ int main() {
         cout << " 3. GESTION DE ORDENES MEDICAS" << endl;
         cout << " 4. GESTION DE TIPOS DE ORDEN" << endl;
         cout << " 5. GESTION DE ORIGENES DE LA ORDEN" << endl;
+        cout << " 6. GESTION DE AUTORIZACIONES" << endl;
         cout << "--------------------------------------------------" << endl;
         cout << " 0. SALIR DEL SISTEMA" << endl;
         cout << "==================================================" << endl;
@@ -57,6 +58,14 @@ int main() {
                 OrigenDeLaOrdenManager oom;
                 oom.menu();
                 break;
+            }
+            case 6: {
+            AutorizacionManager aut;
+            aut.menu();
+            break;
+
+
+
             }
             case 0:
                 cout << endl << "Gracias por usar el sistema. Saliendo..." << endl;

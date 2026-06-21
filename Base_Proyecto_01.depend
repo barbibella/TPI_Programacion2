@@ -213,7 +213,7 @@
 1781038139 c:\users\barbi\documents\github\tpi_programacion2\autorizacionarchivo.h
 	"Autorizacion.h"
 
-1781967395 source:c:\users\budeguer\documents\github\tpi_programacion2\afiliado.cpp
+1782004319 source:c:\users\budeguer\documents\github\tpi_programacion2\afiliado.cpp
 	<iostream>
 	"Afiliado.h"
 	"ObraSocialArchivo.h"
@@ -223,13 +223,13 @@
 	"ObraSocialArchivo.h"
 	"ObraSocialManager.h"
 
-1781967395 c:\users\budeguer\documents\github\tpi_programacion2\afiliado.h
+1782004319 c:\users\budeguer\documents\github\tpi_programacion2\afiliado.h
 	<string>
 	"Persona.h"
 	"Fecha.h"
 
-1781967395 c:\users\budeguer\documents\github\tpi_programacion2\persona.h
-	<cstring>
+1782004319 c:\users\budeguer\documents\github\tpi_programacion2\persona.h
+	<string>
 
 1781967395 c:\users\budeguer\documents\github\tpi_programacion2\fecha.h
 
@@ -239,28 +239,32 @@
 1781967395 c:\users\budeguer\documents\github\tpi_programacion2\obrasocial.h
 	<string>
 
-1781967395 c:\users\budeguer\documents\github\tpi_programacion2\obrasocialmanager.h
+1782004319 c:\users\budeguer\documents\github\tpi_programacion2\obrasocialmanager.h
 	"ObraSocialArchivo.h"
 
-1781967395 source:c:\users\budeguer\documents\github\tpi_programacion2\afiliadoarchivo.cpp
+1782004319 source:c:\users\budeguer\documents\github\tpi_programacion2\afiliadoarchivo.cpp
 	<iostream>
 	<cstring>
 	"Afiliado.h"
 	"AfiliadoArchivo.h"
 
-1781967395 c:\users\budeguer\documents\github\tpi_programacion2\afiliadoarchivo.h
+1782004319 c:\users\budeguer\documents\github\tpi_programacion2\afiliadoarchivo.h
 	<cstring>
 	"Afiliado.h"
 
-1781967395 source:c:\users\budeguer\documents\github\tpi_programacion2\afiliadomanager.cpp
+1782004319 source:c:\users\budeguer\documents\github\tpi_programacion2\afiliadomanager.cpp
 	<iostream>
 	<cstring>
 	<string>
+	"ObraSocial.h"
 	"Afiliado.h"
 	"AfiliadoArchivo.h"
 	"AfiliadoManager.h"
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+	"Fecha.h"
 
-1781967395 c:\users\budeguer\documents\github\tpi_programacion2\afiliadomanager.h
+1782004319 c:\users\budeguer\documents\github\tpi_programacion2\afiliadomanager.h
 	"AfiliadoArchivo.h"
 	"Afiliado.h"
 
@@ -292,7 +296,7 @@
 	<iostream>
 	"Fecha.h"
 
-1781967395 source:c:\users\budeguer\documents\github\tpi_programacion2\main.cpp
+1782004319 source:c:\users\budeguer\documents\github\tpi_programacion2\main.cpp
 	<iostream>
 	"ObraSocialArchivo.h"
 	"ObraSocialManager.h"
@@ -300,42 +304,37 @@
 	"OrdenMedicaManager.h"
 	"TipoDeOrdenManager.h"
 	"OrigenDeLaOrdenManager.h"
-	"Fecha.h"
+
+1782004319 c:\users\budeguer\documents\github\tpi_programacion2\ordenmedicamanager.h
+
+1782004319 c:\users\budeguer\documents\github\tpi_programacion2\tipodeordenmanager.h
+
+1782004319 c:\users\budeguer\documents\github\tpi_programacion2\origendelaordenmanager.h
+
+1782004319 c:\users\budeguer\documents\github\tpi_programacion2\medico.h
 	"Persona.h"
-	"Medico.h"
-	"Afiliado.h"
-	"OrdenMedica.h"
-	"AfiliadoManager.h"
-	"ObraSocialArchivo.h"
-	"ObraSocialManager.h"
-
-1781967395 c:\users\budeguer\documents\github\tpi_programacion2\ordenmedicamanager.h
-
-1781967395 c:\users\budeguer\documents\github\tpi_programacion2\tipodeordenmanager.h
-
-1781967395 c:\users\budeguer\documents\github\tpi_programacion2\origendelaordenmanager.h
-
-1781967395 c:\users\budeguer\documents\github\tpi_programacion2\medico.h
-	"Persona.h"
+	"auxiliares.h"
+	<cstring>
 
 1781967395 c:\users\budeguer\documents\github\tpi_programacion2\ordenmedica.h
 	"Fecha.h"
 	<string>
 
-1781967395 source:c:\users\budeguer\documents\github\tpi_programacion2\medico.cpp
+1782004319 source:c:\users\budeguer\documents\github\tpi_programacion2\medico.cpp
 	<iostream>
 	"Medico.h"
 
-1781967395 source:c:\users\budeguer\documents\github\tpi_programacion2\medicoarchivo.cpp
+1782004319 source:c:\users\budeguer\documents\github\tpi_programacion2\medicoarchivo.cpp
 	<iostream>
 	<cstring>
 	"Medico.h"
 	"MedicoArchivo.h"
 
-1781967395 c:\users\budeguer\documents\github\tpi_programacion2\medicoarchivo.h
+1782004319 c:\users\budeguer\documents\github\tpi_programacion2\medicoarchivo.h
 	"Medico.h"
+	<cstring>
 
-1781967395 source:c:\users\budeguer\documents\github\tpi_programacion2\obrasocial.cpp
+1782004319 source:c:\users\budeguer\documents\github\tpi_programacion2\obrasocial.cpp
 	<iostream>
 	<cstring>
 	"Afiliado.h"
@@ -348,7 +347,7 @@
 	"ObraSocial.h"
 	"ObraSocialArchivo.h"
 
-1781967395 source:c:\users\budeguer\documents\github\tpi_programacion2\obrasocialmanager.cpp
+1782004319 source:c:\users\budeguer\documents\github\tpi_programacion2\obrasocialmanager.cpp
 	<iostream>
 	"ObraSocial.h"
 	"ObraSocialArchivo.h"
@@ -360,7 +359,7 @@
 	<string>
 	<cstring>
 
-1781967395 source:c:\users\budeguer\documents\github\tpi_programacion2\ordenmedicaarchivo.cpp
+1782004319 source:c:\users\budeguer\documents\github\tpi_programacion2\ordenmedicaarchivo.cpp
 	<iostream>
 	<cstring>
 	"OrdenMedica.h"
@@ -369,7 +368,7 @@
 1781967395 c:\users\budeguer\documents\github\tpi_programacion2\ordenmedicaarchivo.h
 	"OrdenMedica.h"
 
-1781967395 source:c:\users\budeguer\documents\github\tpi_programacion2\ordenmedicamanager.cpp
+1782004319 source:c:\users\budeguer\documents\github\tpi_programacion2\ordenmedicamanager.cpp
 	<iostream>
 	<cstring>
 	"OrdenMedica.h"
@@ -385,7 +384,7 @@
 1781967395 c:\users\budeguer\documents\github\tpi_programacion2\origendelaorden.h
 	<string>
 
-1781967395 source:c:\users\budeguer\documents\github\tpi_programacion2\origendelaordenarchivo.cpp
+1782004319 source:c:\users\budeguer\documents\github\tpi_programacion2\origendelaordenarchivo.cpp
 	<iostream>
 	<cstring>
 	"OrigenDeLaOrden.h"
@@ -394,15 +393,16 @@
 1781967395 c:\users\budeguer\documents\github\tpi_programacion2\origendelaordenarchivo.h
 	"OrigenDeLaOrden.h"
 
-1781967395 source:c:\users\budeguer\documents\github\tpi_programacion2\origendelaordenmanager.cpp
+1782004319 source:c:\users\budeguer\documents\github\tpi_programacion2\origendelaordenmanager.cpp
 	<iostream>
 	<cstring>
 	"OrigenDeLaOrden.h"
 	"OrigenDeLaOrdenArchivo.h"
 	"OrigenDeLaOrdenManager.h"
 
-1781967395 source:c:\users\budeguer\documents\github\tpi_programacion2\persona.cpp
+1782004319 source:c:\users\budeguer\documents\github\tpi_programacion2\persona.cpp
 	<iostream>
+	<cstring>
 	"Persona.h"
 
 1781967395 source:c:\users\budeguer\documents\github\tpi_programacion2\tipodeorden.cpp
@@ -414,7 +414,7 @@
 1781967395 c:\users\budeguer\documents\github\tpi_programacion2\tipodeorden.h
 	<string>
 
-1781967395 source:c:\users\budeguer\documents\github\tpi_programacion2\tipodeordenarchivo.cpp
+1782004319 source:c:\users\budeguer\documents\github\tpi_programacion2\tipodeordenarchivo.cpp
 	<iostream>
 	<cstring>
 	"TipoDeOrden.h"
@@ -423,7 +423,7 @@
 1781967395 c:\users\budeguer\documents\github\tpi_programacion2\tipodeordenarchivo.h
 	"TipoDeOrden.h"
 
-1781967395 source:c:\users\budeguer\documents\github\tpi_programacion2\tipodeordenmanager.cpp
+1782004319 source:c:\users\budeguer\documents\github\tpi_programacion2\tipodeordenmanager.cpp
 	<iostream>
 	<cstring>
 	"TipoDeOrden.h"
@@ -437,4 +437,7 @@
 	"AutorizacionArchivo.h"
 
 1781969518 c:\users\budeguer\documents\github\tpi_programacion2\autorizacionmanager.h
+
+1782004319 c:\users\budeguer\documents\github\tpi_programacion2\auxiliares.h
+	<string>
 
