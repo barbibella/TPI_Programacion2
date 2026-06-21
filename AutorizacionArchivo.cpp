@@ -65,19 +65,62 @@ Autorizacion AutorizacionArchivo::leer(int pos){
 
 
 
-
-
-
 ///////////contar reg
 
+int AutorizacionArchivo::contarRegistros(){
 
+    FILE* p;
+
+    p = fopen(nombreArchivo, "rb");
+
+    if(p == NULL){
+        return -1;
+    }
+
+    fseek(p, 0, SEEK_END);
+
+    int cantidad = ftell(p) / sizeof(Autorizacion);
+
+    fclose(p);
+
+    return cantidad;
+}
 
 
 
 
 ///////////// buscar por cod Auto
 
+int AutorizacionArchivo::buscar(int codAutorizacion){
 
+    Autorizacion reg;
+
+    int pos = 0;
+
+    FILE* p;
+
+    p = fopen(nombreArchivo, "rb");
+
+    if(p == NULL){
+        return -1;
+    }
+
+    while(fread(&reg, sizeof(Autorizacion), 1, p) == 1){
+
+        if(reg.getCodAutorizacion() == codAutorizacion){
+
+            fclose(p);
+
+            return pos;
+        }
+
+        pos++;
+    }
+
+    fclose(p);
+
+    return -1;
+}
 
 
 
