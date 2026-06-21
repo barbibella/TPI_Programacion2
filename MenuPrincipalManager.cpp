@@ -1,6 +1,3 @@
-/*
-AHORA ESTO ESTA EN MenuPrincipalManager.
-
 #include <iostream>
 #include "ObraSocialArchivo.h"
 #include "ObraSocialManager.h"
@@ -9,6 +6,7 @@ AHORA ESTO ESTA EN MenuPrincipalManager.
 #include "TipoDeOrdenManager.h"
 #include "OrigenDeLaOrdenManager.h"
 #include "AutorizacionManager.h"
+#include "MenuPrincipalManager.h"
 // #include "InformeManager.h"
 
 using namespace std;
@@ -83,28 +81,3 @@ int main() {
 
     return 0;
 }
-
-
-
-*/
-
-#include "MenuPrincipalManager.h"
-
-int main(){
-
-    MenuPrincipalManager menu;
-    menu.menu();
-
-    return 0;
-}
-
-
-
-
-
-
-
-
-
-
-

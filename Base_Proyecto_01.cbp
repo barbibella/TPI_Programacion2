@@ -61,6 +61,8 @@
 		<Unit filename="MedicoArchivo.h" />
 		<Unit filename="MedicoManager.cpp" />
 		<Unit filename="MedicoManager.h" />
+		<Unit filename="MenuPrincipalManager.cpp" />
+		<Unit filename="MenuPrincipalManager.h" />
 		<Unit filename="ObraSocial.cpp" />
 		<Unit filename="ObraSocial.dat" />
 		<Unit filename="ObraSocial.h" />
