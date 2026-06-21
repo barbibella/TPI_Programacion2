@@ -42,18 +42,25 @@
 		<Unit filename="Autorizacion.h" />
 		<Unit filename="AutorizacionArchivo.cpp" />
 		<Unit filename="AutorizacionArchivo.h" />
-		<Unit filename="AutorizacionManager.cpp" />
-		<Unit filename="AutorizacionManager.h" />
+		<Unit filename="Base_Proyecto_01.cbp" />
+		<Unit filename="Base_Proyecto_01.depend" />
+		<Unit filename="Base_Proyecto_01.layout" />
+		<Unit filename="ConfiguracionManager.cpp" />
 		<Unit filename="ConfiguracionManager.h" />
 		<Unit filename="Especialidad.cpp" />
 		<Unit filename="Especialidad.h" />
+		<Unit filename="EspecialidadArchivo.cpp" />
+		<Unit filename="EspecialidadArchivo.h" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
 		<Unit filename="Medico.cpp" />
 		<Unit filename="Medico.h" />
 		<Unit filename="MedicoArchivo.cpp" />
 		<Unit filename="MedicoArchivo.h" />
+		<Unit filename="MedicoManager.cpp" />
+		<Unit filename="MedicoManager.h" />
 		<Unit filename="ObraSocial.cpp" />
+		<Unit filename="ObraSocial.dat" />
 		<Unit filename="ObraSocial.h" />
 		<Unit filename="ObraSocialArchivo.cpp" />
 		<Unit filename="ObraSocialArchivo.h" />
@@ -82,6 +89,9 @@
 		<Unit filename="TipoDeOrdenArchivo.h" />
 		<Unit filename="TipoDeOrdenManager.cpp" />
 		<Unit filename="TipoDeOrdenManager.h" />
+		<Unit filename="afiliados.dat" />
+		<Unit filename="auxiliares.cpp" />
+		<Unit filename="auxiliares.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="tipoDeOrden.dat" />
 		<Extensions />
