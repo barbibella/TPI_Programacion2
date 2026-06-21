@@ -3,7 +3,7 @@
 #include "Autorizacion.h"
 using namespace std;
 
-
+/////prueba de que se cambio algo
 
 ///////Cons
 
