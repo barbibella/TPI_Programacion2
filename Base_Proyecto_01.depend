@@ -75,25 +75,28 @@
 	"TipoDeOrdenManager.h"
 	"OrigenDeLaOrdenManager.h"
 
-1777954706 c:\users\barbi\documents\github\tpi_programacion2\medico.h
+1782001312 c:\users\barbi\documents\github\tpi_programacion2\medico.h
 	"Persona.h"
+	"auxiliares.h"
+	<cstring>
 
 1781048305 c:\users\barbi\documents\github\tpi_programacion2\ordenmedica.h
 	"Fecha.h"
 	<string>
 
-1781975381 source:c:\users\barbi\documents\github\tpi_programacion2\medico.cpp
+1782001312 source:c:\users\barbi\documents\github\tpi_programacion2\medico.cpp
 	<iostream>
 	"Medico.h"
 
-1780862826 source:c:\users\barbi\documents\github\tpi_programacion2\medicoarchivo.cpp
+1781999064 source:c:\users\barbi\documents\github\tpi_programacion2\medicoarchivo.cpp
 	<iostream>
 	<cstring>
 	"Medico.h"
 	"MedicoArchivo.h"
 
-1777954326 c:\users\barbi\documents\github\tpi_programacion2\medicoarchivo.h
+1781999064 c:\users\barbi\documents\github\tpi_programacion2\medicoarchivo.h
 	"Medico.h"
+	<cstring>
 
 1781975082 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocial.cpp
 	<iostream>
@@ -125,7 +128,7 @@
 	"ObraSocialArchivo.h"
 	"ObraSocialManager.h"
 
-1781022674 source:c:\users\barbi\documents\github\tpi_programacion2\ordenmedicaarchivo.cpp
+1781999064 source:c:\users\barbi\documents\github\tpi_programacion2\ordenmedicaarchivo.cpp
 	<iostream>
 	<cstring>
 	"OrdenMedica.h"
@@ -134,14 +137,14 @@
 1781022674 c:\users\barbi\documents\github\tpi_programacion2\ordenmedicaarchivo.h
 	"OrdenMedica.h"
 
-1781652669 source:c:\users\barbi\documents\github\tpi_programacion2\ordenmedicamanager.cpp
+1782000108 source:c:\users\barbi\documents\github\tpi_programacion2\ordenmedicamanager.cpp
 	<iostream>
 	<cstring>
 	"OrdenMedica.h"
 	"OrdenMedicaArchivo.h"
 	"OrdenMedicaManager.h"
 
-1781022674 c:\users\barbi\documents\github\tpi_programacion2\ordenmedicamanager.h
+1781999064 c:\users\barbi\documents\github\tpi_programacion2\ordenmedicamanager.h
 
 1781652669 source:c:\users\barbi\documents\github\tpi_programacion2\origendelaorden.cpp
 	<iostream>
@@ -152,7 +155,7 @@
 1781022674 c:\users\barbi\documents\github\tpi_programacion2\origendelaorden.h
 	<string>
 
-1781022674 source:c:\users\barbi\documents\github\tpi_programacion2\origendelaordenarchivo.cpp
+1781999064 source:c:\users\barbi\documents\github\tpi_programacion2\origendelaordenarchivo.cpp
 	<iostream>
 	<cstring>
 	"OrigenDeLaOrden.h"
@@ -161,14 +164,14 @@
 1781022674 c:\users\barbi\documents\github\tpi_programacion2\origendelaordenarchivo.h
 	"OrigenDeLaOrden.h"
 
-1781652669 source:c:\users\barbi\documents\github\tpi_programacion2\origendelaordenmanager.cpp
+1782000108 source:c:\users\barbi\documents\github\tpi_programacion2\origendelaordenmanager.cpp
 	<iostream>
 	<cstring>
 	"OrigenDeLaOrden.h"
 	"OrigenDeLaOrdenArchivo.h"
 	"OrigenDeLaOrdenManager.h"
 
-1781652669 c:\users\barbi\documents\github\tpi_programacion2\origendelaordenmanager.h
+1781999064 c:\users\barbi\documents\github\tpi_programacion2\origendelaordenmanager.h
 
 1781652670 source:c:\users\barbi\documents\github\tpi_programacion2\tipodeorden.cpp
 	<iostream>
@@ -179,9 +182,9 @@
 1781022674 c:\users\barbi\documents\github\tpi_programacion2\tipodeorden.h
 	<string>
 
-1781652670 c:\users\barbi\documents\github\tpi_programacion2\tipodeordenmanager.h
+1781999065 c:\users\barbi\documents\github\tpi_programacion2\tipodeordenmanager.h
 
-1781022674 source:c:\users\barbi\documents\github\tpi_programacion2\tipodeordenarchivo.cpp
+1781999065 source:c:\users\barbi\documents\github\tpi_programacion2\tipodeordenarchivo.cpp
 	<iostream>
 	<cstring>
 	"TipoDeOrden.h"
@@ -190,7 +193,7 @@
 1781022674 c:\users\barbi\documents\github\tpi_programacion2\tipodeordenarchivo.h
 	"TipoDeOrden.h"
 
-1781652670 source:c:\users\barbi\documents\github\tpi_programacion2\tipodeordenmanager.cpp
+1782000108 source:c:\users\barbi\documents\github\tpi_programacion2\tipodeordenmanager.cpp
 	<iostream>
 	<cstring>
 	"TipoDeOrden.h"
@@ -212,4 +215,11 @@
 
 1781038139 c:\users\barbi\documents\github\tpi_programacion2\autorizacionarchivo.h
 	"Autorizacion.h"
+
+1781999065 c:\users\barbi\documents\github\tpi_programacion2\auxiliares.h
+	<string>
+
+1781999065 source:c:\users\barbi\documents\github\tpi_programacion2\auxiliares.cpp
+	"auxiliares.h"
+	<iostream>
 

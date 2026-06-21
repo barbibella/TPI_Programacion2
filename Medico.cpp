@@ -33,7 +33,7 @@ void Medico::setEspecialidad(int especialidad){
 
 //GETTERS - MAI
 int Medico::getMatricula () const{return _matricula;}
-string Medico::getEspecialidad () const{ return _especialidad;}
+int Medico::getEspecialidad () const{ return _especialidad;}
 
 
 /* ===< ESPECIALIDADES >===

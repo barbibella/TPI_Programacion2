@@ -19,7 +19,7 @@ class Medico: public Persona{
 
 //GETTERS - MAI
     int getMatricula () const;
-    string getEspecialidad() const;
+    int getEspecialidad() const;
 };
 
 

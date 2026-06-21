@@ -18,4 +18,5 @@ public:
     bool actualizar(int pos, const Especialidad &reg);
     bool existeEspecialidad (int especialidad);
     Especialidad leer (int pos);
+    bool existeIdEspecialidad(int id);
 };
