@@ -42,6 +42,8 @@
 		<Unit filename="Autorizacion.h" />
 		<Unit filename="AutorizacionArchivo.cpp" />
 		<Unit filename="AutorizacionArchivo.h" />
+		<Unit filename="AutorizacionManager.cpp" />
+		<Unit filename="AutorizacionManager.h" />
 		<Unit filename="Base_Proyecto_01.cbp" />
 		<Unit filename="Base_Proyecto_01.depend" />
 		<Unit filename="Base_Proyecto_01.layout" />
