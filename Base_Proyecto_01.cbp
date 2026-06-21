@@ -48,7 +48,6 @@
 		<Unit filename="Base_Proyecto_01.depend" />
 		<Unit filename="Base_Proyecto_01.layout" />
 		<Unit filename="ConfiguracionManager.cpp" />
-		<Unit filename="ConfiguracionManager.h" />
 		<Unit filename="Especialidad.cpp" />
 		<Unit filename="Especialidad.h" />
 		<Unit filename="EspecialidadArchivo.cpp" />

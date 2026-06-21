@@ -11,7 +11,8 @@
 
 using namespace std;
 
-int main() {
+void MenuPrincipalManager::menu() {
+
     ObraSocialArchivo archObra;
     archObra.crearObrasSocialesPredeterminadas();
 

@@ -19,3 +19,6 @@ std::string cargarCadenaValidada(string mensaje, int maximo);
 3)Realizar InformesManager.cpp .h ( A)cantidad mensual de ordenes autorizadas y rechazadas. b) cantidad de ordenes medicas por tipo
 c) cantidad de ordenes emitidas por medico. d) cantidad de ordenes por especialidad medica. e)Obras sociales con mayor cantidad de
 afiliados atendidos
+
+*/
+
