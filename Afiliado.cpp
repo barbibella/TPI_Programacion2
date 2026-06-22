@@ -75,7 +75,7 @@ void Afiliado::Mostrar(){
              << " | MAIL: " << email << endl;
 
         if (getEstado() == false) {
-        cout << " ❌ [DADO DE BAJA]";
+        cout << "[DADO DE BAJA]";
         }
          cout << endl << "-----------------------------------------" << endl;
     }
