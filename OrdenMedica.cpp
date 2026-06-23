@@ -88,7 +88,7 @@ void OrdenMedica::cargar(){
     AfiliadoArchivo archivoAfiliado;
     MedicoArchivo archivoMedico;
     TipoDeOrdenArchivo archivoTipo;
-    OrigenArchivo archivoOrigen;
+    OrigenDeLaOrdenArchivo archivoOrigen;
 
     string dni;
 
