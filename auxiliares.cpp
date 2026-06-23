@@ -61,3 +61,66 @@ int cargarEnteroValidado(string mensaje, int minimo, int maximo){
 
     return valor;
 }
+
+
+///Modificaciones Medico
+void modificarNombre(Medico &reg){
+    string nombre;
+
+    nombre = cargarCadenaValidada("Ingrese Nombre: ", 30);
+
+    reg.setNombre(nombre);
+}
+
+void modificarApellido(Medico &reg){
+    string apellido;
+
+    apellido = cargarCadenaValidada("Ingrese Apellido: ", 30);
+
+    reg.setApellido(apellido);
+}
+
+void modificarDNI(Medico &reg){
+    string dni;
+
+    dni = cargarCadenaValidada("Ingrese DNI: ", 15);
+
+    reg.setDNI(dni);
+}
+
+void modificarTelefono(Medico &reg){
+    string telefono;
+
+    telefono = cargarCadenaValidada("Ingrese telefono: ", 20);
+
+    reg.setTelefono(telefono);
+}
+
+void modificarMatricula(Medico &reg){
+    int matricula;
+
+    matricula = cargarEnteroValidado("Ingrese Matricula: ", 0, 7);
+
+    reg.setMatricula(matricula);
+}
+
+void modificarEspecialidad(Medico &reg){
+    int especialidad;
+
+    especialidad = cargarEnteroValidado("Ingrese Especialidad: ", 0, 10 );
+
+    reg.setEspecialidad(especialidad);
+}
+
+void modificarTodo(Medico &reg){
+
+    modificarNombre(reg);
+    modificarApellido(reg);
+    modificarDni(reg);
+    modificarTelefono(reg);
+    modificarEspecialidad(reg);
+    modificarMatricula(reg);
+
+
+
+    }

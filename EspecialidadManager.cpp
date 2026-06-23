@@ -5,10 +5,8 @@
 #include "EspecialidadManager.h"
 #include "auxiliares.h"
 
-//--- MAI ---
-
 using namespace std;
-//CONSTRUCTOR
+//CONSTRUCTOR //--- MAI ---
 EspecialidadManager::EspecialidadManager()
 : _repoEspecialidad(){
 }
@@ -60,10 +58,53 @@ void EspecialidadManager::listarEspecialidad(){
 }
 
 
-void mostrarEspecialidad(const Especialidad &reg){
+void  EspecialidadManager::mostrarEspecialidad(const Especialidad &reg){
     cout << "ID #" << reg.getEspecialidad() << endl;
     cout << "Nombre Especialidad: " << reg.getNombreEspecialidad() << endl;
     cout << "Descripcion: " << reg.getDescripcionEspecialidad() << endl;
     cout << "Formacion: " << reg.getFormacion() << endl;
 
+}
+
+///Eliminar Especialidad
+void EspecialidadManager::eliminarEspecialidad(){
+    int idEspecialidad = cargarEnteroValidado("Ingrese el id a eliminar: ", 0, _repoEspecialidad.getCantidadRegistros());
+
+    int _pos = _repoEspecialidad.buscarIdEspecialidad(idEspecialidad);
+
+    if (_pos == -1){
+        cout << "El id no existe en el sistema" << endl;
+        return;
+    }
+
+    Especialidad _regEspecialidad = _repoEspecialidad.leer(_pos);
+
+    mostrarEspecialidad(_regEspecialidad);
+
+    cout << "--------------------------------" << endl;
+
+    if(_regEspecialidad.getEstado() == "Inactivo"){
+        cout << "La Especialidad ya esta dada de baja" << endl;
+        return;
+    }
+
+    bool  _elimina = cargarEnteroValidado("Esta seguro que desea eliminar esta matricula? 1-Si 0-No", 0, 1);
+
+    if (_elimina != 1){
+        _elimina = false;
+    }
+
+    if(!_elimina){
+        cout <<"La matricula no fue dada de baja! "<<endl;
+        return;
+    }
+
+    _regEspecialidad.setEstado(2);  ///estado 2 es inactivo
+
+    if (_repoEspecialidad.actualizar(_pos, _regEspecialidad)){
+        cout << "Actualizado exitosamente!" << endl;
+    }
+    else {
+        cout << "No se pudo actualizar!" << endl;
+    }
 }

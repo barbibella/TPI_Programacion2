@@ -10,6 +10,14 @@ int cargarEnteroValidado(string mensaje, int minimo, int maximo);
 std::string cargarCadena();
 std::string cargarCadenaValidada(string mensaje, int maximo);
 
+void modificarNombre(Medico &reg);
+void modificarApellido (Medico &reg);
+void modificarDNI (Medico &reg);
+void modificarTelefono (Medico &reg);
+void modificarMatricula (Medico &reg);
+void modificarEspecialidad (Medico &reg);
+void modificarTodo (Medico &reg);
+
 
 
 

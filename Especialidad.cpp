@@ -6,14 +6,15 @@ using namespace std;
 //MAI
 //CONSTRUCTOR - MAI
 Especialidad::Especialidad()
-: _idEspecialidad(-1), _idFormacion(-1), _nombreEspecialidad(""), _descripcionEspecialidad(""){}
+: _idEspecialidad(-1), _idFormacion(-1), _nombreEspecialidad(""), _descripcionEspecialidad(""), _estado(2){}
 
-Especialidad::Especialidad(int idEspecialidad, int idFormacion, string nombreEspecialidad, string descripcionEspecialidad)
+Especialidad::Especialidad(int idEspecialidad, int idFormacion, string nombreEspecialidad, string descripcionEspecialidad, int estado)
 {
 	setIdEspecialidad(idEspecialidad);
 	setNombreEspecialidad(nombreEspecialidad);
 	setDescripcionEspecialidad(descripcionEspecialidad);
 	setIdFormacion(idFormacion);
+	setEstado(estado);
 }
 
 
@@ -45,11 +46,19 @@ void Especialidad::setIdFormacion(int idFormacion){
     _idFormacion = idFormacion;
 }
 
+void Especialidad::setEstado(int estado){
+    _estado = estado;
+}
+
 //GETTERS - MAI
-int Especialidad::getEspecialidad() const{return _idEspecialidad;}
+int Especialidad::getIdEspecialidad() const{return _idEspecialidad;}
 string Especialidad::getNombreEspecialidad() const {return _nombreEspecialidad;}
 string Especialidad::getDescripcionEspecialidad() const {return _descripcionEspecialidad;}
 string Especialidad::getFormacion() const{
     string formacion[3] = { "", "Residencia", "Concurrencia"};
     return formacion[_idFormacion-1];
+     }
+string Especialidad::getEstado() const{
+    string estado[2] = { "Activo", "Inactivo"};
+    return estado[_estado-1];
      }

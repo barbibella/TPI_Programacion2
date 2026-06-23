@@ -15,7 +15,8 @@ public:
     void guardarEspecialidad();//crear
     void listarEspecialidad();// LISTAR
     void modificarEspecialidad();
-    void informacionEspecialidad();
+    void informacionEspecialidad(); //falta
+    void eliminarEspecialidad();    // puse la firma, falta el desarrollo en el cpp
     Especialidad cargar();
 
 private:
