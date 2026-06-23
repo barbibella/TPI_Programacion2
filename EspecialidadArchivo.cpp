@@ -148,3 +148,7 @@ FILE *pFile;
 
 }
 
+//Metodo ID Incremental: Devuelve un nuevo nro incremental al crear un nuevo ID Especialidad
+int EspecialidadArchivo::getNuevoId(){
+    return getCantidadRegistros() + 1;
+}
