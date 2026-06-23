@@ -14,7 +14,8 @@ private:
 
 	public:
 		Especialidad();
-		Especialidad(int idEspecialidad, int idFormacion, string nombreEspecialidad, string descripcionEspecialidad, int estado);
+	    Especialidad(int idEspecialidad, int idFormacion, string nombreEspecialidad, string descripcionEspecialidad, int estado);
+
 
 
 //SETTERS - MAI

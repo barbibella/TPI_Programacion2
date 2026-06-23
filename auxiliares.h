@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "Medico.h"
+class Medico;
 
 using namespace std;
 

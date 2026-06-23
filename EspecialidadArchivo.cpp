@@ -112,7 +112,7 @@ FILE *pFile;
     }
 
     while (fread(&reg, sizeof(Especialidad), 1, pFile)){
-        if (reg.getIdEspecialidad() == IdEspecialidad){
+        if (reg.getIdEspecialidad() == especialidad){
             result = pos;
             break;
         }

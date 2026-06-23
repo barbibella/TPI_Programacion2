@@ -83,12 +83,12 @@ void modificarApellido(Medico &reg){
     reg.setApellido(apellido);
 }
 
-void modificarDNI(Medico &reg){
+void modificarDni(Medico &reg){
     string dni;
 
     dni = cargarCadenaValidada("Ingrese DNI: ", 15);
 
-    reg.setDNI(dni);
+    reg.setDni(dni);
 }
 
 void modificarTelefono(Medico &reg){

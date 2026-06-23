@@ -1,4 +1,3 @@
-#pragma once
 #include "OrdenMedica.h"
 #include "AfiliadoArchivo.h"
 #include "MedicoArchivo.h"

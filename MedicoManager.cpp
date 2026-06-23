@@ -76,7 +76,7 @@ Medico MedicoManager::cargar(){
         }
     }while (existe);
 
-    especialidad = cargarEnteroValidado("1 - Medicina clinica\n2 - Pediatria\n3 - Traumatologia\n4 - Oftalmologia\n5 - Cirugia\n6 - Neumonologia\n7 - Cardiologia\n8 - Neurologia\n9 - Gastroenterologia\n10- Ginecologia", 0, 11)
+    especialidad = cargarEnteroValidado("1 - Medicina clinica\n2 - Pediatria\n3 - Traumatologia\n4 - Oftalmologia\n5 - Cirugia\n6 - Neumonologia\n7 - Cardiologia\n8 - Neurologia\n9 - Gastroenterologia\n10- Ginecologia", 0, 11);
     return Medico(matricula, especialidad, nombre, apellido, dni, telefono, 1);
 }
 
@@ -199,7 +199,7 @@ void MedicoManager::modificarMedico(){
 
     system("cls");
 
-    int opcion = mostrarMenuModificar();
+    opcion = mostrarMenuModificar();
     EjecutarOpcion(opcion, reg);
 
     if (_repoMedico.actualizar(pos, reg)){
@@ -224,14 +224,14 @@ int mostrarMenuModificar(){
 		cout << "6 - Todo " << endl;
 		cout << "Ingrese una opcion: " ;
     cin >> opcion;
-    } while (opcion > 0 OR opcion < cantOpciones);
+    } while (opcion > 0 || opcion < 7);
     return opcion;
 }
 
-void EjecutarOpcion(int opcion, const Medico &reg){
+void EjecutarOpcion(int opcion, Medico &reg){
     switch(opcion){
     case 1:
-        reg = modificarNombre(reg);
+         modificarNombre(reg);
     }
 }
 void MedicoManager::eliminarMedico(){   // MAI - DAR DE BAJA LOGICA
@@ -284,13 +284,12 @@ void MedicoManager::eliminarMedico(){   // MAI - DAR DE BAJA LOGICA
 
 void MedicoManager::altaMedico(){  //=MAI= ALTA LOGICA
 
-    int id,recupera;
+    int matricula,recupera;
     bool alta;
-
 
     if(listarInactivos()==true){
     cout << "Ingrese matricula a recuperar: ";
-    cin >> id;
+    cin >> matricula;
 
     cout << "Dar de alta el medico ? 1-Si 0-No" << endl;
     cin >> recupera;
@@ -300,7 +299,7 @@ void MedicoManager::altaMedico(){  //=MAI= ALTA LOGICA
         return;
         }
 
-    int pos = _repoMedico.buscarMatricula(matricula);
+    int pos = _repoMedico.buscarMatricula( matricula);
 
     if (pos == -1){
         cout << "La matricula no existe en el sistema" << endl;

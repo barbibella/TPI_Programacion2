@@ -18,7 +18,7 @@ public:
     void guardarMedico(); //MAI - Funcion "AGREGAR"
     void listarMedicos(); // MAI - listar "TODOS"
     void listarMActivos();
-    void listarInactivos();
+    bool listarInactivos();
     void modificarMedico();
     void eliminarMedico(); // MAI - BAJA LOGICA
     void altaMedico();     // MAI - ALTA LOGICA

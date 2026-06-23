@@ -60,7 +60,7 @@
 	<iostream>
 	"Especialidad.h"
 
-1782248858 c:\users\barbi\documents\github\tpi_programacion2\especialidad.h
+1782252947 c:\users\barbi\documents\github\tpi_programacion2\especialidad.h
 	<cstring>
 
 1782246900 source:c:\users\barbi\documents\github\tpi_programacion2\fecha.cpp
@@ -114,7 +114,7 @@
 	"ObraSocial.h"
 	"ObraSocialArchivo.h"
 
-1782246464 source:c:\users\barbi\documents\github\tpi_programacion2\ordenmedica.cpp
+1782252020 source:c:\users\barbi\documents\github\tpi_programacion2\ordenmedica.cpp
 	"OrdenMedica.h"
 	"AfiliadoArchivo.h"
 	"MedicoArchivo.h"
@@ -227,14 +227,15 @@
 1782231765 c:\users\barbi\documents\github\tpi_programacion2\autorizacionarchivo.h
 	"Autorizacion.h"
 
-1782249406 c:\users\barbi\documents\github\tpi_programacion2\auxiliares.h
+1782252020 c:\users\barbi\documents\github\tpi_programacion2\auxiliares.h
 	<string>
+	"Medico.h"
+
+1782253849 source:c:\users\barbi\documents\github\tpi_programacion2\auxiliares.cpp
+	"auxiliares.h"
 	"Medico.h"
 	"MedicoArchivo.h"
 	"MedicoManager.h"
-
-1781999065 source:c:\users\barbi\documents\github\tpi_programacion2\auxiliares.cpp
-	"auxiliares.h"
 	<iostream>
 
 1782246900 source:c:\users\barbi\documents\github\tpi_programacion2\autorizacionmanager.cpp
@@ -264,8 +265,39 @@
 	<iostream>
 	<cstring>
 
-1782248858 c:\users\barbi\documents\github\tpi_programacion2\medicomanager.h
+1782254965 c:\users\barbi\documents\github\tpi_programacion2\medicomanager.h
 	"Medico.h"
 	"MedicoArchivo.h"
+	"auxiliares.h"
+
+1782251861 source:c:\users\barbi\documents\github\tpi_programacion2\especialidadarchivo.cpp
+	<iostream>
+	<cstring>
+	"Especialidad.h"
+	"EspecialidadArchivo.h"
+
+1782251861 c:\users\barbi\documents\github\tpi_programacion2\especialidadarchivo.h
+	"Especialidad.h"
+	<cstring>
+
+1782252988 source:c:\users\barbi\documents\github\tpi_programacion2\especialidadmanager.cpp
+	<iostream>
+	<cstring>
+	"Especialidad.h"
+	"EspecialidadArchivo.h"
+	"EspecialidadManager.h"
+	"auxiliares.h"
+
+1782248858 c:\users\barbi\documents\github\tpi_programacion2\especialidadmanager.h
+	"Especialidad.h"
+	"EspecialidadArchivo.h"
+	<cstring>
+
+1782253723 source:c:\users\barbi\documents\github\tpi_programacion2\medicomanager.cpp
+	<iostream>
+	<cstring>
+	"Medico.h"
+	"MedicoArchivo.h"
+	"MedicoManager.h"
 	"auxiliares.h"
 
