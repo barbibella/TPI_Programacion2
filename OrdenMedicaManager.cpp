@@ -37,9 +37,9 @@ void OrdenMedicaManager::menu(){
             case 3:
                 buscaPorID();
                 break;
-            //case 4:
-                //modificar();
-               // break;
+            case 4:
+                modificar();
+                break;
             case 5:
                 eliminar();
                 break;
@@ -397,6 +397,65 @@ void OrdenMedicaManager::reactivar(){
     } else {
         cout << "Error  al reactivar la orden" << endl;
     }
+}
+
+void OrdenMedicaManager::modificar(){
+    OrdenMedicaArchivo archivo;
+
+    int id;
+    cout << "Ingrese el ID de la orden medica a modificar: ";
+    cin >> id;
+
+    int pos = archivo.buscarId(id);
+
+    if(pos == -1){
+        cout << "No existe una orden medica con ese ID" << endl;
+        system("pause");
+        return;
+    }
+
+    OrdenMedica reg = archivo.leer(pos);
+
+    if(!reg.getEstado()){
+        cout << "La orden medica esta dada de baja. No se puede modificar" << endl;
+        system("pause");
+        return;
+    }
+
+    cout << endl << "ORDEN ACTUAL:" << endl;
+    reg.mostrar();
+
+    cout << endl;
+    char confirma;
+    cout << "Esta seguro que desea modificar esta orden? (S/N): ";
+    cin >> confirma;
+
+    if(confirma != 'S' && confirma != 's'){
+        cout << "Operacion cancelada." << endl;
+        system("pause");
+        return;
+    }
+
+    OrdenMedica nueva;
+
+    nueva.setIdOrden(reg.getIdOrden()); // mantiene el mismo ID
+
+    if(!nueva.cargar()){
+        cout << "No se pudo modificar la orden" << endl;
+        system("pause");
+        return;
+    }
+
+    nueva.setEstado(true);
+
+    if(archivo.modificar(nueva, pos)){
+        cout << "Orden medica modificada correctamente" << endl;
+    }
+    else{
+        cout << "Error al modificar la orden medica" << endl;
+    }
+
+    system("pause");
 }
 
 void OrdenMedicaManager::menuConsultas(){
