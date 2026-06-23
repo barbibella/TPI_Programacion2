@@ -53,8 +53,8 @@ void MenuPrincipalManager::menu() {
                 break;
             }
             case 4:{
-   //             TipoDeOrdenManager tom;
-//                tom.menu();
+                TipoDeOrdenManager tom;
+                tom.menu();
                 break;
             }
             case 5:{
