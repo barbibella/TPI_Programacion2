@@ -228,7 +228,7 @@ void OrigenDeLaOrdenManager::reactivar(){
 }
 
 void OrigenDeLaOrdenManager::modificar(){
-    TipoDeOrdenArchivo archivo;
+    OrigenDeLaOrdenArchivo archivo;
 
     int id;
     cout << "Ingrese el ID a modificar: ";
