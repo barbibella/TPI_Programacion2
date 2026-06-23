@@ -8,7 +8,7 @@
 #include "ObraSocialArchivo.h"
 #include "ObraSocialManager.h"
 #include "Fecha.h"
- ///nekiscfnskcfsndocfnsncfsodnsdknf
+
 using namespace std;
 
 AfiliadoManager::AfiliadoManager() : _repoAfiliado() {}
@@ -104,7 +104,7 @@ Afiliado AfiliadoManager::crearAfiliado() {
     cout << "Ingrese Apellido: ";
     cin >> apellido;
     while (apellido.size() >= 30 || apellido.size() < 2) {
-        cout << "Error: El apellido debe tener entre 2 and 29 caracteres. Ingrese nuevamente: ";
+        cout << "Error: El apellido debe tener entre 2 y 29 caracteres. Ingrese nuevamente: ";
         cin >> apellido;}
     cout << "Ingrese DNI: ";
     cin >> dni;
