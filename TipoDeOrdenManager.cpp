@@ -11,15 +11,15 @@ void TipoDeOrdenManager::menu(){
 
     do{
         system("cls");
-        cout << "===== ORDENES MEDICAS =====" << endl;
-        cout << "1. AGREGAR UNA ORDEN" << endl;
+        cout << "===== TIPO DE ORDEN MEDICA =====" << endl;
+        cout << "1. AGREGAR UN TIPO DE ORDEN" << endl;
         cout << "2. LISTAR TODOS" << endl;
         cout << "3. LISTAR ACTIVOS" << endl;
         cout << "4. LISTAR INACTIVOS" << endl;
         cout << "5. BUSCAR POR ID" << endl;
-        cout << "6. MODIFICAR ORDEN MEDICA" << endl;
-        cout << "7. ELIMINAR UNA ORDEN" << endl;
-        cout << "8. REACTIVAR UNA ORDEN" << endl;
+        cout << "6. MODIFICAR UN TIPO DE ORDEN" << endl;
+        cout << "7. ELIMINAR UN TIPO DE ORDEN" << endl;
+        cout << "8. REACTIVAR UN TIPO DE ORDEN" << endl;
         cout << "-------------------------" << endl;
         cout << "0. VOLVER AL MENU PRINCIPAL" << endl;
         cout << "OPCION: ";
@@ -42,9 +42,9 @@ void TipoDeOrdenManager::menu(){
             case 5:
                 buscaPorID();
                 break;
-            //case 6:
-                //modificar();
-               // break;
+            case 6:
+                modificar();
+                break;
             case 7:
                 eliminar();
                 break;
@@ -225,5 +225,58 @@ void TipoDeOrdenManager::reactivar(){
     } else {
         cout << "Error  al reactivar el tipo de orden" << endl;
     }
+}
+
+void TipoDeOrdenManager::modificar(){
+    TipoDeOrdenArchivo archivo;
+
+    int id;
+    cout << "Ingrese el ID del tipo de orden a modificar: ";
+    cin >> id;
+
+    int pos = archivo.buscarId(id);
+
+    if(pos == -1){
+        cout << "No existe un tipo de orden con ese ID." << endl;
+        system("pause");
+        return;
+    }
+
+     TipoDeOrden reg = archivo.leer(pos);
+
+    if(!reg.getEstado()){
+        cout << "El tipo de orden esta dado de baja. No se puede modificar" << endl;
+        system("pause");
+        return;
+    }
+
+    cout << "DATOS ACTUALES:" << endl;
+    reg.mostrar();
+
+    cout << endl;
+    char confirma;
+    cout << "Esta seguro que desea modificar este tipo de orden? (S/N): ";
+    cin >> confirma;
+
+    if(confirma != 'S' && confirma != 's'){
+        cout << "Operacion cancelada." << endl;
+        system("pause");
+        return;
+    }
+
+    cout << endl;
+    cout << "Nueva descripcion: ";
+    reg.cargar();
+
+    reg.setIdTipoOrden(id); // Mantiene el mismo ID
+
+    if(archivo.modificar(reg, pos)){
+        cout << "Tipo de orden modificado correctamente" << endl;
+    }
+    else{
+        cout << "Error al modificar" << endl;
+    }
+
+    system("pause");
 }
 
