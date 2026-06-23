@@ -124,6 +124,23 @@ int AutorizacionArchivo::buscar(int codAutorizacion){
 
 
 
+int AutorizacionArchivo::proximoCodigo(){
+
+int cant=contarRegistros();
+
+if(cant==0){
+    return 1;
+}
+
+AutorizacionArchivo arch;
+int proxCodigo=arch.contarRegistros()+1;
+
+return proxCodigo;
+
+}
+
+
+
 /////////////////listar todo
 /*
 en el manager esta el listado

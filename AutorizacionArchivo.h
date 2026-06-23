@@ -19,6 +19,8 @@ public:
 
     int buscar(int codAutorizacion);
 
+    int proximoCodigo();
+
     // void listarTodo() no hace falta porque lo tenemos en el manager
 
 };

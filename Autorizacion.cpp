@@ -1,6 +1,9 @@
 #include <iostream>
 #include <cstring>
 #include "Autorizacion.h"
+#include "OrdenMedicaArchivo.h"
+#include "OrdenMedicaManager.h"
+#include "AutorizacionArchivo.h"
 using namespace std;
 
 /////prueba de que se cambio algo
@@ -87,11 +90,62 @@ void Autorizacion::Cargar(){
     cin >> idOrden;
     cout << endl;
 
-    cout << "INGRESE EL COD DE AUTORIZACIÓN";
-    cin >> codAutorizacion;
+////validacion que exista el id de la orden
+/*
+OrdenMedicaArchivo archOrden ;
 
-    cout << "INGRESE EL PORCENTAJE DE COBER";
-    cin >> porcentajeCobertura;
+while(archOrden.buscarId(idOrden)==-1){
+ cout << "ID DE LA ORDEN INVALIDO, REINGRESE EL ID DE LA ORDEN: " << endl;
+ cin >> idOrden;
+}
+*/
+
+
+AutorizacionArchivo archAuto;
+codAutorizacion=archAuto.proximoCodigo();
+
+
+    cout << "COD DE AUTORIZACIÓN : " << codAutorizacion << endl;
+
+int obraSocial;
+    cout << "INGRESE LA OBRA SOCIAL (1 a 10): ";
+    cin >> obraSocial;
+while(obraSocial<1||obraSocial>10) {
+    cout << "RE INGRESE LA OBRA SOCIAL POR FAVOR: ";
+    cin >>obraSocial;
+}
+switch(obraSocial){
+case 1:
+    porcentajeCobertura=10;
+    break;
+case 2 : porcentajeCobertura=20;
+    break;
+case 3 : porcentajeCobertura=30;
+    break;
+case 4: porcentajeCobertura=40;
+    break;
+case 5: porcentajeCobertura=50;
+    break;
+case 6: porcentajeCobertura=60;
+    break;
+case 7: porcentajeCobertura=70;
+    break;
+case 8:  porcentajeCobertura=80;
+    break;
+case 9: porcentajeCobertura=90;
+    break;
+case 10: porcentajeCobertura=100;
+break;
+default :
+    cout << endl << "ERROR" << endl;
+                system("pause");
+    break;
+
+
+}
+
+//// no hace falta mostrar cout << "PORCENTAJE DE COBERTURA: " << porcentajeCobertura << " %" << endl;
+
 
     cout << "ESTA APROBADA? (1 si o 0 no ): ";
     cin >> aprobada;
