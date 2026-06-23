@@ -99,21 +99,6 @@ void ObraSocialManager::ListarTodas(){
         }
     }
 }
-/*
-    system("cls");
-    cout << "==========================================" << endl;
-    cout << "       LISTADO DE OBRAS SOCIALES          " << endl;
-    cout << "==========================================" << endl;
-
-    ObraSocialArchivo arch;
-    int cantidad = arch.contarRegistros();
-    if (cantidad == 0) {
-        cout << "No hay Obras Sociales registradas en el disco" << endl;
-    } else {
-        arch.listarTodo();
-    }
-    cout << "==========================================" << endl;
-}*/
 
 void ObraSocialManager::ListarActivas(){
     int cantidad = archivo.contarRegistros();
@@ -170,7 +155,7 @@ void ObraSocialManager::Modificar(){
     cin >> modifica;
 
     if (modifica == 1){
-        reg.Cargar(); // Modifica el nombre
+        reg.Cargar(); /// Modifica el nombre
         if (archivo.modificar(reg, pos)) cout << "¡Guardado exitosamente!" << endl;
         else cout << "Error al guardar." << endl;
     }
@@ -229,17 +214,4 @@ void ObraSocialManager::AltaObraSocial(){
     }
 }
 
-int obrasSocialesCant(){
-    cout << "OBRAS SOCIALES CON MAYOR CANTIDAD DE AFILIADOS ATENDIDOS" << endl << endl;
-    cout << "| 1- PAMI                      |" << endl;
-    cout << "| 2- IOMA                      |" << endl;
-    cout << "| 3- OSDE                      |" << endl;
-    cout << "| 4- SWISS MEDICAL             |" << endl;
-    cout << "| 5- OSECAC                    |" << endl;
-    cout << "| 6- GALENO                    |" << endl;
-    cout << "| 7- MEDICUS                   |" << endl;
-    cout << "| 8- SANCOR SALUD              |" << endl;
-    cout << "| 9- UNION PERSONAL            |" << endl;
-    cout << "| 10-OSEP                      |" << endl;
-    return 0;
-}
+
