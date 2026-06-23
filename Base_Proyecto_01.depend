@@ -38,7 +38,7 @@
 1782235141 c:\users\barbi\documents\github\tpi_programacion2\afiliadoarchivo.h
 	"Afiliado.h"
 
-1782235072 source:c:\users\barbi\documents\github\tpi_programacion2\afiliadomanager.cpp
+1782238135 source:c:\users\barbi\documents\github\tpi_programacion2\afiliadomanager.cpp
 	<iostream>
 	<cstring>
 	<string>
@@ -242,4 +242,19 @@
 1782231765 c:\users\barbi\documents\github\tpi_programacion2\autorizacionmanager.h
 
 1782063994 c:\users\barbi\documents\github\tpi_programacion2\menuprincipalmanager.h
+
+1782238135 source:c:\users\barbi\documents\github\tpi_programacion2\menuprincipalmanager.cpp
+	<iostream>
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+	"AfiliadoManager.h"
+	"OrdenMedicaManager.h"
+	"TipoDeOrdenManager.h"
+	"OrigenDeLaOrdenManager.h"
+	"AutorizacionManager.h"
+	"MenuPrincipalManager.h"
+
+1782238414 source:c:\users\barbi\documents\github\tpi_programacion2\especialidad.h
+	<iostream>
+	<cstring>
 

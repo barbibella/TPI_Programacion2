@@ -80,7 +80,7 @@ void AfiliadoManager::MenuListados(){
                 break;
         }
 
-        if(opcion != 0 && opcion >= 1 && opcion <= 8){
+        if(opcion != 0 && opcion >= 1 && opcion <= 3){
             system("pause");
         }
 
@@ -97,6 +97,7 @@ Afiliado AfiliadoManager::crearAfiliado() {
 
     cout << "--- NUEVA ALTA DE AFILIADO ---" << endl << endl;
     cout << "Ingrese Nombre: ";
+    cin >> nombre;
      while (nombre.size() >= 30 || nombre.size() < 2){
         cout << "Error: El nombre debe tener entre 2 y 29 caracteres. Ingrese nuevamente: ";
         cin >> nombre;}
@@ -380,6 +381,64 @@ void AfiliadoManager::AltaAfiliado(){
     }
 }
 
+void AfiliadoManager::ListarOrdenadoPorApellido() {
+    int cantidad = _repoAfiliado.contarRegistros();
+    if (cantidad == 0) {
+        cout << "No hay afiliados registrados." << endl;
+        return;
+    }
+
+    /// 1. se crea el vector dinamico en RAM y pasamos los datos del archivo
+    Afiliado* vAfiliados = new Afiliado[cantidad];
+    _repoAfiliado.leerTodos(vAfiliados, cantidad);
+
+    /// 2. algoritmo de Burbujeo por Apellido
+    for (int i = 0; i < cantidad - 1; i++) {
+        for (int j = 0; j < cantidad - i - 1; j++) {
+            if (vAfiliados[j].getApellido() > vAfiliados[j + 1].getApellido()) {
+                Afiliado aux = vAfiliados[j];
+                vAfiliados[j] = vAfiliados[j + 1];
+                vAfiliados[j + 1] = aux;
+            }
+        }
+    }
+
+    /// 3.  se lista el vector ya ordenado
+    cout << "--- AFILIADOS ORDENADOS POR APELLIDO ---" << endl << endl;
+    for (int i = 0; i < cantidad; i++) {
+        mostrarAfiliado(vAfiliados[i]);
+    }
+    delete[] vAfiliados;
+}
+
+void AfiliadoManager::ListarOrdenadoPorDNI() {
+    int cantidad = _repoAfiliado.contarRegistros();
+    if (cantidad == 0) {
+        cout << "No hay afiliados registrados." << endl;
+        return;
+    }
+
+    Afiliado* vAfiliados = new Afiliado[cantidad];
+    _repoAfiliado.leerTodos(vAfiliados, cantidad);
+
+    /// burbujeo por DNI (Como es string, compara caracter por caracter correctamente)
+    for (int i = 0; i < cantidad - 1; i++) {
+        for (int j = 0; j < cantidad - i - 1; j++) {
+            if (vAfiliados[j].getDni() > vAfiliados[j + 1].getDni()) {
+                Afiliado aux = vAfiliados[j];
+                vAfiliados[j] = vAfiliados[j + 1];
+                vAfiliados[j + 1] = aux;
+            }
+        }
+    }
+
+    cout << "--- AFILIADOS ORDENADOS POR DNI ---" << endl << endl;
+    for (int i = 0; i < cantidad; i++) {
+        mostrarAfiliado(vAfiliados[i]);
+    }
+
+    delete[] vAfiliados;
+}
 
 void AfiliadoManager::ListarOrdenadoPorObraSocial() {
     int cantidad = _repoAfiliado.contarRegistros();
