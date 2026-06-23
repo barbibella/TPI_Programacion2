@@ -84,7 +84,7 @@ void OrdenMedica::setEstado(bool estado){
     _estado = estado;
 }
 
-void OrdenMedica::cargar(){
+bool OrdenMedica::cargar(){
     AfiliadoArchivo archivoAfiliado;
     MedicoArchivo archivoMedico;
     TipoDeOrdenArchivo archivoTipo;

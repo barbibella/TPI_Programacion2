@@ -32,6 +32,6 @@ public:
     void setOrigen(int origen);
     void setEstado(bool estado);
 
-    void cargar();
+    bool cargar();
     void mostrar();
 };
