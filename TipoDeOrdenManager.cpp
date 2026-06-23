@@ -92,7 +92,7 @@ void TipoDeOrdenManager::listarTodos(){
 }
 
 void TipoDeOrdenManager::listarActivos(){
-    TipoDeOrdenManager archivo;
+    TipoDeOrdenArchivo archivo;
 
     int cantidad = archivo.contarRegistros();
 
