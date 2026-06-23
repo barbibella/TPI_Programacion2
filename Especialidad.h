@@ -1,31 +1,30 @@
 #pragma once
-#include "Persona.h"
-#include "Medico.h"
 
-
-/*
-
-IdEspecialidad int
-cargar () void
-mostrar () void
-getIdEspecialidad () int
-*/
-
-
-class Especialidad : public Medico {
+//---MAI---
+//CONSTRUCTOR
+class Especialidad {
 private:
-		int _IdEspecialidad;
+		int _idEspecialidad;
+		char _nombreEspecialidad[25];
+		char _descripcionEspecialidad[50];
+		int _idFormacion;
 
 	public:
 		Especialidad();
-		Especialidad(int IdEspecialidad);
+		Especialidad(int idEspecialidad, int idFormacion, string nombreEspecialidad, string descripcionEspecialidad);
 
 
 //SETTERS - MAI
-	void setEspecialidad(int _IdEspecialidad);
+	void setEspecialidad(int idEspecialidad);
+	void setNombreEspecialidad(string nombreEspecialidad);
+	void setDescripcionEspecialidad(string descripcionEspecialidad);
+	void setIdFormacion(int idFormacion);
 
 
 //GETTERS - MAI
 	int getEspecialidad() const;
+	string getNombreEspecialidad() const;
+	string getDescripcionEspecialidad() const;
+	string getFormacion() const;
 
 };
