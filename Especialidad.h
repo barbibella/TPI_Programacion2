@@ -1,9 +1,17 @@
 #pragma once
+<<<<<<< Updated upstream
 #include <cstring>
 
 using namespace std;
 
 //CONSTRUCTOR - MAI
+=======
+#include <iostream>
+#include <cstring>
+/*
+//---MAI---
+//CONSTRUCTOR
+>>>>>>> Stashed changes
 class Especialidad {
 private:
 		int _idEspecialidad;
@@ -34,3 +42,4 @@ private:
 	string getEstado() const;
 
 };
+*/
