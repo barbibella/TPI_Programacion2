@@ -16,8 +16,6 @@ public:
     int leerTodos(Especialidad vEspecialidad[], int cantidad);
     bool crear(const Especialidad &reg);
     bool actualizar(int pos, const Especialidad &reg);
-    bool existIdeEspecialidad (int especialidad);
+    bool existeEspecialidad (int especialidad);
     Especialidad leer (int pos);
-
-    int getNuevoId();
 };

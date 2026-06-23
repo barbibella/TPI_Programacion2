@@ -1,9 +1,6 @@
 #pragma once
 #include <string>
 #include "Medico.h"
-#include "MedicoArchivo.h"
-#include "MedicoManager.h"
-
 
 using namespace std;
 
@@ -15,7 +12,7 @@ std::string cargarCadenaValidada(string mensaje, int maximo);
 
 void modificarNombre(Medico &reg);
 void modificarApellido (Medico &reg);
-void modificarDNI (Medico &reg);
+void modificarDni (Medico &reg);
 void modificarTelefono (Medico &reg);
 void modificarMatricula (Medico &reg);
 void modificarEspecialidad (Medico &reg);

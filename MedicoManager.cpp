@@ -4,7 +4,7 @@
 #include "MedicoArchivo.h"
 #include "MedicoManager.h"
 #include "auxiliares.h"
-///MAI PC
+
 //--- MAI ---
 using namespace std;
 

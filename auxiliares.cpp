@@ -1,8 +1,8 @@
 #include "auxiliares.h"
 #include "Medico.h"
+#include "MedicoArchivo.h"
 #include "MedicoManager.h"
 #include <iostream>
-#include "Medico.h"
 //===MAI===
 //se incluyó este apartado para contemplar funciones, constructores y otras cosas necesarias generales. - Mai
 
