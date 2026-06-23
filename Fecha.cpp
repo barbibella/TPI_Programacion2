@@ -49,9 +49,34 @@ void Fecha::Cargar(){
     setAnio(a);
 }
 
+void Fecha::CargarFechaOrden(){
+    cout<<"Ingrese la fecha de la orden medica:" <<endl;
+    int d, m, a;
+    cout<<"DIA ";
+    cin>>d;
+    cout<<"MES ";
+    cin>>m;
+    cout<<"ANIO ";
+    cin>>a;
+
+    while(!validarFecha(d, m, a)){
+        cout<<"Fecha ingresada invalida, por favor ingrese nuevamente la fecha: "<<endl;
+        cout<<"DIA ";
+        cin>>d;
+        cout<<"MES ";
+        cin>>m;
+        cout<<"ANIO ";
+        cin>>a;
+   }
+
+    setDia(d);
+    setMes(m);
+    setAnio(a);
+}
+
 void Fecha::Mostrar(){
     cout << endl;
-        cout << "Usted ingreso:" << endl;
+        cout << "Fecha:" << endl;
         cout << dia << "/" << mes << "/" << anio << endl;
 }
 

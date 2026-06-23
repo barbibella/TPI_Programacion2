@@ -97,6 +97,7 @@ bool OrdenMedica::cargar(){
 
      if(archivoAfiliado.buscar(dni) == -1){
         cout << "El afiliado no existe" << endl;
+        system("pause");
         return false;
     }
 
@@ -126,7 +127,7 @@ bool OrdenMedica::cargar(){
         return false;
     }
 
-    _fechaOrden.Cargar();
+    _fechaOrden.CargarFechaOrden();
 
     _estado = true;
 

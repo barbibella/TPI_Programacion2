@@ -12,6 +12,7 @@ class Fecha{
 
     bool validarFecha(int d, int m, int a);
     void Cargar();
+    void CargarFechaOrden();
     void Mostrar();
 
     void setDia(int d);
