@@ -1,8 +1,11 @@
 #pragma once
-#include <iostream>
 #include "OrdenMedica.h"
+#include "AfiliadoArchivo.h"
+#include "MedicoArchivo.h"
+#include "TipoDeOrdenArchivo.h"
+#include "OrigenArchivo.h"
 
-#include <string>
+#include <iostream>
 #include <cstring>
 
 using namespace std;
@@ -82,25 +85,52 @@ void OrdenMedica::setEstado(bool estado){
 }
 
 void OrdenMedica::cargar(){
+    AfiliadoArchivo archivoAfiliado;
+    MedicoArchivo archivoMedico;
+    TipoDeOrdenArchivo archivoTipo;
+    OrigenArchivo archivoOrigen;
+
     string dni;
 
     cout << "DNI paciente: ";
     cin >> dni;
+
+     if(archivoAfiliado.buscarDni(dni) == -1){
+        cout << "El afiliado no existe." << endl;
+        return false;
+    }
 
     strcpy(_dniPaciente, dni.c_str());
 
     cout << "Matricula Medico: ";
     cin >> _matriculaMedico;
 
+    if(archivoMedico.buscarMatricula(_matriculaMedico) == -1){
+        cout << "El medico no existe." << endl;
+        return false;
+    }
+
     cout << "Tipo orden: ";
     cin >> _tipoOrden;
+
+    if(archivoTipo.buscarId(_tipoOrden) == -1){
+        cout << "El tipo de orden no existe." << endl;
+        return false;
+    }
 
     cout << "Origen: ";
     cin >> _origen;
 
+     if(archivoOrigen.buscarId(_origen) == -1){
+        cout << "El origen no existe." << endl;
+        return false;
+    }
+
     _fechaOrden.Cargar();
 
     _estado = true;
+
+    return true;
 }
 
 void OrdenMedica::mostrar(){

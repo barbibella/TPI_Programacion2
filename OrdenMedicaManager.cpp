@@ -42,9 +42,9 @@ void OrdenMedicaManager::menu(){
             case 5:
                 buscaPorID();
                 break;
-            case 6:
-                modificar();
-                break;
+            //case 6:
+                //modificar();
+               // break;
             case 7:
                 eliminar();
                 break;
@@ -67,15 +67,17 @@ void OrdenMedicaManager::agregar(){
     OrdenMedica reg;
 
     reg.setIdOrden(generarId());
-    reg.cargar();
+
+    if(reg.cargar() == false){
+        cout << "No se cargo la orden medica." << endl;
+        return;
+    }
 
     if(archivo.guardar(reg)){
         cout << "La orden medica se guardo correctamente!" << endl;
     } else {
         cout << "Error al guardar la orden" << endl;
     }
-
-
 }
 
 void OrdenMedicaManager::listarTodos(){
