@@ -10,6 +10,8 @@ class EspecialidadManager
 public:
     EspecialidadManager();
 
+    void Menu();//FALTA AGREGAR URGENTE
+
     void guardarEspecialidad();//crear
     void listarEspecialidad();// LISTAR
     void modificarEspecialidad();
