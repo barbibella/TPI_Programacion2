@@ -13,12 +13,17 @@ public:
     AfiliadoManager();
 
     void Menu();
+    void MenuListados();
     void Agregar();
     void ListarTodos();
     void ListarActivos();
     bool ListarInactivos();
+    void ListarOrdenadoPorApellido();
+    void ListarOrdenadoPorDNI();
+    void ListarOrdenadoPorObraSocial();
     void Modificar();
     void Eliminar();
     void AltaAfiliado();
     void BuscarPorDNI();
+    void BuscarPorApellido();
 };
