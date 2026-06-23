@@ -1,4 +1,6 @@
 #include "auxiliares.h"
+#include "Medico.h"
+#include "MedicoManager.h"
 #include <iostream>
 #include "Medico.h"
 //===MAI===
