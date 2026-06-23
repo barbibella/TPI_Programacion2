@@ -91,21 +91,21 @@ void Autorizacion::Cargar(){
     cout << endl;
 
 ////validacion que exista el id de la orden
-/*
+
 OrdenMedicaArchivo archOrden ;
 
 while(archOrden.buscarId(idOrden)==-1){
  cout << "ID DE LA ORDEN INVALIDO, REINGRESE EL ID DE LA ORDEN: " << endl;
  cin >> idOrden;
 }
-*/
+
 
 
 AutorizacionArchivo archAuto;
 codAutorizacion=archAuto.proximoCodigo();
 
 
-    cout << "COD DE AUTORIZACIÓN : " << codAutorizacion << endl;
+    cout << "COD DE AUTORIZACION : " << codAutorizacion << endl;
 
 int obraSocial;
     cout << "INGRESE LA OBRA SOCIAL (1 a 10): ";
@@ -156,7 +156,7 @@ default :
     cin.getline(observaciones, 100);
 
     cout << "Fecha de autorizacion:" << endl;
-    fechaAutorizacion.Cargar();
+    fechaAutorizacion.CargarAut();
 }
 
 void Autorizacion::Mostrar(){
@@ -184,8 +184,8 @@ void Autorizacion::Mostrar(){
     cout << endl;
 
     cout << "OBSERVACIONES: " << observaciones << endl;
+    cout << "-------------------------------------------" << endl;
 }
-
 
 
 

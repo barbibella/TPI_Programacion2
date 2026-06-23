@@ -12,6 +12,7 @@ class Fecha{
 
     bool validarFecha(int d, int m, int a);
     void Cargar();
+    void CargarAut();
     void CargarFechaOrden();
     void Mostrar();
 

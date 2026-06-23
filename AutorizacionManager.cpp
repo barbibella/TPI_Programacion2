@@ -20,14 +20,13 @@ void AutorizacionManager::menu(){
         system("cls");
 
         cout << "===== AUTORIZACIONES =====" << endl;
-        cout << "1. LISTAR TODAS LAS AUTORIZACIONES" << endl;
-        cout << "2. AGREGAR UNA AUTORIZACION" << endl;
-        cout << "3. BUSCAR POR CODIGO UNA AUTORIZACION" << endl;
-        cout << "4.LISTAR AUTORIZACIONES POR ESTADO. " << endl;
+        cout << "1.LISTAR TODAS LAS AUTORIZACIONES" << endl;
+        cout << "2.LISTAR AUTORIZACIONES POR ESTADO. " << endl;
+        cout << "3.BUSCAR POR CODIGO UNA AUTORIZACION" << endl;
+        cout << "4.AGREGAR UNA AUTORIZACION" << endl;
         cout << "5.CONSULTAR AUTORIZACIONES PORCENTAJE COBERTURA" << endl;
         cout << "6.CONSULTAR POR NRO DE ORDEN" << endl;
         cout << "7.CONSULTAR AUTORIZACIONES APROBADAS Y RECHAZADAS POR ANIO" << endl;
-        cout << "8.Prueba de validaciones" << endl;
         cout << "0. SALIR" << endl;
         cout << "OPCION: ";
 
@@ -42,14 +41,14 @@ void AutorizacionManager::menu(){
             break;
 
         case 2:
-            agregar();
+            listarPorEstado();
             break;
 
         case 3:
             buscarPorCodigo();
             break;
         case 4:
-            listarPorEstado();
+            agregar();
             break;
         case 5:
             listarPorCobertura();
@@ -59,10 +58,6 @@ void AutorizacionManager::menu(){
             break;
         case 7:
             CantidadMensualAprobadoRechazado();
-        case 8:
-
-            break;
-
         case 0:
             break;
 
@@ -182,13 +177,23 @@ void AutorizacionManager::listarPorEstado(){
 float CoberturaBuscada;
 bool Encontrado=false;
 
-cout << "INGRESE EL PORCENTAJE DE LA COBERTURA (1 AL 100):";
+cout << "INGRESE EL PORCENTAJE DE LA COBERTURA (10,20,30,40 HASTA EL 100):";
 cin >> CoberturaBuscada;
 cout << endl;
 
-while(CoberturaBuscada<1||CoberturaBuscada>100) {
+while(CoberturaBuscada != 10 &&
+      CoberturaBuscada != 20 &&
+      CoberturaBuscada != 30 &&
+      CoberturaBuscada != 40 &&
+      CoberturaBuscada != 50 &&
+      CoberturaBuscada != 60 &&
+      CoberturaBuscada != 70 &&
+      CoberturaBuscada != 80 &&
+      CoberturaBuscada != 90 &&
+      CoberturaBuscada != 100)
+{
 cout << "USTED INGRESO UN PORCENTAJE DE COBERTURA ERRONEO" << endl;
-cout << "INGRESE NUEVAMENTE EL PORCENTAJE DE COBERTURA(1 AL 100):" ;
+cout << "INGRESE NUEVAMENTE EL PORCENTAJE DE COBERTURA(10,20,30,40 HASTA EL 100):" ;
 cin >>CoberturaBuscada;
 }
 

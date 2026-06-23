@@ -74,6 +74,38 @@ void Fecha::CargarFechaOrden(){
     setAnio(a);
 }
 
+
+void Fecha::CargarAut(){
+    cout<<"INGRESE : "<< endl;
+    int d, m, a;
+    cout<<"DIA ";
+    cin>>d;
+    cout<<"MES ";
+    cin>>m;
+    cout<<"ANIO ";
+    cin>>a;
+
+    while(!validarFecha(d, m, a)){
+        cout<<"Fecha ingresada invalida, por favor ingrese nuevamente la fecha: "<<endl;
+        cout<<"DIA ";
+        cin>>d;
+        cout<<"MES ";
+        cin>>m;
+        cout<<"ANIO ";
+        cin>>a;
+   }
+
+    setDia(d);
+    setMes(m);
+    setAnio(a);
+}
+
+
+
+
+
+
+
 void Fecha::Mostrar(){
     cout << endl;
         cout << "Fecha:" << endl;
