@@ -11,15 +11,15 @@ void OrigenDeLaOrdenManager::menu(){
 
     do{
         system("cls");
-        cout << "===== ORDENES MEDICAS =====" << endl;
-        cout << "1. AGREGAR UNA ORDEN" << endl;
+        cout << "===== ORIGEN DE LA ORDEN MEDICA =====" << endl;
+        cout << "1. AGREGAR" << endl;
         cout << "2. LISTAR TODOS" << endl;
         cout << "3. LISTAR ACTIVOS" << endl;
         cout << "4. LISTAR INACTIVOS" << endl;
         cout << "5. BUSCAR POR ID" << endl;
-        cout << "6. MODIFICAR ORDEN MEDICA" << endl;
-        cout << "7. ELIMINAR UNA ORDEN" << endl;
-        cout << "8. REACTIVAR UNA ORDEN" << endl;
+        cout << "6. MODIFICAR" << endl;
+        cout << "7. ELIMINAR" << endl;
+        cout << "8. REACTIVAR" << endl;
         cout << "-------------------------" << endl;
         cout << "0. VOLVER AL MENU PRINCIPAL" << endl;
         cout << "OPCION: ";
@@ -42,9 +42,9 @@ void OrigenDeLaOrdenManager::menu(){
             case 5:
                 buscaPorID();
                 break;
-            //case 6:
-                //modificar();
-               // break;
+            case 6:
+                modificar();
+                break;
             case 7:
                 eliminar();
                 break;
@@ -225,5 +225,58 @@ void OrigenDeLaOrdenManager::reactivar(){
     } else {
         cout << "Error  al reactivar el orgien de la orden" << endl;
     }
+}
+
+void OrigenDeLaOrdenManager::modificar(){
+    TipoDeOrdenArchivo archivo;
+
+    int id;
+    cout << "Ingrese el ID a modificar: ";
+    cin >> id;
+
+    int pos = archivo.buscarId(id);
+
+    if(pos == -1){
+        cout << "No existe un origen de la orden con ese ID." << endl;
+        system("pause");
+        return;
+    }
+
+     OrigenDeLaOrden reg = archivo.leer(pos);
+
+    if(!reg.getEstado()){
+        cout << "El origen de la orden esta dado de baja. No se puede modificar" << endl;
+        system("pause");
+        return;
+    }
+
+    cout << "DATOS ACTUALES:" << endl;
+    reg.mostrar();
+
+    cout << endl;
+    char confirma;
+    cout << "Esta seguro que desea modificarlo? (S/N): ";
+    cin >> confirma;
+
+    if(confirma != 'S' && confirma != 's'){
+        cout << "Operacion cancelada." << endl;
+        system("pause");
+        return;
+    }
+
+    cout << endl;
+    cout << "Nueva descripcion: ";
+    reg.cargar();
+
+    reg.setIdOrigen(id);
+
+    if(archivo.modificar(reg, pos)){
+        cout << "Origen de la orden modificado correctamente" << endl;
+    }
+    else{
+        cout << "Error al modificar" << endl;
+    }
+
+    system("pause");
 }
 
