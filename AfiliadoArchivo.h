@@ -1,5 +1,4 @@
 #pragma once
-#include <cstring>
 #include "Afiliado.h"
 
 class AfiliadoArchivo{

@@ -5,9 +5,9 @@
 
 class Afiliado: public Persona {
   private:
-      int nroDeAfiliado;
-      int idObraSocial;
-      char email[45];
+      int _nroDeAfiliado;
+      int _idObraSocial;
+      char _email[45];
       Fecha _fechaNacimiento;
 
   public:

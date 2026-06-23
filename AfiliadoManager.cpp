@@ -56,6 +56,7 @@ void AfiliadoManager::Menu(){
 
 void AfiliadoManager::MenuListados(){
     int opcion;
+
     do{
         system("cls");
         cout << "--- SUBMENU DE LISTADOS ORDENADOS ---" << endl;
@@ -66,6 +67,7 @@ void AfiliadoManager::MenuListados(){
         cout << "0. VOLVER AL MENU DE AFILIADOS" << endl;
         cout << "OPCION: ";
         cin >> opcion;
+
         system("cls");
 
         switch(opcion){
@@ -73,12 +75,18 @@ void AfiliadoManager::MenuListados(){
             case 2: ListarOrdenadoPorDNI(); break;
             case 3: ListarOrdenadoPorObraSocial(); break;
             case 0: break;
-            default: cout << "OPCION INCORRECTA" << endl; break;
-        if (opcion != 0 && opcion >= 1 && opcion <= 8) {
+            default:
+                cout << "OPCION INCORRECTA" << endl;
+                break;
+        }
+
+        if(opcion != 0 && opcion >= 1 && opcion <= 8){
             system("pause");
         }
+
     }while(opcion != 0);
 }
+
 Afiliado AfiliadoManager::crearAfiliado() {
     string nombre, apellido, dni, telefono, mail;
     int idObraSocial, nuevoNumero;
