@@ -466,7 +466,7 @@ void OrdenMedicaManager::menuConsultas(){
         cout << "===== CONSULTAS =====" << endl;
         cout << "1. CONSULTA POR PACIENTE" << endl;
         cout << "2. CONSULTA POR MEDICO" << endl;
-        cout << "3. CONSULTA ENTRE FECHAS" << endl;
+        cout << "3. CONSULTA POR FECHA DE ORDEN" << endl;
         cout << "4. CONSULTA POR TIPO DE ORDEN" << endl;
         cout << "-------------------------" << endl;
         cout << "0. VOLVER AL MENU ANTERIOR" << endl;
@@ -561,27 +561,26 @@ void OrdenMedicaManager::consultarPorFecha(){
     Fecha fecha;
     bool encontro = false;
 
-    cout << "Ingrese la fecha que desea consultar: " << endl;
-    fecha.Cargar();
+    fecha.CargarFechaOrden();
 
     int cantidad = archivo.contarRegistros();
 
     for(int i = 0; i < cantidad; i++){
-        OrdenMedica reg;
-
-        reg = archivo.leer(i);
+        OrdenMedica reg = archivo.leer(i);
+        Fecha fechaOrden = reg.getFechaOrden();
 
         if(reg.getEstado() &&
-           reg.getFechaOrden().getDia() == fecha.getDia() &&
-           reg.getFechaOrden().getMes() == fecha.getMes() &&
-           reg.getFechaOrden().getAnio() == fecha.getAnio()){
+           fechaOrden.getDia() == fecha.getDia() &&
+           fechaOrden.getMes() == fecha.getMes() &&
+           fechaOrden.getAnio() == fecha.getAnio()){
+
             reg.mostrar();
             encontro = true;
         }
     }
 
     if(!encontro){
-        cout << "No se encontro ninguna orden con esa fecha." << endl;
+        cout << "No se encontro ninguna orden con esa fecha" << endl;
     }
 
     system("pause");
