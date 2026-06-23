@@ -101,11 +101,16 @@ Afiliado AfiliadoManager::crearAfiliado() {
      while (nombre.size() >= 30 || nombre.size() < 2){
         cout << "Error: El nombre debe tener entre 2 y 29 caracteres. Ingrese nuevamente: ";
         cin >> nombre;}
+        if (!nombre.empty()) {
+        nombre[0] = toupper(nombre[0]);}
     cout << "Ingrese Apellido: ";
     cin >> apellido;
     while (apellido.size() >= 30 || apellido.size() < 2) {
         cout << "Error: El apellido debe tener entre 2 y 29 caracteres. Ingrese nuevamente: ";
         cin >> apellido;}
+        /// ESTA LINEA PASA LA PRIMERA LETRA A MAYUSCULA SI O SI
+        if (!apellido.empty()) {
+        apellido[0] = toupper(apellido[0]);}
     cout << "Ingrese DNI: ";
     cin >> dni;
     while (dni.size() >= 15 || dni.size() < 7) {
