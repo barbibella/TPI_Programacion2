@@ -91,7 +91,6 @@ void OrdenMedicaManager::menuListados(){
         cout << "4. LISTAR ORDENADOS POR FECHA" << endl;
         cout << "5. LISTAR ORDENADOS POR TIPO DE ORDEN" << endl;
         cout << "6. LISTAR ORDENADOS POR ORIGEN DE LA ORDEN" << endl;
-        cout << "7. CONSULTAS" << endl;
         cout << "-------------------------" << endl;
         cout << "0. VOLVER AL MENU ANTERIOR" << endl;
         cout << "OPCION: ";
@@ -399,3 +398,167 @@ void OrdenMedicaManager::reactivar(){
         cout << "Error  al reactivar la orden" << endl;
     }
 }
+
+void OrdenMedicaManager::menuConsultas(){
+    int opcion;
+
+    do{
+        system("cls");
+        cout << "===== CONSULTAS =====" << endl;
+        cout << "1. CONSULTA POR PACIENTE" << endl;
+        cout << "2. CONSULTA POR MEDICO" << endl;
+        cout << "3. CONSULTA ENTRE FECHAS" << endl;
+        cout << "4. CONSULTA POR TIPO DE ORDEN" << endl;
+        cout << "-------------------------" << endl;
+        cout << "0. VOLVER AL MENU ANTERIOR" << endl;
+        cout << "OPCION: ";
+        cin >> opcion;
+        system("cls");
+
+        switch(opcion){
+            case 1:
+                consultarPorDni();
+                break;
+            case 2:
+                consultarPorMedico();
+                break;
+            case 3:
+                consultarPorFecha();
+                break;
+           case 4:
+                consultarPorTipoOrden();
+                break;
+           case 0:
+                cout << "Saliendo.." << endl;
+                break;
+            default:
+                cout << "OPCION INCORRECTA" << endl;
+                system("pause");
+                break;
+        }
+    }while(opcion != 0);
+}
+
+void OrdenMedicaManager::consultarPorDni(){
+    OrdenMedicaArchivo archivo;
+
+    string dni;
+    bool encontro = false;
+
+    cout << "Ingrese el dni del paciente: " << endl;
+    cin >> dni;
+
+    int cantidad = archivo.contarRegistros();
+
+    for(int i=0; i < cantidad; i++){
+        OrdenMedica reg;
+
+        reg = archivo.leer(i);
+
+        if(reg.getEstado() && reg.getDniPaciente() == dni){
+            reg.mostrar();
+            encontro = true;
+        }
+    }
+
+    if(!encontro){
+        cout << "No se encontro ninguna orden con ese dni" << endl;
+    }
+
+    system("pause");
+}
+
+void OrdenMedicaManager::consultarPorMedico(){
+    OrdenMedicaArchivo archivo;
+
+    int matricula;
+    bool encontro = false;
+
+    cout << "Ingrese la matricula del medico: " << endl;
+    cin >> matricula;
+
+    int cantidad = archivo.contarRegistros();
+
+    for(int i=0; i < cantidad; i++){
+        OrdenMedica reg;
+
+        reg = archivo.leer(i);
+
+        if(reg.getEstado() && reg.getMatriculaMedico() == matricula){
+            reg.mostrar();
+            encontro = true;
+        }
+    }
+
+    if(!encontro){
+        cout << "No se encontro ninguna orden con la matricula del medico" << endl;
+    }
+
+    system("pause");
+}
+
+void OrdenMedicaManager::consultarPorFecha(){
+    OrdenMedicaArchivo archivo;
+    Fecha fecha;
+    bool encontro = false;
+
+    cout << "Ingrese la fecha que desea consultar: " << endl;
+    fecha.Cargar();
+
+    int cantidad = archivo.contarRegistros();
+
+    for(int i = 0; i < cantidad; i++){
+        OrdenMedica reg;
+
+        reg = archivo.leer(i);
+
+        if(reg.getEstado() &&
+           reg.getFechaOrden().getDia() == fecha.getDia() &&
+           reg.getFechaOrden().getMes() == fecha.getMes() &&
+           reg.getFechaOrden().getAnio() == fecha.getAnio()){
+            reg.mostrar();
+            encontro = true;
+        }
+    }
+
+    if(!encontro){
+        cout << "No se encontro ninguna orden con esa fecha." << endl;
+    }
+
+    system("pause");
+}
+
+void OrdenMedicaManager::consultarPorTipoOrden(){
+    OrdenMedicaArchivo archivo;
+    TipoDeOrdenArchivo archivoTipos;
+
+    int tipo;
+    bool encontro = false;
+
+    cout << "Ingrese el id del tipo de orden que desea buscar: " << endl;
+    cin >> tipo;
+
+    int cantidad = archivo.contarRegistros();
+
+    TipoDeOrden regTipo = archivoTipos.leer(tipo - 1);
+
+    cout << "===== TIPO DE ORDEN: " << regTipo.getIdTipoOrden() << " - " << regTipo.getDescripcion() << " =====" << endl;
+
+    for(int i=0; i < cantidad; i++){
+        OrdenMedica reg;
+
+        reg = archivo.leer(i);
+
+        if(reg.getEstado() && reg.getTipoOrden() == tipo){
+            reg.mostrar();
+            encontro = true;
+        }
+    }
+
+    if(!encontro){
+        cout << "No se encontro ninguna orden con ese tipo" << endl;
+    }
+
+    system("pause");
+}
+
