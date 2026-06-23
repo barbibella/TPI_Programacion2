@@ -7,7 +7,6 @@
 #include "OrigenDeLaOrdenManager.h"
 #include "AutorizacionManager.h"
 #include "MenuPrincipalManager.h"
-// #include "InformeManager.h"
 
 using namespace std;
 
@@ -82,3 +81,47 @@ void MenuPrincipalManager::menu() {
 
     return ;
 }
+/*
+void MenuPrincipalManager::menu() {
+    ObraSocialArchivo archObra;
+    archObra.crearObrasSocialesPredeterminadas();
+
+    int opcion;
+    do {
+        system("cls");
+        cout << "==================================================" << endl;
+        cout << "       SISTEMA DE GESTION DE ORDENES MEDICAS      " << endl;
+        cout << "==================================================" << endl;
+        cout << " 1. GESTION DE AFILIADOS" << endl;
+        cout << " 2. GESTION DE OBRAS SOCIALES" << endl;
+        cout << " 3. GESTION DE ORDENES MEDICAS" << endl;
+        cout << " 4. GESTION DE TIPOS DE ORDEN" << endl;
+        cout << " 5. GESTION DE ORIGENES DE LA ORDEN" << endl;
+        cout << " 6. GESTION DE AUTORIZACIONES" << endl;
+        cout << "--------------------------------------------------" << endl;
+        cout << " 0. SALIR DEL SISTEMA" << endl;
+        cout << "==================================================" << endl;
+        cout << " OPCION: ";
+        cin >> opcion;
+
+        switch (opcion) {
+            case 1:{
+                AfiliadoManager am;
+                am.Menu();
+                break;
+            }
+            case 2:{
+                ObraSocialManager osm;
+                osm.Menu();
+                break;
+            }
+            case 0:
+                cout << endl << "Saliendo del testeo..." << endl;
+                break;
+            default:
+                cout << endl << "OPCION INCORRECTA." << endl;
+                system("pause");
+                break;
+        }
+    } while (opcion != 0);
+}*/

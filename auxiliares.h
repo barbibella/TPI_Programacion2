@@ -1,5 +1,8 @@
 #pragma once
 #include <string>
+#include "Medico.h"
+#include "MedicoArchivo.h"
+#include "MedicoManager.h"
 
 
 using namespace std;
