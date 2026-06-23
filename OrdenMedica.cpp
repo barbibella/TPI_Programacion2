@@ -111,6 +111,20 @@ bool OrdenMedica::cargar(){
         return false;
     }
 
+    cout << "TIPOS DE ORDEN DISPONIBLES:" << endl;
+
+    int cantidadTipo = archivoTipo.contarRegistros();
+
+    for(int i = 0; i < cantidadTipo; i++){
+        TipoDeOrden reg = archivoTipo.leer(i);
+
+        if(reg.getEstado()){
+            reg.mostrar();
+        }
+    }
+
+    cout << endl;
+
     cout << "Tipo orden: ";
     cin >> _tipoOrden;
 
@@ -118,6 +132,20 @@ bool OrdenMedica::cargar(){
         cout << "El tipo de orden no existe" << endl;
         return false;
     }
+
+    cout << "EL ORIGEN DE LA ORDEN PUEDE SER:" << endl;
+
+    int cantidadOrigen = archivoOrigen.contarRegistros();
+
+    for(int i = 0; i < cantidadOrigen; i++){
+        OrigenDeLaOrden reg = archivoOrigen.leer(i);
+
+        if(reg.getEstado()){
+            reg.mostrar();
+        }
+    }
+
+    cout << endl;
 
     cout << "Origen: ";
     cin >> _origen;
