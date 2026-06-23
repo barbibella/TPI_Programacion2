@@ -38,7 +38,7 @@ Medico MedicoManager::cargar(){
     return Medico(matricula, especialidad, nombre, apellido, dni, telefono, 1);
 }
 
-// MAI - guardarMedico es la funcion agregar.
+// MAI - guardarMedico es la funcion agregar/CREAR.
 void MedicoManager::guardarMedico(){
     Medico reg = crearMedico();
     if (_repoMedico.crear(reg)){

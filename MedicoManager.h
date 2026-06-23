@@ -10,12 +10,15 @@ private:
 
 public:
     MedicoManager();
-    void guardarMedico(); //MAI - Funcion "AGREGAR"
+
+    void Menu();//FALTA AGREGAR URGENTE
+
+    void guardarMedico(); //MAI - Funcion "AGREGAR/CREAR"
     void listarMedicos(); // MAI - listar "TODOS"
     void listarMActivos();
     bool listarInactivos();
     void modificarMedico();
-    void eliminarMedico(); // MAI - BAJA LOGICA
+    void eliminarMedico(); // MAI - BAJA LOGICA - ESTA EN MedicoArchivo!!!
     void altaMedico();     // MAI - ALTA LOGICA
     void informacionMedico();
     Medico cargar();
