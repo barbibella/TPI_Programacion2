@@ -3,7 +3,7 @@
 #include "AfiliadoArchivo.h"
 #include "MedicoArchivo.h"
 #include "TipoDeOrdenArchivo.h"
-#include "OrigenArchivo.h"
+#include "OrigenDeLaOrdenArchivo.h"
 
 #include <iostream>
 #include <cstring>
@@ -95,8 +95,8 @@ void OrdenMedica::cargar(){
     cout << "DNI paciente: ";
     cin >> dni;
 
-     if(archivoAfiliado.buscarDni(dni) == -1){
-        cout << "El afiliado no existe." << endl;
+     if(archivoAfiliado.buscar(dni) == -1){
+        cout << "El afiliado no existe" << endl;
         return false;
     }
 
@@ -106,7 +106,7 @@ void OrdenMedica::cargar(){
     cin >> _matriculaMedico;
 
     if(archivoMedico.buscarMatricula(_matriculaMedico) == -1){
-        cout << "El medico no existe." << endl;
+        cout << "El medico no existe" << endl;
         return false;
     }
 
@@ -114,7 +114,7 @@ void OrdenMedica::cargar(){
     cin >> _tipoOrden;
 
     if(archivoTipo.buscarId(_tipoOrden) == -1){
-        cout << "El tipo de orden no existe." << endl;
+        cout << "El tipo de orden no existe" << endl;
         return false;
     }
 
