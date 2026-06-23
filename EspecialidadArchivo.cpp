@@ -47,7 +47,7 @@ Especialidad EspecialidadArchivo::leer(int pos){
 FILE *pFile;
     Especialidad reg;
 
-    reg.setEspecialidad(-1);
+    reg.setIdEspecialidad(-1);
 
     pFile = fopen(_nombreArchivo.c_str(), "rb");
 
