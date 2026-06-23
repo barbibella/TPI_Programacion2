@@ -56,9 +56,9 @@ int AfiliadoArchivo::contarRegistros(){
     if (p == NULL) return 0;
 
     fseek(p, 0, SEEK_END);
-    int bytes = ftell(p);///el peso total del archivo en bytes
+    int bytes = ftell(p);
     fclose(p);
-    return bytes / sizeof(Afiliado);///la cantidad exacta de registros guardados
+    return bytes / sizeof(Afiliado);
 }
 
 int AfiliadoArchivo::buscar(string dniBuscado){

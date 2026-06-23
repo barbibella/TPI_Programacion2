@@ -48,15 +48,9 @@
 		<Unit filename="Base_Proyecto_01.depend" />
 		<Unit filename="Base_Proyecto_01.layout" />
 		<Unit filename="ConfiguracionManager.cpp" />
-		<Unit filename="Especialidad.cpp">
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
+		<Unit filename="Especialidad.cpp" />
 		<Unit filename="Especialidad.h" />
-		<Unit filename="EspecialidadArchivo.cpp">
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
+		<Unit filename="EspecialidadArchivo.cpp" />
 		<Unit filename="EspecialidadArchivo.h" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
@@ -64,10 +58,7 @@
 		<Unit filename="Medico.h" />
 		<Unit filename="MedicoArchivo.cpp" />
 		<Unit filename="MedicoArchivo.h" />
-		<Unit filename="MedicoManager.cpp">
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
+		<Unit filename="MedicoManager.cpp" />
 		<Unit filename="MedicoManager.h" />
 		<Unit filename="MenuPrincipalManager.cpp" />
 		<Unit filename="MenuPrincipalManager.h" />

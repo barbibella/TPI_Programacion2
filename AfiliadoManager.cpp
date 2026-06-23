@@ -8,10 +8,10 @@
 #include "ObraSocialArchivo.h"
 #include "ObraSocialManager.h"
 #include "Fecha.h"
-
+ ///nekiscfnskcfsndocfnsncfsodnsdknf
 using namespace std;
 
-AfiliadoManager::AfiliadoManager() : _repoAfiliado(){}
+AfiliadoManager::AfiliadoManager() : _repoAfiliado() {}
 
 void AfiliadoManager::Menu(){
     int opcion;
@@ -22,12 +22,10 @@ void AfiliadoManager::Menu(){
         cout << "2. LISTAR TODOS" << endl;
         cout << "3. LISTAR ACTIVOS" << endl;
         cout << "4. LISTAR INACTIVOS" << endl;
-        cout << "5. LISTADOS ORDENADOS..." << endl;
-        cout << "6. BUSCAR POR DNI" << endl;
-        cout << "7. BUSCAR POR APELLIDO" << endl;
-        cout << "8. MODIFICAR AFILIADO" << endl;
-        cout << "9. ELIMINAR (BAJA LOGICA)" << endl;
-        cout << "10. ALTA DE AFILIADO (RECUPERAR)" << endl;
+        cout << "5. BUSCAR POR DNI" << endl;
+        cout << "6. MODIFICAR AFILIADO" << endl;
+        cout << "7. ELIMINAR (BAJA LOGICA)" << endl;
+        cout << "8. ALTA DE AFILIADO (RECUPERAR)" << endl;
         cout << "-------------------------" << endl;
         cout << "0. VOLVER AL MENU PRINCIPAL" << endl;
         cout << "OPCION: ";
@@ -39,44 +37,14 @@ void AfiliadoManager::Menu(){
             case 2: ListarTodos(); break;
             case 3: ListarActivos(); break;
             case 4: ListarInactivos(); break;
-            case 5: MenuListados(); break;
-            case 6: BuscarPorDNI(); break;
-            case 7: BuscarPorApellido(); break;
-            case 8: Modificar(); break;
-            case 9: Eliminar(); break;
-            case 10: AltaAfiliado(); break;
+            case 5: BuscarPorDNI(); break;
+            case 6: Modificar(); break;
+            case 7: Eliminar(); break;
+            case 8: AltaAfiliado(); break;
             case 0: break;
             default: cout << "OPCION INCORRECTA" << endl; system("pause"); break;
         }
-        if(opcion != 0 && opcion != 5 && opcion >= 1 && opcion <= 10) {
-            system("pause");
-        }
-    }while(opcion != 0);
-}
-
-void AfiliadoManager::MenuListados(){
-    int opcion;
-    do{
-        system("cls");
-        cout << "--- SUBMENU DE LISTADOS ORDENADOS ---" << endl;
-        cout << "1. ORDENADOS POR APELLIDO" << endl;
-        cout << "2. ORDENADOS POR DNI" << endl;
-        cout << "3. ORDENADOS POR OBRA SOCIAL" << endl;
-        cout << "-------------------------------------" << endl;
-        cout << "0. VOLVER AL MENU DE AFILIADOS" << endl;
-        cout << "OPCION: ";
-        cin >> opcion;
-        system("cls");
-
-        switch(opcion){
-            case 1: ListarOrdenadoPorApellido(); break;
-            case 2: ListarOrdenadoPorDNI(); break;
-            case 3: ListarOrdenadoPorObraSocial(); break;
-            case 0: break;
-            default: cout << "OPCION INCORRECTA" << endl; break;
-        }
-
-        if(opcion != 0 && opcion >= 1 && opcion <= 3) {
+        if (opcion != 0 && opcion >= 1 && opcion <= 8) {
             system("pause");
         }
     }while(opcion != 0);
@@ -93,31 +61,19 @@ Afiliado AfiliadoManager::crearAfiliado() {
     cout << "--- NUEVA ALTA DE AFILIADO ---" << endl << endl;
     cout << "Ingrese Nombre: ";
     cin >> nombre;
-    while (nombre.size() >= 30 || nombre.size() < 2){
-        cout << "Error: El nombre debe tener entre 2 y 29 caracteres. Ingrese nuevamente: ";
-        cin >> nombre;}
     cout << "Ingrese Apellido: ";
     cin >> apellido;
-    while (apellido.size() >= 30 || apellido.size() < 2) {
-        cout << "Error: El apellido debe tener entre 2 and 29 caracteres. Ingrese nuevamente: ";
-        cin >> apellido;}
     cout << "Ingrese DNI: ";
     cin >> dni;
-    while (dni.size() >= 15 || dni.size() < 7) {
-        cout << "Error: DNI invalido (debe tener entre 7 y 14 caracteres). Ingrese nuevamente: ";
-        cin >> dni;}
     cout << "SU NUMERO DE AFILIADO ES: " << nuevoNumero << endl;
     cout << "Ingrese Telefono: ";
     cin >> telefono;
-    while (telefono.size() >= 20 || telefono.size() < 4) {
-        cout << "Error: Telefono fuera de rango. Ingrese nuevamente: ";
-        cin >> telefono;}
 
     ObraSocialArchivo archObraSocial;
     ObraSocialManager managerObraSocial;
 
    bool idValido = false;
-    while(!idValido) {
+    while (!idValido) {
         cout << "Ingrese ID de Obra Social (o 0 para ver codigos disponibles): ";
         cin >> idObraSocial;
 
@@ -129,10 +85,10 @@ Afiliado AfiliadoManager::crearAfiliado() {
 
             cout << "--- NUEVA ALTA DE AFILIADO ---" << endl << endl;
             cout << "Paciente: " << apellido << ", " << nombre << " (Nro: " << nuevoNumero << ")" << endl << endl;
-        }else{
+        } else {
             if (archObraSocial.buscar(idObraSocial) >= 0) {
                 idValido = true;
-            }else{
+            } else {
                 cout << "Error: El ID ingresado no existe. Intente de nuevo." << endl;
                 system("pause");
                 cout << "--------------------------------------------------" << endl;
@@ -142,19 +98,15 @@ Afiliado AfiliadoManager::crearAfiliado() {
 
     cout << "MAIL: ";
     cin >> mail;
-    while (mail.size() <= 5 || mail.find('@') == string::npos) {
-        cout << "Mail invalido (Debe tener mas de 5 letras y contener '@'). Ingrese nuevamente: ";
-        cin >> mail;}
     fNac.Cargar();
     Afiliado nuevoAfiliado(nuevoNumero, idObraSocial, mail, fNac, nombre, apellido, dni, telefono, true);
-    ///es un constructor para pasarle los datos de forma nativa a la clase padre Persona
 
     return nuevoAfiliado;
 }
 
 void AfiliadoManager::Agregar(){
     Afiliado obj = crearAfiliado();
-    if(_repoAfiliado.guardar(obj)){ ///se guarda el afi. en el disco rigido
+    if(_repoAfiliado.guardar(obj)){
         cout << "Afiliado guardado exitosamente." << endl;
     }else{
         cout << "Error al guardar en el archivo" << endl;
@@ -164,7 +116,7 @@ void AfiliadoManager::Agregar(){
 void AfiliadoManager::ListarTodos(){
     cout << "--- LISTA GENERAL DE AFILIADOS ---" << endl << endl;
     int cantidad = _repoAfiliado.contarRegistros();
-    for(int i = 0; i < cantidad; i++){
+    for (int i = 0; i < cantidad; i++){
         Afiliado obj = _repoAfiliado.leer(i);
         obj.Mostrar();
     }
@@ -173,9 +125,9 @@ void AfiliadoManager::ListarTodos(){
 void AfiliadoManager::ListarActivos(){
     cout << "--- AFILIADOS ACTIVOS ---" << endl << endl;
     int cantidad = _repoAfiliado.contarRegistros();
-    for(int i = 0; i < cantidad; i++){
+    for (int i = 0; i < cantidad; i++){
         Afiliado obj = _repoAfiliado.leer(i);
-        if(obj.getEstado() == true){///filtro condicinal
+        if(obj.getEstado() == true){
            obj.Mostrar();
         }
     }
@@ -186,7 +138,7 @@ bool AfiliadoManager::ListarInactivos(){
     bool hayEliminados = false;
 
     cout << "--- AFILIADOS DADOS DE BAJA ---" << endl << endl;
-    for(int i = 0; i < cantidad; i++){
+    for (int i = 0; i < cantidad; i++){
         Afiliado a = _repoAfiliado.leer(i);
         if(a.getEstado() == false){
            cout << "Nro Afiliado: #" << a.getNroDeAfiliado() << endl;
@@ -215,39 +167,15 @@ void AfiliadoManager::BuscarPorDNI(){
 
     int pos = _repoAfiliado.buscar(dniBuscado);
 
-    if(pos == -1){
+    if (pos == -1){
         cout << "El DNI no existe en el sistema" << endl;
         return;
     }
 
     Afiliado reg = _repoAfiliado.leer(pos);
     system("cls");
-    cout << "AFILIADO ENCONTRADO" << endl;
+    cout << "\t\tAFILIADO ENCONTRADO" << endl;
     mostrarAfiliado(reg);
-}
-
-void AfiliadoManager::BuscarPorApellido(){
-   string apellidoBuscado;
-    bool encontro = false;
-
-    cout << "--- BUSCAR AFILIADO POR APELLIDO ---" << endl << endl;
-    cout << "Ingrese el apellido a buscar: ";
-    cin >> apellidoBuscado;
-
-    int cantidad = _repoAfiliado.contarRegistros();
-
-    for(int i = 0; i < cantidad; i++){
-        Afiliado obj = _repoAfiliado.leer(i);
-
-        if(obj.getApellido() == apellidoBuscado) {
-            mostrarAfiliado(obj);
-            encontro = true;
-        }
-    }
-    if(!encontro){
-        cout << "No se encontraron pacientes con el apellido: " << apellidoBuscado << endl;
-    }
-    cout << endl;
 }
 
 void AfiliadoManager::Modificar(){
@@ -259,7 +187,7 @@ void AfiliadoManager::Modificar(){
 
     int pos = _repoAfiliado.buscar(dniBuscado);
 
-    if(pos == -1){
+    if (pos == -1){
         cout << "El DNI no existe en el sistema" << endl;
         return;
     }
@@ -278,17 +206,17 @@ void AfiliadoManager::Modificar(){
         int nroFijo = reg.getNroDeAfiliado();
         reg.Cargar(nroFijo);
 
-        if(_repoAfiliado.modificar(reg, pos)){
+        if (_repoAfiliado.modificar(reg, pos)){
             cout << "Guardado exitosamente!" << endl;
-        }else {
+        } else {
             cout << "No se pudo guardar el cambio." << endl;
         }
-    }else {
+    } else {
         cout << "Operacion cancelada." << endl;
     }
 }
 
-void AfiliadoManager::Eliminar(){
+void AfiliadoManager::Eliminar() {
     string dniBuscado;
     int elimina;
 
@@ -365,7 +293,7 @@ void AfiliadoManager::AltaAfiliado(){
 
         if(alta == 1){
             reg.setEstado(true);
-            if (_repoAfiliado.modificar(reg, pos)){///se guarda en su pos original
+            if (_repoAfiliado.modificar(reg, pos)){
                 cout << "Afiliado reactivado exitosamente!" << endl;
             } else {
                 cout << "No se pudo actualizar el archivo." << endl;
@@ -374,93 +302,4 @@ void AfiliadoManager::AltaAfiliado(){
             cout << "Operacion cancelada." << endl;
         }
     }
-}
-
-void AfiliadoManager::ListarOrdenadoPorApellido() {
-    int cantidad = _repoAfiliado.contarRegistros();
-    if (cantidad == 0) {
-        cout << "No hay afiliados registrados." << endl;
-        return;
-    }
-
-    /// 1. se crea el vector dinamico en RAM y pasamos los datos del archivo
-    Afiliado* vAfiliados = new Afiliado[cantidad];
-    _repoAfiliado.leerTodos(vAfiliados, cantidad);
-
-    /// 2. algoritmo de Burbujeo por Apellido
-    for (int i = 0; i < cantidad - 1; i++) {
-        for (int j = 0; j < cantidad - i - 1; j++) {
-            if (vAfiliados[j].getApellido() > vAfiliados[j + 1].getApellido()) {
-                Afiliado aux = vAfiliados[j];
-                vAfiliados[j] = vAfiliados[j + 1];
-                vAfiliados[j + 1] = aux;
-            }
-        }
-    }
-
-    /// 3.  se lista el vector ya ordenado
-    cout << "--- AFILIADOS ORDENADOS POR APELLIDO ---" << endl << endl;
-    for (int i = 0; i < cantidad; i++) {
-        mostrarAfiliado(vAfiliados[i]);
-    }
-
-    delete[] vAfiliados;
-}
-
-void AfiliadoManager::ListarOrdenadoPorDNI() {
-    int cantidad = _repoAfiliado.contarRegistros();
-    if (cantidad == 0) {
-        cout << "No hay afiliados registrados." << endl;
-        return;
-    }
-
-    Afiliado* vAfiliados = new Afiliado[cantidad];
-    _repoAfiliado.leerTodos(vAfiliados, cantidad);
-
-    /// burbujeo por DNI (Como es string, compara caracter por caracter correctamente)
-    for (int i = 0; i < cantidad - 1; i++) {
-        for (int j = 0; j < cantidad - i - 1; j++) {
-            if (vAfiliados[j].getDni() > vAfiliados[j + 1].getDni()) {
-                Afiliado aux = vAfiliados[j];
-                vAfiliados[j] = vAfiliados[j + 1];
-                vAfiliados[j + 1] = aux;
-            }
-        }
-    }
-
-    cout << "--- AFILIADOS ORDENADOS POR DNI ---" << endl << endl;
-    for (int i = 0; i < cantidad; i++) {
-        mostrarAfiliado(vAfiliados[i]);
-    }
-
-    delete[] vAfiliados;
-}
-
-void AfiliadoManager::ListarOrdenadoPorObraSocial() {
-    int cantidad = _repoAfiliado.contarRegistros();
-    if (cantidad == 0) {
-        cout << "No hay afiliados registrados." << endl;
-        return;
-    }
-
-    Afiliado* vAfiliados = new Afiliado[cantidad];
-    _repoAfiliado.leerTodos(vAfiliados, cantidad);
-
-    ///burbujeo por ID Obra Social (Comparacion de enteros)
-    for (int i = 0; i < cantidad - 1; i++) {
-        for (int j = 0; j < cantidad - i - 1; j++) {
-            if (vAfiliados[j].getIDObraSocial() > vAfiliados[j + 1].getIDObraSocial()) {
-                Afiliado aux = vAfiliados[j];
-                vAfiliados[j] = vAfiliados[j + 1];
-                vAfiliados[j + 1] = aux;
-            }
-        }
-    }
-
-    cout << "--- AFILIADOS ORDENADOS POR ID OBRA SOCIAL ---" << endl << endl;
-    for (int i = 0; i < cantidad; i++) {
-        mostrarAfiliado(vAfiliados[i]);
-    }
-
-    delete[] vAfiliados;
 }
