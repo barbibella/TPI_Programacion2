@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-
+#include "Medico.h"
 
 using namespace std;
 
