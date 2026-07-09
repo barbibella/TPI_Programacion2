@@ -1,9 +1,10 @@
+#pragma once
 #include "OrdenMedica.h"
 #include "AfiliadoArchivo.h"
 #include "MedicoArchivo.h"
 #include "TipoDeOrdenArchivo.h"
 #include "OrigenDeLaOrdenArchivo.h"
-
+#include "Fecha.h"
 #include <iostream>
 #include <cstring>
 

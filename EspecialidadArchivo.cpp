@@ -125,7 +125,7 @@ FILE *pFile;
     return result;
 }
 
-bool EspecialidadArchivo::existeIdEspecialidad(int especialidad){
+bool EspecialidadArchivo::existeEspecialidad(int especialidad){
 FILE *pFile;
     Especialidad reg;
 

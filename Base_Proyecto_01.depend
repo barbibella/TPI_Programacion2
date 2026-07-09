@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1782234935 source:c:\users\barbi\documents\github\tpi_programacion2\afiliado.cpp
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\afiliado.cpp
 	<iostream>
 	"Afiliado.h"
 	"ObraSocialArchivo.h"
@@ -9,36 +9,36 @@
 	"ObraSocialArchivo.h"
 	"ObraSocialManager.h"
 
-1782234619 c:\users\barbi\documents\github\tpi_programacion2\afiliado.h
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\afiliado.h
 	<string>
 	"Persona.h"
 	"Fecha.h"
 
-1782013709 c:\users\barbi\documents\github\tpi_programacion2\persona.h
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\persona.h
 	<cstring>
 	<string>
 
-1782246900 c:\users\barbi\documents\github\tpi_programacion2\fecha.h
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\fecha.h
 
-1781747107 c:\users\barbi\documents\github\tpi_programacion2\obrasocialarchivo.h
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\obrasocialarchivo.h
 	"ObraSocial.h"
 
-1781747107 c:\users\barbi\documents\github\tpi_programacion2\obrasocial.h
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\obrasocial.h
 	<string>
 
-1781974340 c:\users\barbi\documents\github\tpi_programacion2\obrasocialmanager.h
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\obrasocialmanager.h
 	"ObraSocialArchivo.h"
 
-1782232636 source:c:\users\barbi\documents\github\tpi_programacion2\afiliadoarchivo.cpp
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\afiliadoarchivo.cpp
 	<iostream>
 	<cstring>
 	"Afiliado.h"
 	"AfiliadoArchivo.h"
 
-1782235141 c:\users\barbi\documents\github\tpi_programacion2\afiliadoarchivo.h
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\afiliadoarchivo.h
 	"Afiliado.h"
 
-1782247756 source:c:\users\barbi\documents\github\tpi_programacion2\afiliadomanager.cpp
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\afiliadomanager.cpp
 	<iostream>
 	<cstring>
 	<string>
@@ -50,167 +50,11 @@
 	"ObraSocialManager.h"
 	"Fecha.h"
 
-1782232636 c:\users\barbi\documents\github\tpi_programacion2\afiliadomanager.h
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\afiliadomanager.h
 	"AfiliadoArchivo.h"
 	"Afiliado.h"
 
-1780864287 source:c:\users\barbi\documents\github\tpi_programacion2\configuracionmanager.cpp
-
-1782248858 source:c:\users\barbi\documents\github\tpi_programacion2\especialidad.cpp
-	<iostream>
-	"Especialidad.h"
-
-1782255760 c:\users\barbi\documents\github\tpi_programacion2\especialidad.h
-	<cstring>
-	<iostream>
-	<cstring>
-
-1782246900 source:c:\users\barbi\documents\github\tpi_programacion2\fecha.cpp
-	<iostream>
-	"Fecha.h"
-
-1782231765 source:c:\users\barbi\documents\github\tpi_programacion2\main.cpp
-	<iostream>
-	"ObraSocialArchivo.h"
-	"ObraSocialManager.h"
-	"AfiliadoManager.h"
-	"OrdenMedicaManager.h"
-	"TipoDeOrdenManager.h"
-	"OrigenDeLaOrdenManager.h"
-	"AutorizacionManager.h"
-	"MenuPrincipalManager.h"
-
-1782001312 c:\users\barbi\documents\github\tpi_programacion2\medico.h
-	"Persona.h"
-	"auxiliares.h"
-	<cstring>
-
-1782231765 c:\users\barbi\documents\github\tpi_programacion2\ordenmedica.h
-	"Fecha.h"
-	<string>
-
-1782001312 source:c:\users\barbi\documents\github\tpi_programacion2\medico.cpp
-	<iostream>
-	"Medico.h"
-
-1781999064 source:c:\users\barbi\documents\github\tpi_programacion2\medicoarchivo.cpp
-	<iostream>
-	<cstring>
-	"Medico.h"
-	"MedicoArchivo.h"
-
-1782248858 c:\users\barbi\documents\github\tpi_programacion2\medicoarchivo.h
-	"Medico.h"
-	<cstring>
-
-1781975082 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocial.cpp
-	<iostream>
-	<cstring>
-	"Afiliado.h"
-	"ObraSocial.h"
-	"ObraSocialArchivo.h"
-
-1781894504 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocialarchivo.cpp
-	<iostream>
-	<cstring>
-	"ObraSocial.h"
-	"ObraSocialArchivo.h"
-
-1782252020 source:c:\users\barbi\documents\github\tpi_programacion2\ordenmedica.cpp
-	"OrdenMedica.h"
-	"AfiliadoArchivo.h"
-	"MedicoArchivo.h"
-	"TipoDeOrdenArchivo.h"
-	"OrigenDeLaOrdenArchivo.h"
-	<iostream>
-	<cstring>
-
-1782013709 source:c:\users\barbi\documents\github\tpi_programacion2\persona.cpp
-	<iostream>
-	<cstring>
-	"Persona.h"
-
-1782248214 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocialmanager.cpp
-	<iostream>
-	"ObraSocial.h"
-	"ObraSocialArchivo.h"
-	"ObraSocialManager.h"
-
-1781999064 source:c:\users\barbi\documents\github\tpi_programacion2\ordenmedicaarchivo.cpp
-	<iostream>
-	<cstring>
-	"OrdenMedica.h"
-	"OrdenMedicaArchivo.h"
-
-1781022674 c:\users\barbi\documents\github\tpi_programacion2\ordenmedicaarchivo.h
-	"OrdenMedica.h"
-
-1782247868 source:c:\users\barbi\documents\github\tpi_programacion2\ordenmedicamanager.cpp
-	<iostream>
-	<cstring>
-	"OrdenMedica.h"
-	"OrdenMedicaArchivo.h"
-	"OrdenMedicaManager.h"
-	"TipoDeOrdenArchivo.h"
-	"OrigenDeLaOrdenArchivo.h"
-
-1782240847 c:\users\barbi\documents\github\tpi_programacion2\ordenmedicamanager.h
-
-1781652669 source:c:\users\barbi\documents\github\tpi_programacion2\origendelaorden.cpp
-	<iostream>
-	"OrigenDeLaOrden.h"
-	<string>
-	<cstring>
-
-1781022674 c:\users\barbi\documents\github\tpi_programacion2\origendelaorden.h
-	<string>
-
-1781999064 source:c:\users\barbi\documents\github\tpi_programacion2\origendelaordenarchivo.cpp
-	<iostream>
-	<cstring>
-	"OrigenDeLaOrden.h"
-	"OrigenDeLaOrdenArchivo.h"
-
-1781022674 c:\users\barbi\documents\github\tpi_programacion2\origendelaordenarchivo.h
-	"OrigenDeLaOrden.h"
-
-1782246464 source:c:\users\barbi\documents\github\tpi_programacion2\origendelaordenmanager.cpp
-	<iostream>
-	<cstring>
-	"OrigenDeLaOrden.h"
-	"OrigenDeLaOrdenArchivo.h"
-	"OrigenDeLaOrdenManager.h"
-
-1782231765 c:\users\barbi\documents\github\tpi_programacion2\origendelaordenmanager.h
-
-1781652670 source:c:\users\barbi\documents\github\tpi_programacion2\tipodeorden.cpp
-	<iostream>
-	"TipoDeOrden.h"
-	<string>
-	<cstring>
-
-1781022674 c:\users\barbi\documents\github\tpi_programacion2\tipodeorden.h
-	<string>
-
-1782231765 c:\users\barbi\documents\github\tpi_programacion2\tipodeordenmanager.h
-
-1781999065 source:c:\users\barbi\documents\github\tpi_programacion2\tipodeordenarchivo.cpp
-	<iostream>
-	<cstring>
-	"TipoDeOrden.h"
-	"TipoDeOrdenArchivo.h"
-
-1781022674 c:\users\barbi\documents\github\tpi_programacion2\tipodeordenarchivo.h
-	"TipoDeOrden.h"
-
-1782246464 source:c:\users\barbi\documents\github\tpi_programacion2\tipodeordenmanager.cpp
-	<iostream>
-	<cstring>
-	"TipoDeOrden.h"
-	"TipoDeOrdenArchivo.h"
-	"TipoDeOrdenManager.h"
-
-1782246900 source:c:\users\barbi\documents\github\tpi_programacion2\autorizacion.cpp
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\autorizacion.cpp
 	<iostream>
 	<cstring>
 	"Autorizacion.h"
@@ -218,71 +62,80 @@
 	"OrdenMedicaManager.h"
 	"AutorizacionArchivo.h"
 
-1782231765 c:\users\barbi\documents\github\tpi_programacion2\autorizacion.h
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\autorizacion.h
 	"fecha.h"
 
-1782231765 source:c:\users\barbi\documents\github\tpi_programacion2\autorizacionarchivo.cpp
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\ordenmedicaarchivo.h
+	"OrdenMedica.h"
+
+1782255626 d:\cursos\utn\2 programacion\tpi_programacion2-main\ordenmedica.h
+	"Fecha.h"
+	<string>
+
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\ordenmedicamanager.h
+
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\autorizacionarchivo.h
+	"Autorizacion.h"
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\autorizacionarchivo.cpp
 	<cstring>
 	<iostream>
 	"AutorizacionArchivo.h"
 
-1782231765 c:\users\barbi\documents\github\tpi_programacion2\autorizacionarchivo.h
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\autorizacionmanager.cpp
+	<iostream>
+	"AutorizacionManager.h"
 	"Autorizacion.h"
+	"AutorizacionArchivo.h"
+	"OrdenMedicaArchivo.h"
+	"OrdenMedica.h"
 
-1782252020 c:\users\barbi\documents\github\tpi_programacion2\auxiliares.h
-	<string>
-	"Medico.h"
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\autorizacionmanager.h
 
-1782253849 source:c:\users\barbi\documents\github\tpi_programacion2\auxiliares.cpp
+1782255275 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\auxiliares.cpp
 	"auxiliares.h"
 	"Medico.h"
 	"MedicoArchivo.h"
 	"MedicoManager.h"
 	<iostream>
 
-1782246900 source:c:\users\barbi\documents\github\tpi_programacion2\autorizacionmanager.cpp
-	<iostream>
-	"AutorizacionManager.h"
-	"Autorizacion.h"
-	"AutorizacionArchivo.h"
-	"OrdenMedicaArchivo.h"
-	"OrdenMedica.h"
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\auxiliares.h
+	<string>
+	"Medico.h"
 
-1782231765 c:\users\barbi\documents\github\tpi_programacion2\autorizacionmanager.h
-
-1782063994 c:\users\barbi\documents\github\tpi_programacion2\menuprincipalmanager.h
-
-1782249442 source:c:\users\barbi\documents\github\tpi_programacion2\menuprincipalmanager.cpp
-	<iostream>
-	"ObraSocialArchivo.h"
-	"ObraSocialManager.h"
-	"AfiliadoManager.h"
-	"OrdenMedicaManager.h"
-	"TipoDeOrdenManager.h"
-	"OrigenDeLaOrdenManager.h"
-	"AutorizacionManager.h"
-	"MenuPrincipalManager.h"
-
-1782238414 source:c:\users\barbi\documents\github\tpi_programacion2\especialidad.h
-	<iostream>
+1782255012 d:\cursos\utn\2 programacion\tpi_programacion2-main\medico.h
+	"Persona.h"
 	<cstring>
 
-1782255696 c:\users\barbi\documents\github\tpi_programacion2\medicomanager.h
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\medicoarchivo.h
+	"Medico.h"
+	<cstring>
+
+1782255242 d:\cursos\utn\2 programacion\tpi_programacion2-main\medicomanager.h
 	"Medico.h"
 	"MedicoArchivo.h"
 	"auxiliares.h"
 
-1782251861 source:c:\users\barbi\documents\github\tpi_programacion2\especialidadarchivo.cpp
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\configuracionmanager.cpp
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\especialidad.cpp
+	<iostream>
+	"Especialidad.h"
+
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\especialidad.h
+	<cstring>
+
+1782254989 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\especialidadarchivo.cpp
 	<iostream>
 	<cstring>
 	"Especialidad.h"
 	"EspecialidadArchivo.h"
 
-1782251861 c:\users\barbi\documents\github\tpi_programacion2\especialidadarchivo.h
+1782254966 d:\cursos\utn\2 programacion\tpi_programacion2-main\especialidadarchivo.h
 	"Especialidad.h"
 	<cstring>
 
-1782252988 source:c:\users\barbi\documents\github\tpi_programacion2\especialidadmanager.cpp
+1782255004 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\especialidadmanager.cpp
 	<iostream>
 	<cstring>
 	"Especialidad.h"
@@ -290,16 +143,455 @@
 	"EspecialidadManager.h"
 	"auxiliares.h"
 
-1782248858 c:\users\barbi\documents\github\tpi_programacion2\especialidadmanager.h
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\especialidadmanager.h
 	"Especialidad.h"
 	"EspecialidadArchivo.h"
 	<cstring>
 
-1782255695 source:c:\users\barbi\documents\github\tpi_programacion2\medicomanager.cpp
+1782255626 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\main.cpp
+	<iostream>
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+	"AfiliadoManager.h"
+	"OrdenMedicaManager.h"
+	"TipoDeOrdenManager.h"
+	"OrigenDeLaOrdenManager.h"
+	"AutorizacionManager.h"
+	"MenuPrincipalManager.h"
+
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\tipodeordenmanager.h
+
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\origendelaordenmanager.h
+
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\menuprincipalmanager.h
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\medico.cpp
+	<iostream>
+	"Medico.h"
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\medicoarchivo.cpp
+	<iostream>
+	<cstring>
+	"Medico.h"
+	"MedicoArchivo.h"
+
+1782255258 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\medicomanager.cpp
 	<iostream>
 	<cstring>
 	"Medico.h"
 	"MedicoArchivo.h"
 	"MedicoManager.h"
 	"auxiliares.h"
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\menuprincipalmanager.cpp
+	<iostream>
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+	"AfiliadoManager.h"
+	"OrdenMedicaManager.h"
+	"TipoDeOrdenManager.h"
+	"OrigenDeLaOrdenManager.h"
+	"AutorizacionManager.h"
+	"MenuPrincipalManager.h"
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\obrasocial.cpp
+	<iostream>
+	<cstring>
+	"Afiliado.h"
+	"ObraSocial.h"
+	"ObraSocialArchivo.h"
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\obrasocialarchivo.cpp
+	<iostream>
+	<cstring>
+	"ObraSocial.h"
+	"ObraSocialArchivo.h"
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\obrasocialmanager.cpp
+	<iostream>
+	"ObraSocial.h"
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+
+1782255626 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\ordenmedica.cpp
+	"OrdenMedica.h"
+	"AfiliadoArchivo.h"
+	"MedicoArchivo.h"
+	"TipoDeOrdenArchivo.h"
+	"OrigenDeLaOrdenArchivo.h"
+	"Fecha.h"
+	<iostream>
+	<cstring>
+
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\tipodeordenarchivo.h
+	"TipoDeOrden.h"
+
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\tipodeorden.h
+	<string>
+
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\origendelaordenarchivo.h
+	"OrigenDeLaOrden.h"
+
+1782254792 d:\cursos\utn\2 programacion\tpi_programacion2-main\origendelaorden.h
+	<string>
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\ordenmedicaarchivo.cpp
+	<iostream>
+	<cstring>
+	"OrdenMedica.h"
+	"OrdenMedicaArchivo.h"
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\ordenmedicamanager.cpp
+	<iostream>
+	<cstring>
+	"OrdenMedica.h"
+	"OrdenMedicaArchivo.h"
+	"OrdenMedicaManager.h"
+	"TipoDeOrdenArchivo.h"
+	"OrigenDeLaOrdenArchivo.h"
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\origendelaorden.cpp
+	<iostream>
+	"OrigenDeLaOrden.h"
+	<string>
+	<cstring>
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\origendelaordenarchivo.cpp
+	<iostream>
+	<cstring>
+	"OrigenDeLaOrden.h"
+	"OrigenDeLaOrdenArchivo.h"
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\origendelaordenmanager.cpp
+	<iostream>
+	<cstring>
+	"OrigenDeLaOrden.h"
+	"OrigenDeLaOrdenArchivo.h"
+	"OrigenDeLaOrdenManager.h"
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\persona.cpp
+	<iostream>
+	<cstring>
+	"Persona.h"
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\tipodeorden.cpp
+	<iostream>
+	"TipoDeOrden.h"
+	<string>
+	<cstring>
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\tipodeordenarchivo.cpp
+	<iostream>
+	<cstring>
+	"TipoDeOrden.h"
+	"TipoDeOrdenArchivo.h"
+
+1782254792 source:d:\cursos\utn\2 programacion\tpi_programacion2-main\tipodeordenmanager.cpp
+	<iostream>
+	<cstring>
+	"TipoDeOrden.h"
+	"TipoDeOrdenArchivo.h"
+	"TipoDeOrdenManager.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\afiliado.cpp
+	<iostream>
+	"Afiliado.h"
+	"ObraSocialArchivo.h"
+	<iostream>
+	<cstring>
+	"Afiliado.h"
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\afiliado.h
+	<string>
+	"Persona.h"
+	"Fecha.h"
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\persona.h
+	<cstring>
+	<string>
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\fecha.h
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\obrasocialarchivo.h
+	"ObraSocial.h"
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\obrasocial.h
+	<string>
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\obrasocialmanager.h
+	"ObraSocialArchivo.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\afiliadoarchivo.cpp
+	<iostream>
+	<cstring>
+	"Afiliado.h"
+	"AfiliadoArchivo.h"
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\afiliadoarchivo.h
+	"Afiliado.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\afiliadomanager.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"ObraSocial.h"
+	"Afiliado.h"
+	"AfiliadoArchivo.h"
+	"AfiliadoManager.h"
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+	"Fecha.h"
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\afiliadomanager.h
+	"AfiliadoArchivo.h"
+	"Afiliado.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\autorizacion.cpp
+	<iostream>
+	<cstring>
+	"Autorizacion.h"
+	"OrdenMedicaArchivo.h"
+	"OrdenMedicaManager.h"
+	"AutorizacionArchivo.h"
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\autorizacion.h
+	"fecha.h"
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\ordenmedicaarchivo.h
+	"OrdenMedica.h"
+
+1782255626 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\ordenmedica.h
+	"Fecha.h"
+	<string>
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\ordenmedicamanager.h
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\autorizacionarchivo.h
+	"Autorizacion.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\autorizacionarchivo.cpp
+	<cstring>
+	<iostream>
+	"AutorizacionArchivo.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\autorizacionmanager.cpp
+	<iostream>
+	"AutorizacionManager.h"
+	"Autorizacion.h"
+	"AutorizacionArchivo.h"
+	"OrdenMedicaArchivo.h"
+	"OrdenMedica.h"
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\autorizacionmanager.h
+
+1782255275 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\auxiliares.cpp
+	"auxiliares.h"
+	"Medico.h"
+	"MedicoArchivo.h"
+	"MedicoManager.h"
+	<iostream>
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\auxiliares.h
+	<string>
+	"Medico.h"
+
+1782255012 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\medico.h
+	"Persona.h"
+	<cstring>
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\medicoarchivo.h
+	"Medico.h"
+	<cstring>
+
+1782255242 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\medicomanager.h
+	"Medico.h"
+	"MedicoArchivo.h"
+	"auxiliares.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\configuracionmanager.cpp
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\especialidad.cpp
+	<iostream>
+	"Especialidad.h"
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\especialidad.h
+	<cstring>
+
+1782254989 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\especialidadarchivo.cpp
+	<iostream>
+	<cstring>
+	"Especialidad.h"
+	"EspecialidadArchivo.h"
+
+1782254966 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\especialidadarchivo.h
+	"Especialidad.h"
+	<cstring>
+
+1782255004 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\especialidadmanager.cpp
+	<iostream>
+	<cstring>
+	"Especialidad.h"
+	"EspecialidadArchivo.h"
+	"EspecialidadManager.h"
+	"auxiliares.h"
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\especialidadmanager.h
+	"Especialidad.h"
+	"EspecialidadArchivo.h"
+	<cstring>
+
+1782255626 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\main.cpp
+	<iostream>
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+	"AfiliadoManager.h"
+	"OrdenMedicaManager.h"
+	"TipoDeOrdenManager.h"
+	"OrigenDeLaOrdenManager.h"
+	"AutorizacionManager.h"
+	"MenuPrincipalManager.h"
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\tipodeordenmanager.h
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\origendelaordenmanager.h
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\menuprincipalmanager.h
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\medico.cpp
+	<iostream>
+	"Medico.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\medicoarchivo.cpp
+	<iostream>
+	<cstring>
+	"Medico.h"
+	"MedicoArchivo.h"
+
+1782255258 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\medicomanager.cpp
+	<iostream>
+	<cstring>
+	"Medico.h"
+	"MedicoArchivo.h"
+	"MedicoManager.h"
+	"auxiliares.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\menuprincipalmanager.cpp
+	<iostream>
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+	"AfiliadoManager.h"
+	"OrdenMedicaManager.h"
+	"TipoDeOrdenManager.h"
+	"OrigenDeLaOrdenManager.h"
+	"AutorizacionManager.h"
+	"MenuPrincipalManager.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\obrasocial.cpp
+	<iostream>
+	<cstring>
+	"Afiliado.h"
+	"ObraSocial.h"
+	"ObraSocialArchivo.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\obrasocialarchivo.cpp
+	<iostream>
+	<cstring>
+	"ObraSocial.h"
+	"ObraSocialArchivo.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\obrasocialmanager.cpp
+	<iostream>
+	"ObraSocial.h"
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+
+1782255626 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\ordenmedica.cpp
+	"OrdenMedica.h"
+	"AfiliadoArchivo.h"
+	"MedicoArchivo.h"
+	"TipoDeOrdenArchivo.h"
+	"OrigenDeLaOrdenArchivo.h"
+	"Fecha.h"
+	<iostream>
+	<cstring>
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\tipodeordenarchivo.h
+	"TipoDeOrden.h"
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\tipodeorden.h
+	<string>
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\origendelaordenarchivo.h
+	"OrigenDeLaOrden.h"
+
+1782254792 d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\origendelaorden.h
+	<string>
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\ordenmedicaarchivo.cpp
+	<iostream>
+	<cstring>
+	"OrdenMedica.h"
+	"OrdenMedicaArchivo.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\ordenmedicamanager.cpp
+	<iostream>
+	<cstring>
+	"OrdenMedica.h"
+	"OrdenMedicaArchivo.h"
+	"OrdenMedicaManager.h"
+	"TipoDeOrdenArchivo.h"
+	"OrigenDeLaOrdenArchivo.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\origendelaorden.cpp
+	<iostream>
+	"OrigenDeLaOrden.h"
+	<string>
+	<cstring>
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\origendelaordenarchivo.cpp
+	<iostream>
+	<cstring>
+	"OrigenDeLaOrden.h"
+	"OrigenDeLaOrdenArchivo.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\origendelaordenmanager.cpp
+	<iostream>
+	<cstring>
+	"OrigenDeLaOrden.h"
+	"OrigenDeLaOrdenArchivo.h"
+	"OrigenDeLaOrdenManager.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\persona.cpp
+	<iostream>
+	<cstring>
+	"Persona.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\tipodeorden.cpp
+	<iostream>
+	"TipoDeOrden.h"
+	<string>
+	<cstring>
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\tipodeordenarchivo.cpp
+	<iostream>
+	<cstring>
+	"TipoDeOrden.h"
+	"TipoDeOrdenArchivo.h"
+
+1782254792 source:d:\mai\jofiel\1_tup_utn_frgp\2_tup_2026\1_programacion 2\tp_grupalintegrador_1c2026\tpi_programacion2-main_funcionanuevo\tpi_programacion2-main\tipodeordenmanager.cpp
+	<iostream>
+	<cstring>
+	"TipoDeOrden.h"
+	"TipoDeOrdenArchivo.h"
+	"TipoDeOrdenManager.h"
 

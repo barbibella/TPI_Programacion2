@@ -27,7 +27,7 @@ Especialidad EspecialidadManager::cargar(){
 
     idFormacion = cargarEnteroValidado("Ingrese el tipo de Formacion: 1- Sin Formacion, 2 - Residencia, 3- Concurrencia", 0, 4);
 
-    return Especialidad( idEspecialidad, idFormacion, nombreEspecialidad, descripcionEspecialidad, 1);
+    return Especialidad (idEspecialidad, idFormacion, nombreEspecialidad, descripcionEspecialidad,1);
 }
 
 void EspecialidadManager::guardarEspecialidad(){

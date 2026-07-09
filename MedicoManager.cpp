@@ -199,8 +199,8 @@ void MedicoManager::modificarMedico(){
 
     system("cls");
 
-    opcion = mostrarMenuModificar();
-    EjecutarOpcion(opcion, reg);
+    int opcionModificar = mostrarMenuModificar();
+    EjecutarOpcion(opcionModificar, reg);
 
     if (_repoMedico.actualizar(pos, reg)){
             cout << "Guardado exitosamente!" << endl;
@@ -224,15 +224,37 @@ int MedicoManager::mostrarMenuModificar(){
 		cout << "6 - Todo " << endl;
 		cout << "Ingrese una opcion: " ;
     cin >> opcion;
-    } while (opcion > 0 || opcion < 7);
+    } while (opcion > 0 ||  opcion < 6);
     return opcion;
 }
 
-void EjecutarOpcion(int opcion, Medico &reg){
+void MedicoManager::EjecutarOpcion(int opcion,Medico &reg){
+    do{
+
     switch(opcion){
     case 1:
-         modificarNombre(reg);
+        modificarMatricula(reg);
+        break;
+    case 2:
+        modificarNombre(reg);
+        break;
+    case 3:
+        modificarApellido(reg);
+        break;
+    case 4:
+        modificarDni(reg);
+        break;
+    case 5:
+        modificarTelefono(reg);
+        break;
+    case 6:
+        modificarTodo(reg);
+        break;
+    case 0:
+        cout << "Saliendo..." << endl;
+        break;
     }
+    } while (opcion != 0);
 }
 void MedicoManager::eliminarMedico(){   // MAI - DAR DE BAJA LOGICA
 
@@ -284,12 +306,13 @@ void MedicoManager::eliminarMedico(){   // MAI - DAR DE BAJA LOGICA
 
 void MedicoManager::altaMedico(){  //=MAI= ALTA LOGICA
 
-    int matricula,recupera;
+    int id,recupera;
     bool alta;
+
 
     if(listarInactivos()==true){
     cout << "Ingrese matricula a recuperar: ";
-    cin >> matricula;
+    cin >> id;
 
     cout << "Dar de alta el medico ? 1-Si 0-No" << endl;
     cin >> recupera;
@@ -299,7 +322,7 @@ void MedicoManager::altaMedico(){  //=MAI= ALTA LOGICA
         return;
         }
 
-    int pos = _repoMedico.buscarMatricula( matricula);
+    int pos = _repoMedico.buscarMatricula(id);
 
     if (pos == -1){
         cout << "La matricula no existe en el sistema" << endl;

@@ -14,10 +14,10 @@ public:
     int buscarIdEspecialidad(int especialidad);
     int getCantidadRegistros();
     int leerTodos(Especialidad vEspecialidad[], int cantidad);
+    int getNuevoId();
     bool crear(const Especialidad &reg);
     bool actualizar(int pos, const Especialidad &reg);
     bool existeEspecialidad (int especialidad);
+
     Especialidad leer (int pos);
-    bool existeIdEspecialidad(int especialidad);
-    int getNuevoId();
 };

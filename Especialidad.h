@@ -4,11 +4,6 @@
 using namespace std;
 
 //CONSTRUCTOR - MAI
-#include <iostream>
-#include <cstring>
-
-//---MAI---
-//CONSTRUCTOR
 class Especialidad {
 private:
 		int _idEspecialidad;
@@ -19,8 +14,7 @@ private:
 
 	public:
 		Especialidad();
-	    Especialidad(int idEspecialidad, int idFormacion, string nombreEspecialidad, string descripcionEspecialidad, int estado);
-
+		Especialidad(int idEspecialidad, int idFormacion, string nombreEspecialidad, string descripcionEspecialidad, int estado);
 
 
 //SETTERS - MAI
@@ -39,4 +33,3 @@ private:
 	string getEstado() const;
 
 };
-

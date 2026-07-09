@@ -1,6 +1,5 @@
 #pragma once
 #include "Persona.h"
-#include "auxiliares.h"
 #include <cstring>
 
 using namespace std;
