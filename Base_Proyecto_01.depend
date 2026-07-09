@@ -60,7 +60,9 @@
 	<iostream>
 	"Especialidad.h"
 
-1782252947 c:\users\barbi\documents\github\tpi_programacion2\especialidad.h
+1782255760 c:\users\barbi\documents\github\tpi_programacion2\especialidad.h
+	<cstring>
+	<iostream>
 	<cstring>
 
 1782246900 source:c:\users\barbi\documents\github\tpi_programacion2\fecha.cpp
@@ -265,7 +267,7 @@
 	<iostream>
 	<cstring>
 
-1782254965 c:\users\barbi\documents\github\tpi_programacion2\medicomanager.h
+1782255696 c:\users\barbi\documents\github\tpi_programacion2\medicomanager.h
 	"Medico.h"
 	"MedicoArchivo.h"
 	"auxiliares.h"
@@ -293,7 +295,7 @@
 	"EspecialidadArchivo.h"
 	<cstring>
 
-1782253723 source:c:\users\barbi\documents\github\tpi_programacion2\medicomanager.cpp
+1782255695 source:c:\users\barbi\documents\github\tpi_programacion2\medicomanager.cpp
 	<iostream>
 	<cstring>
 	"Medico.h"

@@ -211,7 +211,7 @@ void MedicoManager::modificarMedico(){
 
 }
 
-int mostrarMenuModificar(){
+int MedicoManager::mostrarMenuModificar(){
     int opcion;
     do {
     cout << "-------------------------------" << endl;

@@ -25,7 +25,7 @@ public:
     void informacionMedico();  // Mostrar 1 medico por DNI
     Medico cargar();
     int mostrarMenuModificar();
-    void EjecutarOpcion(int opcion,const Medico &reg);
+    void EjecutarOpcion(int opcion, Medico &reg);
 
 };
 

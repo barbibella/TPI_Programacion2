@@ -122,7 +122,6 @@ void MenuPrincipalManager::menu() {
                 break;
         }
     } while (opcion != 0);
->>>>>>> Stashed changes
 }
 /*
 void MenuPrincipalManager::menu() {
