@@ -11,6 +11,19 @@
 
 using namespace std;
 
+//------------Barbi----------
+//Auxiliares
+bool esTextoNumerico(string cadena) {
+    // Si está vacio, no es numerico valido
+    if (cadena.empty()) return false;
+    // Recorremos caracter por caracter
+    for (int i = 0; i < cadena.size(); i++) {
+        // Si ALGUNO de los caracteres NO es un digito, devolvemos false inmediatamente
+        if (!isdigit(cadena[i])) {
+            return false;}
+    }
+    return true; // Si paso todo el bucle, es porque son todos numeros
+}
 AfiliadoManager::AfiliadoManager() : _repoAfiliado() {}
 
 void AfiliadoManager::Menu(){
@@ -123,8 +136,12 @@ Afiliado AfiliadoManager::crearAfiliado() {
     cout << "SU NUMERO DE AFILIADO ES: " << nuevoNumero << endl;
     cout << "Ingrese Telefono: ";
     cin >> telefono;
-    while (telefono.size() >= 20 || telefono.size() < 4) {
-        cout << "Error: Telefono fuera de rango. Ingrese nuevamente: ";
+    while(telefono.size() > 12 || telefono.size() < 8 || !esTextoNumerico(telefono)){
+        if(telefono.size() > 12 || telefono.size() < 8){
+            cout << "Error: Telefono fuera de rango (debe tener entre 8 y 12 caracteres). ";}
+        else{
+            cout << "Error: El telefono solo debe contener numeros (sin letras ni espacios). ";}
+        cout << "Ingrese nuevamente: ";
         cin >> telefono;}
 
     ObraSocialArchivo archObraSocial;
@@ -172,7 +189,6 @@ Afiliado AfiliadoManager::crearAfiliado() {
     fNac.Cargar();
     Afiliado nuevoAfiliado(nuevoNumero, idObraSocial, mail, fNac, nombre, apellido, dni, telefono, true);
     ///es un constructor para pasarle los datos de forma nativa a la clase padre Persona
-
     return nuevoAfiliado;
 }
 
@@ -407,11 +423,11 @@ void AfiliadoManager::ListarOrdenadoPorApellido() {
         return;
     }
 
-    /// 1. se crea el vector dinamico en RAM y pasamos los datos del archivo
+    /// se crea el vector dinamico en RAM y pasamos los datos del archivo
     Afiliado* vAfiliados = new Afiliado[cantidad];
     _repoAfiliado.leerTodos(vAfiliados, cantidad);
 
-    /// 2. algoritmo de Burbujeo por Apellido
+    /// algoritmo de Burbujeo por Apellido
     for (int i = 0; i < cantidad - 1; i++) {
         for (int j = 0; j < cantidad - i - 1; j++) {
             if (vAfiliados[j].getApellido() > vAfiliados[j + 1].getApellido()) {
@@ -422,7 +438,7 @@ void AfiliadoManager::ListarOrdenadoPorApellido() {
         }
     }
 
-    /// 3.  se lista el vector ya ordenado
+    /// se lista el vector ya ordenado
     cout << "--- AFILIADOS ORDENADOS POR APELLIDO ---" << endl << endl;
     for (int i = 0; i < cantidad; i++) {
         mostrarAfiliado(vAfiliados[i]);
@@ -440,7 +456,7 @@ void AfiliadoManager::ListarOrdenadoPorDNI() {
     Afiliado* vAfiliados = new Afiliado[cantidad];
     _repoAfiliado.leerTodos(vAfiliados, cantidad);
 
-    /// burbujeo por DNI (Como es string, compara caracter por caracter correctamente)
+    ///burbujeo por DNI (Como es string, compara caracter por caracter correctamente)
     for (int i = 0; i < cantidad - 1; i++) {
         for (int j = 0; j < cantidad - i - 1; j++) {
             if (vAfiliados[j].getDni() > vAfiliados[j + 1].getDni()) {
@@ -487,3 +503,4 @@ void AfiliadoManager::ListarOrdenadoPorObraSocial() {
 
     delete[] vAfiliados;
 }
+

@@ -8,24 +8,57 @@ bool Fecha::validarFecha(int d, int m, int a){
     if ((a<ANIOACTUAL || a>ANIOFIN) || (m<1 || m>12) || (d<1 || d>31)){
         return false;
     }
-
     if(m==4 || m==6 || m==9 || m==11){
         if(d<1 || d>30){
             return false;
         }
     }
-
     if(m==2){
         if(d<1 || d>28){
             return false;
         }
     }
-
     return true;
 }
 
 void Fecha::Cargar(){
-    cout<<"INGRESE FECHA DE NACIMIENTO:" <<endl;
+    cout << "--- INGRESE FECHA DE NACIMIENTO ---" << endl;
+    int d, m, a;
+
+    int maxDia = 31;
+    if(m == 4 || m == 6 || m == 9 || m == 11){
+        maxDia = 30;
+    }else if(m == 2){
+        if((a % 4 == 0 && a % 100 != 0) || (a % 400 == 0)){
+            maxDia = 29;
+        }else{
+            maxDia = 28;
+        }
+    }
+    cout << "DIA (1 - " << maxDia << "): ";
+    cin >> d;
+    while(d < 1 || d > maxDia){
+        cout << "Error: Dia invalido para el mes seleccionado. Ingrese nuevamente: ";
+        cin >> d;
+    }
+    cout << "MES (1 - 12): ";
+    cin >> m;
+    while(m < 1 || m > 12){
+        cout << "Error: El mes debe estar entre 1 y 12. Ingrese nuevamente: ";
+        cin >> m;
+    }
+    cout << "ANIO (1900 - 2026): ";
+    cin >> a;
+    while(a < 1900 || a > 2026){
+        cout << "Error: Anio invalido para nacimiento. Ingrese nuevamente: ";
+        cin >> a;
+    }
+    setDia(d);
+    setMes(m);
+    setAnio(a);
+}
+/*void Fecha::Cargar(){
+    cout<<"--- INGRESE FECHA DE NACIMIENTO ---" <<endl;
     int d, m, a;
     cout<<"DIA ";
     cin>>d;
@@ -47,7 +80,7 @@ void Fecha::Cargar(){
     setDia(d);
     setMes(m);
     setAnio(a);
-}
+}*/
 
 void Fecha::CargarFechaOrden(){
     cout<<"Ingrese la fecha de la orden medica:" <<endl;
@@ -68,7 +101,6 @@ void Fecha::CargarFechaOrden(){
         cout<<"ANIO ";
         cin>>a;
    }
-
     setDia(d);
     setMes(m);
     setAnio(a);
@@ -94,17 +126,10 @@ void Fecha::CargarAut(){
         cout<<"ANIO ";
         cin>>a;
    }
-
     setDia(d);
     setMes(m);
     setAnio(a);
 }
-
-
-
-
-
-
 
 void Fecha::Mostrar(){
     cout << endl;
@@ -134,7 +159,7 @@ void Fecha::setMes(int m){
         }
     }
 void Fecha::setAnio(int a){
-        if(a>=ANIOACTUAL && a<=ANIOFIN){
+        if(a >= 1900 && a <= 2026){
                 anio=a;
         }
     }

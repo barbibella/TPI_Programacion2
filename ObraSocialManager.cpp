@@ -4,11 +4,7 @@
 #include "ObraSocialManager.h"
 using namespace std;
 
-/**
-en el case 1, debo de poner las opciones, osea un switch con las 10 opciones de OBRAS SOCIALES,
-*/
-
-//Auxiliar privado creador
+//--------------Barbi-------------
 ObraSocial ObraSocialManager::crearObraSocial(){
     string nombre;
     int idIngresado;
@@ -209,7 +205,7 @@ void ObraSocialManager::AltaObraSocial(){
         if(alta == 1){
             reg.setEstado(true);
             archivo.modificar(reg, pos);
-            cout << "¡Reactivada!" << endl;
+            cout << "Reactivada!" << endl;
         }
     }
 }
