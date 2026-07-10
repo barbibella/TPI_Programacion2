@@ -113,8 +113,12 @@ Afiliado AfiliadoManager::crearAfiliado() {
         apellido[0] = toupper(apellido[0]);}
     cout << "Ingrese DNI: ";
     cin >> dni;
-    while (dni.size() >= 15 || dni.size() < 7) {
-        cout << "Error: DNI invalido (debe tener entre 7 y 14 caracteres). Ingrese nuevamente: ";
+    while(dni.size() >= 15 || dni.size() < 7 || _repoAfiliado.existeDNI(dni) == true) {
+        if(dni.size() >= 15 || dni.size() < 7) {
+            cout << "Error: DNI invalido (debe tener entre 7 y 14 caracteres). ";}
+        else{
+            cout << "Error: El DNI ya pertenece a un afiliado activo en el sistema. ";}
+        cout << "Ingrese nuevamente: ";
         cin >> dni;}
     cout << "SU NUMERO DE AFILIADO ES: " << nuevoNumero << endl;
     cout << "Ingrese Telefono: ";
@@ -139,10 +143,20 @@ Afiliado AfiliadoManager::crearAfiliado() {
 
             cout << "--- NUEVA ALTA DE AFILIADO ---" << endl << endl;
             cout << "Paciente: " << apellido << ", " << nombre << " (Nro: " << nuevoNumero << ")" << endl << endl;
-        }else {
-            if (archObraSocial.buscar(idObraSocial) >= 0) {
-                idValido = true;
-            } else {
+        }else{
+            int pos = archObraSocial.buscar(idObraSocial);
+
+            if(pos >= 0) {
+                ObraSocial osTemporal = archObraSocial.leer(pos);
+
+                if(osTemporal.getEstado() == true) {
+                   idValido = true;
+                }else{
+                    cout << "Error: La Obra Social existe pero se encuentra DADA DE BAJA." << endl;
+                    system("pause");
+                    cout << "--------------------------------------------------" << endl;
+                }
+            }else{
                 cout << "Error: El ID ingresado no existe. Intente de nuevo." << endl;
                 system("pause");
                 cout << "--------------------------------------------------" << endl;

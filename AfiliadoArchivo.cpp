@@ -117,3 +117,16 @@ Afiliado AfiliadoArchivo::buscarPorDNI(string dniBuscado) {
 
     return reg;
 }
+
+bool AfiliadoArchivo::existeDNI(string dniBuscado) {
+    int cantidad = contarRegistros();
+
+    for (int i = 0; i < cantidad; i++) {
+        Afiliado obj = leer(i);
+
+        if (obj.getDni() == dniBuscado && obj.getEstado() == true) {
+            return true;
+        }
+    }
+    return false;
+}

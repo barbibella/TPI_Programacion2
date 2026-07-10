@@ -118,3 +118,16 @@ void ObraSocialArchivo::crearObrasSocialesPredeterminadas(){
     }
     fclose(p);
 }
+
+bool ObraSocialArchivo::obraSocialActiva(int idBuscado) {
+    int cantidad = contarRegistros();
+
+    for (int i = 0; i < cantidad; i++) {
+        ObraSocial o = leer(i);
+
+        if (o.getId() == idBuscado) {
+            return o.getEstado();
+        }
+    }
+    return false;
+}

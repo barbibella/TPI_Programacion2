@@ -16,4 +16,5 @@ public:
     void listarTodo();
     void crearObrasSocialesPredeterminadas();
     int leerTodos(ObraSocial vObra[], int cantidad);
+    bool obraSocialActiva(int idBuscado);
 };

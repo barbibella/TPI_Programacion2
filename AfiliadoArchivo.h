@@ -16,4 +16,5 @@ public:
     void listarTodo();
     Afiliado buscarPorDNI(std::string dni);
     int leerTodos(Afiliado vAfiliado[], int cantidad);
+    bool existeDNI(string dniBuscado);
 };
