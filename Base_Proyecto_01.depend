@@ -893,3 +893,302 @@
 	<iostream>
 	<cstring>
 
+1782237250 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\afiliado.cpp
+	<iostream>
+	"Afiliado.h"
+	"ObraSocialArchivo.h"
+	<iostream>
+	<cstring>
+	"Afiliado.h"
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+
+1782237250 c:\users\evely\onedrive\documentos\github\tpi_programacion2\afiliado.h
+	<string>
+	"Persona.h"
+	"Fecha.h"
+
+1782225976 c:\users\evely\onedrive\documentos\github\tpi_programacion2\persona.h
+	<cstring>
+	<string>
+
+1782246939 c:\users\evely\onedrive\documentos\github\tpi_programacion2\fecha.h
+
+1783740893 c:\users\evely\onedrive\documentos\github\tpi_programacion2\obrasocialarchivo.h
+	"ObraSocial.h"
+
+1781993158 c:\users\evely\onedrive\documentos\github\tpi_programacion2\obrasocial.h
+	<string>
+
+1781993158 c:\users\evely\onedrive\documentos\github\tpi_programacion2\obrasocialmanager.h
+	"ObraSocialArchivo.h"
+
+1783740893 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\afiliadoarchivo.cpp
+	<iostream>
+	<cstring>
+	"Afiliado.h"
+	"AfiliadoArchivo.h"
+
+1783740893 c:\users\evely\onedrive\documentos\github\tpi_programacion2\afiliadoarchivo.h
+	"Afiliado.h"
+
+1783740893 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\afiliadomanager.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"ObraSocial.h"
+	"Afiliado.h"
+	"AfiliadoArchivo.h"
+	"AfiliadoManager.h"
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+	"Fecha.h"
+
+1782237250 c:\users\evely\onedrive\documentos\github\tpi_programacion2\afiliadomanager.h
+	"AfiliadoArchivo.h"
+	"Afiliado.h"
+
+1782246939 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\autorizacion.cpp
+	<iostream>
+	<cstring>
+	"Autorizacion.h"
+	"OrdenMedicaArchivo.h"
+	"OrdenMedicaManager.h"
+	"AutorizacionArchivo.h"
+
+1782224272 c:\users\evely\onedrive\documentos\github\tpi_programacion2\autorizacion.h
+	"fecha.h"
+
+1779565994 c:\users\evely\onedrive\documentos\github\tpi_programacion2\ordenmedicaarchivo.h
+	"OrdenMedica.h"
+
+1782229132 c:\users\evely\onedrive\documentos\github\tpi_programacion2\ordenmedica.h
+	"Fecha.h"
+	<string>
+
+1782232654 c:\users\evely\onedrive\documentos\github\tpi_programacion2\ordenmedicamanager.h
+
+1782224272 c:\users\evely\onedrive\documentos\github\tpi_programacion2\autorizacionarchivo.h
+	"Autorizacion.h"
+
+1782224272 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\autorizacionarchivo.cpp
+	<cstring>
+	<iostream>
+	"AutorizacionArchivo.h"
+
+1782246939 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\autorizacionmanager.cpp
+	<iostream>
+	"AutorizacionManager.h"
+	"Autorizacion.h"
+	"AutorizacionArchivo.h"
+	"OrdenMedicaArchivo.h"
+	"OrdenMedica.h"
+
+1782224272 c:\users\evely\onedrive\documentos\github\tpi_programacion2\autorizacionmanager.h
+
+1783439198 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\auxiliares.cpp
+	"auxiliares.h"
+	"Medico.h"
+	"MedicoArchivo.h"
+	"MedicoManager.h"
+	<iostream>
+
+1783640887 c:\users\evely\onedrive\documentos\github\tpi_programacion2\auxiliares.h
+	<string>
+	"Medico.h"
+
+1783640887 c:\users\evely\onedrive\documentos\github\tpi_programacion2\medico.h
+	"Persona.h"
+	<cstring>
+
+1782249124 c:\users\evely\onedrive\documentos\github\tpi_programacion2\medicoarchivo.h
+	"Medico.h"
+	<cstring>
+
+1783640887 c:\users\evely\onedrive\documentos\github\tpi_programacion2\medicomanager.h
+	"Medico.h"
+	"MedicoArchivo.h"
+	"auxiliares.h"
+
+1780969187 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\configuracionmanager.cpp
+
+1782249124 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\especialidad.cpp
+	<iostream>
+	"Especialidad.h"
+
+1783640887 c:\users\evely\onedrive\documentos\github\tpi_programacion2\especialidad.h
+	<cstring>
+
+1783640887 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\especialidadarchivo.cpp
+	<iostream>
+	<cstring>
+	"Especialidad.h"
+	"EspecialidadArchivo.h"
+
+1783640887 c:\users\evely\onedrive\documentos\github\tpi_programacion2\especialidadarchivo.h
+	"Especialidad.h"
+	<cstring>
+
+1783640887 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\especialidadmanager.cpp
+	<iostream>
+	<cstring>
+	"Especialidad.h"
+	"EspecialidadArchivo.h"
+	"EspecialidadManager.h"
+	"auxiliares.h"
+
+1782249124 c:\users\evely\onedrive\documentos\github\tpi_programacion2\especialidadmanager.h
+	"Especialidad.h"
+	"EspecialidadArchivo.h"
+	<cstring>
+
+1783740893 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1782059421 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\main.cpp
+	<iostream>
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+	"AfiliadoManager.h"
+	"OrdenMedicaManager.h"
+	"TipoDeOrdenManager.h"
+	"OrigenDeLaOrdenManager.h"
+	"AutorizacionManager.h"
+	"MenuPrincipalManager.h"
+
+1782070334 c:\users\evely\onedrive\documentos\github\tpi_programacion2\tipodeordenmanager.h
+
+1782070296 c:\users\evely\onedrive\documentos\github\tpi_programacion2\origendelaordenmanager.h
+
+1782059421 c:\users\evely\onedrive\documentos\github\tpi_programacion2\menuprincipalmanager.h
+
+1782024631 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\medico.cpp
+	<iostream>
+	"Medico.h"
+
+1781999331 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\medicoarchivo.cpp
+	<iostream>
+	<cstring>
+	"Medico.h"
+	"MedicoArchivo.h"
+
+1783640887 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\medicomanager.cpp
+	<iostream>
+	<cstring>
+	"Medico.h"
+	"MedicoArchivo.h"
+	"MedicoManager.h"
+	"auxiliares.h"
+
+1783871058 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\menuprincipalmanager.cpp
+	<iostream>
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+	"AfiliadoManager.h"
+	"MedicoManager.h"
+	"OrdenMedicaManager.h"
+	"TipoDeOrdenManager.h"
+	"OrigenDeLaOrdenManager.h"
+	"AutorizacionManager.h"
+	"MenuPrincipalManager.h"
+
+1781993158 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\obrasocial.cpp
+	<iostream>
+	<cstring>
+	"Afiliado.h"
+	"ObraSocial.h"
+	"ObraSocialArchivo.h"
+
+1783740893 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\obrasocialarchivo.cpp
+	<iostream>
+	<cstring>
+	"ObraSocial.h"
+	"ObraSocialArchivo.h"
+
+1783740893 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\obrasocialmanager.cpp
+	<iostream>
+	"ObraSocial.h"
+	"ObraSocialArchivo.h"
+	"ObraSocialManager.h"
+
+1783640887 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\ordenmedica.cpp
+	"OrdenMedica.h"
+	"AfiliadoArchivo.h"
+	"MedicoArchivo.h"
+	"TipoDeOrdenArchivo.h"
+	"OrigenDeLaOrdenArchivo.h"
+	"Fecha.h"
+	<iostream>
+	<cstring>
+
+1779648398 c:\users\evely\onedrive\documentos\github\tpi_programacion2\tipodeordenarchivo.h
+	"TipoDeOrden.h"
+
+1779657869 c:\users\evely\onedrive\documentos\github\tpi_programacion2\tipodeorden.h
+	<string>
+
+1779658472 c:\users\evely\onedrive\documentos\github\tpi_programacion2\origendelaordenarchivo.h
+	"OrigenDeLaOrden.h"
+
+1779658119 c:\users\evely\onedrive\documentos\github\tpi_programacion2\origendelaorden.h
+	<string>
+
+1781998124 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\ordenmedicaarchivo.cpp
+	<iostream>
+	<cstring>
+	"OrdenMedica.h"
+	"OrdenMedicaArchivo.h"
+
+1782246914 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\ordenmedicamanager.cpp
+	<iostream>
+	<cstring>
+	"OrdenMedica.h"
+	"OrdenMedicaArchivo.h"
+	"OrdenMedicaManager.h"
+	"TipoDeOrdenArchivo.h"
+	"OrigenDeLaOrdenArchivo.h"
+
+1781456072 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\origendelaorden.cpp
+	<iostream>
+	"OrigenDeLaOrden.h"
+	<string>
+	<cstring>
+
+1781998704 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\origendelaordenarchivo.cpp
+	<iostream>
+	<cstring>
+	"OrigenDeLaOrden.h"
+	"OrigenDeLaOrdenArchivo.h"
+
+1782246313 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\origendelaordenmanager.cpp
+	<iostream>
+	<cstring>
+	"OrigenDeLaOrden.h"
+	"OrigenDeLaOrdenArchivo.h"
+	"OrigenDeLaOrdenManager.h"
+
+1782225976 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\persona.cpp
+	<iostream>
+	<cstring>
+	"Persona.h"
+
+1781456252 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\tipodeorden.cpp
+	<iostream>
+	"TipoDeOrden.h"
+	<string>
+	<cstring>
+
+1781997794 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\tipodeordenarchivo.cpp
+	<iostream>
+	<cstring>
+	"TipoDeOrden.h"
+	"TipoDeOrdenArchivo.h"
+
+1782245440 source:c:\users\evely\onedrive\documentos\github\tpi_programacion2\tipodeordenmanager.cpp
+	<iostream>
+	<cstring>
+	"TipoDeOrden.h"
+	"TipoDeOrdenArchivo.h"
+	"TipoDeOrdenManager.h"
+
