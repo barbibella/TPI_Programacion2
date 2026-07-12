@@ -66,6 +66,10 @@ int TipoDeOrdenArchivo::contarRegistros(){
 
     pFile = fopen("tipoDeOrden.dat", "rb");
 
+    if(pFile == nullptr){
+        return 0;
+    }
+
     fseek(pFile, 0, SEEK_END);
 
     int bytes = ftell(pFile) / sizeof(TipoDeOrden);

@@ -42,12 +42,10 @@ void TipoDeOrden::setEstado(bool estado){
 }
 
 void TipoDeOrden::cargar(){
-    string descripcion;
 
     cout << "Descripcion del tipo de orden: ";
-    cin >> descripcion;
-
-    strcpy(_descripcion, descripcion.c_str());
+    cin.ignore();
+    cin.getline(_descripcion, 40);
 
     _estado = true;
 }

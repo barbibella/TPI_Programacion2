@@ -74,12 +74,19 @@ void TipoDeOrdenManager::agregar(){
     } else {
         cout << "Error al guardar el tipo de orden" << endl;
     }
+    system("pause");
 }
 
 void TipoDeOrdenManager::listarTodos(){
     TipoDeOrdenArchivo archivo;
 
     int cantidad = archivo.contarRegistros();
+
+    if(cantidad == 0){
+        cout << "No hay registros cargados." << endl;
+        system("pause");
+        return;
+    }
 
     for(int i = 0; i < cantidad; i++){
         TipoDeOrden reg;
@@ -146,11 +153,15 @@ void TipoDeOrdenManager::buscaPorID(){
 
     if(pos == -1){
         cout << "No existe un tipo de orden con ese ID" << endl;
+        system("pause");
         return;
     }
 
     TipoDeOrden reg = archivo.leer(pos);
     reg.mostrar();
+
+    cout << "===================================" << endl;
+    system("pause");
 }
 
 void TipoDeOrdenManager::eliminar(){
@@ -164,6 +175,7 @@ void TipoDeOrdenManager::eliminar(){
 
     if(pos == -1){
         cout << "No existe un tipo de orden con ese ID" << endl;
+        system("pause");
         return;
     }
 
@@ -171,6 +183,7 @@ void TipoDeOrdenManager::eliminar(){
 
     if(!reg.getEstado()){
         cout << "El tipo de orden ya se encuentra dado de baja" << endl;
+        system("pause");
         return;
     }
 
@@ -194,6 +207,7 @@ void TipoDeOrdenManager::eliminar(){
     else{
         cout << "Operacion cancelada" << endl;
     }
+    system("pause");
 }
 
 void TipoDeOrdenManager::reactivar(){
@@ -208,6 +222,7 @@ void TipoDeOrdenManager::reactivar(){
 
     if(pos == -1){
         cout << "No existe un tipo de orden con ese ID" << endl;
+        system("pause");
         return;
     }
 
@@ -215,6 +230,7 @@ void TipoDeOrdenManager::reactivar(){
 
     if(reg.getEstado()){
         cout << "El tipo de orden ya se encuentra activo" << endl;
+        system("pause");
         return;
     }
 
@@ -225,6 +241,8 @@ void TipoDeOrdenManager::reactivar(){
     } else {
         cout << "Error  al reactivar el tipo de orden" << endl;
     }
+
+    system("pause");
 }
 
 void TipoDeOrdenManager::modificar(){

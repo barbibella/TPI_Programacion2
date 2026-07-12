@@ -1,8 +1,5 @@
 #pragma once
 
-#include <string>
-
-
 class TipoDeOrden {
 private:
     int _idTipoOrden;
