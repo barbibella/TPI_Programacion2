@@ -2,6 +2,7 @@
 #include "ObraSocialArchivo.h"
 #include "ObraSocialManager.h"
 #include "AfiliadoManager.h"
+#include "MedicoManager.h"
 #include "OrdenMedicaManager.h"
 #include "TipoDeOrdenManager.h"
 #include "OrigenDeLaOrdenManager.h"
@@ -25,10 +26,11 @@ void MenuPrincipalManager::menu() {
         cout << "==================================================" << endl;
         cout << " 1. GESTION DE AFILIADOS" << endl;
         cout << " 2. GESTION DE OBRAS SOCIALES" << endl;
-        cout << " 3. GESTION DE ORDENES MEDICAS" << endl;
-        cout << " 4. GESTION DE TIPOS DE ORDEN" << endl;
-        cout << " 5. GESTION DE ORIGENES DE LA ORDEN" << endl;
-        cout << " 6. GESTION DE AUTORIZACIONES" << endl;
+        cout << " 3. GESTION DE MEDICOS" << endl;
+        cout << " 4. GESTION DE ORDENES MEDICAS" << endl;
+        cout << " 5. GESTION DE TIPOS DE ORDEN" << endl;
+        cout << " 6. GESTION DE ORIGENES DE LA ORDEN" << endl;
+        cout << " 7. GESTION DE AUTORIZACIONES" << endl;
         cout << "--------------------------------------------------" << endl;
         cout << " 0. SALIR DEL SISTEMA" << endl;
         cout << "==================================================" << endl;
@@ -47,27 +49,29 @@ void MenuPrincipalManager::menu() {
                 break;
             }
             case 3:{
+                MedicoManager mm;
+                mm.Menu();
+                break;
+            }
+            case 4:{
                 OrdenMedicaManager omm;
                 omm.menu();
                 break;
             }
-            case 4:{
+            case 5:{
                 TipoDeOrdenManager tom;
                 tom.menu();
                 break;
             }
-            case 5:{
+            case 6:{
                 OrigenDeLaOrdenManager oom;
                 oom.menu();
                 break;
             }
-            case 6: {
+            case 7: {
             AutorizacionManager aut;
             aut.menu();
             break;
-
-
-
             }
             case 0:
                 cout << endl << "Gracias por usar el sistema. Saliendo..." << endl;
