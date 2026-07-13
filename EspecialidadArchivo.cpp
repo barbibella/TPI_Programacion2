@@ -54,9 +54,11 @@ FILE *pFile;
     if (pFile == nullptr){
         return reg;
     }
-
+    //abre el archivo, obtiene cuanto pesa cada objeto especialidad y
+    //lo multiplica por posicion. SEEK_SET dice donde coloca el puntero, seria
+    //al principio.
     fseek(pFile, pos*sizeof(Especialidad), SEEK_SET);
-
+    //lee y determina el tamaño de cada objeto que lee.
     fread(&reg, sizeof(Especialidad), 1, pFile);
 
     fclose(pFile);
