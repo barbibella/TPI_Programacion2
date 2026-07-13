@@ -32,47 +32,9 @@ ObraSocial ObraSocialManager::crearObraSocial(){
     reg.Cargar(); // Pide el nombre
     return reg;
 }
-
 void ObraSocialManager::mostrarObraSocial(ObraSocial reg){
     cout << "-----------------------------------------" << endl;
     reg.Mostrar();
-}
-
-void ObraSocialManager::Menu(){
-    int opcion;
-    do{
-        system("cls");
-        cout << "--- MENU DE OBRAS SOCIALES ---" << endl;
-        cout << "1. AGREGAR OBRA SOCIAL" << endl;
-        cout << "2. LISTAR TODAS" << endl;
-        cout << "3. LISTAR ACTIVAS" << endl;
-        cout << "4. LISTAR INACTIVAS" << endl;
-        cout << "5. BUSCAR POR ID" << endl;
-        cout << "6. MODIFICAR OBRA SOCIAL" << endl;
-        cout << "7. ELIMINAR (BAJA LOGICA)" << endl;
-        cout << "8. RECONECTAR OBRA SOCIAL (ALTA)" << endl;
-        cout << "------------------------------" << endl;
-        cout << "0. VOLVER AL MENU PRINCIPAL" << endl;
-        cout << "OPCION: ";
-        cin >> opcion;
-        system("cls");
-
-        switch(opcion){
-            case 1: Agregar(); break;
-            case 2: ListarTodas(); break;
-            case 3: ListarActivas(); break;
-            case 4: ListarInactivas(); break;
-            case 5: BuscarPorID(); break;
-            case 6: Modificar(); break;
-            case 7: Eliminar(); break;
-            case 8: AltaObraSocial(); break;
-            case 0: break;
-            default: cout << "OPCION INCORRECTA" << endl; system("pause"); break;
-        }
-        if(opcion !=0){
-           system("pause");
-        }
-    }while(opcion != 0);
 }
 
 void ObraSocialManager::Agregar(){

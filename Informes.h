@@ -23,7 +23,7 @@ class Informes{
 
     public:
         Informes();
-        Informes(/*parametros*/);
+//        Informes(/*parametros*/);
 
 //SETTERS - MAI
 

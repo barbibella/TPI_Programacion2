@@ -767,7 +767,7 @@
 	"ObraSocial.h"
 	"ObraSocialArchivo.h"
 
-1783718290 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocialmanager.cpp
+1783978055 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocialmanager.cpp
 	<iostream>
 	"ObraSocial.h"
 	"ObraSocialArchivo.h"
@@ -865,13 +865,14 @@
 	"EspecialidadArchivo.h"
 	<cstring>
 
-1783703977 source:c:\users\barbi\documents\github\tpi_programacion2\medicomanager.cpp
+1783981431 source:c:\users\barbi\documents\github\tpi_programacion2\medicomanager.cpp
 	<iostream>
 	<cstring>
 	"Medico.h"
 	"MedicoArchivo.h"
 	"MedicoManager.h"
 	"auxiliares.h"
+	"EspecialidadManager.h"
 
 1783962394 source:c:\users\barbi\documents\github\tpi_programacion2\menuprincipalmanager.cpp
 	<iostream>
@@ -1214,4 +1215,42 @@
 1783966785 c:\users\barbi\documents\github\tpi_programacion2\afiliadomenu.h
 	"MenuCls.h"
 	"AfiliadoManager.h"
+
+1783981318 source:c:\users\barbi\documents\github\tpi_programacion2\obrasocialmenu.cpp
+	<iostream>
+	<cstdio>
+	"ObraSocialMenu.h"
+
+1783978055 c:\users\barbi\documents\github\tpi_programacion2\obrasocialmenu.h
+	"MenuCls.h"
+	"ObraSocialManager.h"
+
+1783962394 source:c:\users\barbi\documents\github\tpi_programacion2\informes.cpp
+	<iostream>
+	"Informes.h"
+
+1783981431 c:\users\barbi\documents\github\tpi_programacion2\informes.h
+	"ObraSocial.h"
+	"Medico.h"
+	"Especialidad.h"
+	"Autorizacion.h"
+	"TipoDeOrden.h"
+	"OrdenMedica.h"
+	<cstring>
+
+1783981159 source:c:\users\barbi\documents\github\tpi_programacion2\informesmenu.cpp
+	<cstdio>
+	<iostream>
+	"InformesMenu.h"
+
+1783966617 c:\users\barbi\documents\github\tpi_programacion2\informesmenu.h
+	"MenuCls.h"
+	"InformesManager.h"
+
+1783981160 c:\users\barbi\documents\github\tpi_programacion2\informesmanager.h
+	"Informes.h"
+	"auxiliares.h"
+	"ObraSocialArchivo.h"
+	"AfiliadoArchivo.h"
+	"OrdenMedicaArchivo.h"
 

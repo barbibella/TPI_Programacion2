@@ -1,6 +1,9 @@
 #pragma once
 #include "Informes.h"
 #include "auxiliares.h"
+#include "ObraSocialArchivo.h"
+#include "AfiliadoArchivo.h"
+#include "OrdenMedicaArchivo.h"
 
 //--- MAI ---
 class InformesManager{
@@ -10,6 +13,9 @@ private:
     void mostrarMedico(const Medico &reg);
     MedicoArchivo _repoMedico;
     */
+    ObraSocialArchivo archObraSocial;
+    AfiliadoArchivo archAfiliado;
+    OrdenMedicaArchivo archOrden;
 
 public:
     InformesManager ();
@@ -17,9 +23,10 @@ public:
     void Menu();
     void MenuInformes();
 
-    /*
-    --- INFORMES ---
+
+
     void ObrasSocialesMasAtendidas();
+   /* --- INFORMES ---
     void TipoOrdenConMayorRegistros();
     void MedicoCantOrdenEmitidas(); ///MAI
     void EspecialidadCantOrdenEmitidas(); ///MAI

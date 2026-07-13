@@ -25,21 +25,11 @@ void InformesMenu::mostrarOpciones(){
 
 }
 
-/*          --- INFORMES ---
-    void ObrasSocialesMasAtendidas();
-    void TipoOrdenConMayorRegistros();
-    void MedicoCantOrdenEmitidas();
-    void EspecialidadCantOrdenEmitidas();
-    void OrdenCantAutorizadasMensual();
-    void OrdenCantRechazadasMensual ();
 
-*/
-/*
-void MedicoMenu::ejecutarOpcion(int opcion){
+void InformesMenu::ejecutarOpcion(int opcion){
     switch(opcion){
-            case 1: _ObrasSocialesMasAtendidas(); // Informe "obras sociales mas atendidas"
-                break;
-            case 2: TipoOrdenConMayorRegistros();
+            case 1: _managerInformes.ObrasSocialesMasAtendidas(); break;// Informe "obras sociales mas atendidas"
+            /*case 2: TipoOrdenConMayorRegistros();
                 break;
             case 3: MedicoCantOrdenEmitidas();
                 break;
@@ -50,7 +40,7 @@ void MedicoMenu::ejecutarOpcion(int opcion){
             case 6: OrdenCantRechazadasMensual ();
                 break;
             case 0: cout << "Saliendo del menu" << endl;
-                break;
+                break;*/
             }
 }
-*/
+

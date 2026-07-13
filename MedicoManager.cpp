@@ -141,7 +141,7 @@ void MedicoManager::modificarMedico(){
 
     Medico reg = _repoMedico.leer(pos);
      //se fija si el medico está inactivo, si es así, no permite modificarlo.
-    if (reg.getEstado == false){
+    if (reg.getEstado() == false){
         cout<<"No se puede modificar un medico inactivo"<< endl;
         return;
     }
