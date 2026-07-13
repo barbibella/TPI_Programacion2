@@ -1,5 +1,5 @@
 #pragma once
-#include "Menu.h"
+#include "MenuCls.h"
 #include "InformesManager.h"
 
 /// ----- MAI -----

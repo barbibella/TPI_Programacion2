@@ -11,7 +11,7 @@ InformesMenu::InformesMenu()
     setCantidadOpciones(6);
 }
 
-void MedicoMenu::mostrarOpciones(){
+void InformesMenu::mostrarOpciones(){
 
         cout << "=== MENU INFORMES ===" << endl;
         cout << "1. OBRAS SOCIALES MAS ATENDIDAS" << endl;
