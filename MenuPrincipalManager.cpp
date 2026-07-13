@@ -1,98 +1,14 @@
 #include <iostream>
-#include "ObraSocialArchivo.h"
-#include "ObraSocialManager.h"
-#include "AfiliadoManager.h"
-#include "MedicoManager.h"
-#include "OrdenMedicaManager.h"
-#include "TipoDeOrdenManager.h"
-#include "OrigenDeLaOrdenManager.h"
-#include "AutorizacionManager.h"
-#include "MenuPrincipalManager.h"
+#include "MenuPrincipalManager.h" ///NO borrar
 
+
+///---- MAI ----
 using namespace std;
 
-void MenuPrincipalManager::menu() {
-
-    ObraSocialArchivo archObra;
-    archObra.crearObrasSocialesPredeterminadas();
-
-    // (Si tienen funciones similares para predeterminar Tipos de Orden o Origenes, las llamas aca)
-
-    int opcion;
-    do {
-        system("cls");
-        cout << "==================================================" << endl;
-        cout << "       SISTEMA DE GESTION DE ORDENES MEDICAS      " << endl;
-        cout << "==================================================" << endl;
-        cout << " 1. GESTION DE AFILIADOS" << endl;
-        cout << " 2. GESTION DE OBRAS SOCIALES" << endl;
-        cout << " 3. GESTION DE MEDICOS" << endl;
-        cout << " 4. GESTION DE ORDENES MEDICAS" << endl;
-        cout << " 5. GESTION DE TIPOS DE ORDEN" << endl;
-        cout << " 6. GESTION DE ORIGENES DE LA ORDEN" << endl;
-        cout << " 7. GESTION DE AUTORIZACIONES" << endl;
-        cout << "--------------------------------------------------" << endl;
-        cout << " 0. SALIR DEL SISTEMA" << endl;
-        cout << "==================================================" << endl;
-        cout << " OPCION: ";
-        cin >> opcion;
-
-        switch (opcion) {
-            case 1:{
-                AfiliadoManager am;
-                am.Menu();
-                break;
-            }
-            case 2:{
-                ObraSocialManager osm;
-                osm.Menu();
-                break;
-            }
-            case 3:{
-                MedicoManager mm;
-                mm.Menu();
-                break;
-            }
-            case 4:{
-                OrdenMedicaManager omm;
-                omm.menu();
-                break;
-            }
-            case 5:{
-                TipoDeOrdenManager tom;
-                tom.menu();
-                break;
-            }
-            case 6:{
-                OrigenDeLaOrdenManager oom;
-                oom.menu();
-                break;
-            }
-            case 7: {
-            AutorizacionManager aut;
-            aut.menu();
-            break;
-            }
-            case 0:
-                cout << endl << "Gracias por usar el sistema. Saliendo..." << endl;
-                break;
-            default:
-                cout << endl << "OPCION INCORRECTA. Intente nuevamente" << endl;
-                system("pause");
-                break;
-        }
-    } while (opcion != 0);
-
-    return ;
+MenuPrincipalManager::MenuPrincipalManager(){
+    setCantidadOpciones(8);
 }
-/*
-void MenuPrincipalManager::menu() {
-    ObraSocialArchivo archObra;
-    archObra.crearObrasSocialesPredeterminadas();
-
-    int opcion;
-    do {
-        system("cls");
+void MenuPrincipalManager::mostrarOpciones(){
         cout << "==================================================" << endl;
         cout << "       SISTEMA DE GESTION DE ORDENES MEDICAS      " << endl;
         cout << "==================================================" << endl;
@@ -102,30 +18,64 @@ void MenuPrincipalManager::menu() {
         cout << " 4. GESTION DE TIPOS DE ORDEN" << endl;
         cout << " 5. GESTION DE ORIGENES DE LA ORDEN" << endl;
         cout << " 6. GESTION DE AUTORIZACIONES" << endl;
+        cout << " 7. GESTION DE MEDICOS" << endl;
+        cout << " 8. GESTION DE ESPECIALIDADES" << endl;
+     // cout << " 9. GESTION DE INFORMES" << endl;
         cout << "--------------------------------------------------" << endl;
         cout << " 0. SALIR DEL SISTEMA" << endl;
         cout << "==================================================" << endl;
-        cout << " OPCION: ";
-        cin >> opcion;
+
+}
+
+void MenuPrincipalManager::ejecutarOpcion(int opcion) {
+
+     archObra.crearObrasSocialesPredeterminadas();
+     //(Si tienen funciones similares para predeterminar Tipos de Orden U Origenes, las llamas aca)
+
+
 
         switch (opcion) {
             case 1:{
-                AfiliadoManager am;
                 am.Menu();
                 break;
             }
             case 2:{
-                ObraSocialManager osm;
                 osm.Menu();
                 break;
             }
+            case 3:{
+                omm.menu();
+                break;
+            }
+            case 4:{
+
+                tom.menu();
+                break;
+            }
+            case 5:{
+                oom.menu();
+                break;
+            }
+            case 6: {
+                aut.menu();
+                break;
+            }
+
+            case 7:{
+                mm.run();
+                break;
+            }
+            case 8: {
+                em.run();
+                break;
+            }
+
             case 0:
-                cout << endl << "Saliendo del testeo..." << endl;
+                cout << endl << "Gracias por usar el sistema. Saliendo..." << endl;
                 break;
             default:
-                cout << endl << "OPCION INCORRECTA." << endl;
+                cout << endl << "OPCION INCORRECTA. Intente nuevamente" << endl;
                 system("pause");
                 break;
         }
-    } while (opcion != 0);
-}*/
+    }
