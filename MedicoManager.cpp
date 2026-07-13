@@ -4,53 +4,15 @@
 #include "MedicoArchivo.h"
 #include "MedicoManager.h"
 #include "auxiliares.h"
+#include "EspecialidadManager.h"
 
 //--- MAI ---
 using namespace std;
-
+///constructor
 MedicoManager::MedicoManager()
 : _repoMedico (){}
 
-//-------------------- MENU -------------------
-
-void MedicoManager::Menu(){
-    int opcion;
-    do{
-        system("cls");
-        cout << "=== MENU MEDICOS ===" << endl;
-        cout << "1. AGREGAR MEDICO" << endl;
-        cout << "2. LISTAR TODOS" << endl;
-        cout << "3. LISTAR ACTIVOS" << endl;
-        cout << "4. LISTAR INACTIVOS" << endl;
-        cout << "5. BUSCAR INFORMACION MEDICO" << endl;
-        cout << "6. MODIFICAR MEDICO" << endl;
-        cout << "7. ELIMINAR (BAJA LOGICA)" << endl;
-        cout << "8. ALTA DE MEDICO (RECUPERAR)" << endl;
-        cout << "=========================" << endl;
-        cout << "0. VOLVER AL MENU PRINCIPAL" << endl;
-        cout << "OPCION: ";
-        cin >> opcion;
-        system("cls");
-
-        switch(opcion){
-            case 1: guardarMedico(); break; //AGREGAR
-            case 2: listarMedicos(); break; //LISTAR TODOS
-            case 3: listarMActivos(); break;
-            case 4: listarInactivos(); break;
-            case 5: informacionMedico(); break; ///Está en MedicoArchivo
-            case 6: modificarMedico(); break;
-            case 7: eliminarMedico(); break; // BAJA LOGICA
-            case 8: altaMedico();  break;    // ALTA LOGICA
-            case 0: break;
-            default: cout << "OPCION INCORRECTA" << endl; system("pause"); break;
-        }
-        if (opcion != 0 && opcion >= 1 && opcion <= 8) {
-            system("pause");
-        }
-    }while(opcion != 0);
-}
-
-//---------------------------------------------
+// Manager Métodos
 
 Medico MedicoManager::crearMedico(){
     Medico reg;
@@ -178,6 +140,11 @@ void MedicoManager::modificarMedico(){
     }
 
     Medico reg = _repoMedico.leer(pos);
+     //se fija si el medico está inactivo, si es así, no permite modificarlo.
+    if (reg.getEstado == false){
+        cout<<"No se puede modificar un medico inactivo"<< endl;
+        return;
+    }
 
     cout << "MEDICO A MODIFICAR: " << endl;
 
@@ -215,7 +182,7 @@ int MedicoManager::mostrarMenuModificar(){
     int opcion;
     do {
     cout << "-------------------------------" << endl;
-    cout << "Que quiere modificar " << endl;
+    cout << "Seleccione opcion a modificar " << endl;
    		cout << "1 - Matricula" << endl;
 		cout << "2 - Nombre " << endl;
 		cout << "3 - Apellido "  << endl;
@@ -224,7 +191,7 @@ int MedicoManager::mostrarMenuModificar(){
 		cout << "6 - Todo " << endl;
 		cout << "Ingrese una opcion: " ;
     cin >> opcion;
-    } while (opcion > 0 ||  opcion < 6);
+    } while (opcion > 0 ||  opcion < 7);
     return opcion;
 }
 

@@ -13,7 +13,8 @@ private:
 public:
     MedicoManager ();
 
-    void Menu();//FALTA AGREGAR URGENTE
+    void Menu(); //Llamar a menu medico y menu especialidad
+    void MenuMedico();//FALTA AGREGAR URGENTE
 
     void guardarMedico(); //MAI - Funcion "AGREGAR"
     void listarMedicos(); // MAI - listar "TODOS"
@@ -30,7 +31,7 @@ public:
 };
 
 /*
-//FALTA HACER MENU - para mostrar
+//
   FALTA ELIMINAR: void eliminarMedico(); (BAJA LÓGICA)
   FALTA BUSCAR POR MATRICULA
   FALTA void eliminarMedico();
