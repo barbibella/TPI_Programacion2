@@ -7,8 +7,8 @@ using namespace std;
 class Especialidad {
 private:
 		int _idEspecialidad;
-		char _nombreEspecialidad[25];
-		char _descripcionEspecialidad[50];
+		char _nombreEspecialidad[30];
+		char _descripcionEspecialidad[300];
 		int _idFormacion;
 		int _estado;
 

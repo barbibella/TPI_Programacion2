@@ -25,7 +25,7 @@ void Especialidad::setIdEspecialidad(int idEspecialidad){
 
 void Especialidad::setNombreEspecialidad(string nombreEspecialidad){
 
-    if(nombreEspecialidad.size() < 25){
+    if(nombreEspecialidad.size() < 30){
         strcpy(_nombreEspecialidad, nombreEspecialidad.c_str());
     }
     else {
@@ -34,7 +34,7 @@ void Especialidad::setNombreEspecialidad(string nombreEspecialidad){
 }
 
 void Especialidad::setDescripcionEspecialidad(string descripcionEspecialidad){
-    if(descripcionEspecialidad.size() < 50){
+    if(descripcionEspecialidad.size() < 300){
         strcpy(_nombreEspecialidad, descripcionEspecialidad.c_str());
     }
     else {
@@ -55,7 +55,7 @@ int Especialidad::getIdEspecialidad() const{return _idEspecialidad;}
 string Especialidad::getNombreEspecialidad() const {return _nombreEspecialidad;}
 string Especialidad::getDescripcionEspecialidad() const {return _descripcionEspecialidad;}
 string Especialidad::getFormacion() const{
-    string formacion[3] = { "", "Residencia", "Concurrencia"};
+string formacion[3] = { "", "Residencia", "Concurrencia"};
     return formacion[_idFormacion-1];
      }
 string Especialidad::getEstado() const{

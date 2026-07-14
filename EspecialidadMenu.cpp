@@ -29,21 +29,21 @@ void EspecialidadMenu::mostrarOpciones(){
 void EspecialidadMenu::ejecutarOpcion(int opcion){
      switch(opcion){
             case 1: _managerEspecialidad.guardarEspecialidad();
-             break; //AGREGAR
+            break; //AGREGAR
             case 2: _managerEspecialidad.listarEspecialidad();
             break; //LISTAR TODOS
-//            case 3: _managerEspecialidad.listarEspActivos(); ///FALTA HACER
- //           break;  /// copiar de medicos el metodo acá y luego cambiar variables
-//            case 4: _managerEspecialidad.listarEspInactivos(); ///FALTA HACER
-//            break; /// copiar de medicos el metodo acá y luego cambiar variables
-//            case 5: _managerEspecialidad.informacionEspecialidad();
+            case 3: _managerEspecialidad.listarEspActivos();
+            break;  /// copiar de medicos el metodo acá y luego cambiar variables
+            case 4: _managerEspecialidad.listarEspInactivos();
+            break; // copiar de medicos el metodo acá y luego cambiar variables
+///            case 5: _managerEspecialidad.informacionEspecialidad();
 //            break;
-//            case 6: _managerEspecialidad.modificarEspecialidad();
+            case 6: _managerEspecialidad.modificarEspecialidad();
             break;
             case 7: _managerEspecialidad.eliminarEspecialidad();
             break;
- //           case 8: _managerEspecialidad.altaEspecialidad();  /// FALTA HACER ALTA LOGICA
- //           break;
+            case 8: _managerEspecialidad.altaEspecialidad();
+            break;
             case 0: break;
             default: cout << "OPCION INCORRECTA" << endl; system("pause");
                     break;

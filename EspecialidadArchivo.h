@@ -18,6 +18,8 @@ public:
     bool crear(const Especialidad &reg);
     bool actualizar(int pos, const Especialidad &reg);
     bool existeEspecialidad (int especialidad);
+    int buscarPorNombre(string nombre);
+    bool existeNombre(string nombre);
 
     Especialidad leer (int pos);
 };

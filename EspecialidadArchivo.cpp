@@ -2,6 +2,8 @@
 #include <cstring>
 #include "Especialidad.h"
 #include "EspecialidadArchivo.h"
+#include "auxiliares.h"
+
 //--- MAI ---
 using namespace std;
 
@@ -128,6 +130,7 @@ FILE *pFile;
 }
 
 bool EspecialidadArchivo::existeEspecialidad(int especialidad){
+    //Validacion: verifica que existe la especialidad
 FILE *pFile;
     Especialidad reg;
 
@@ -138,7 +141,7 @@ FILE *pFile;
     }
 
     while(fread(&reg, sizeof(Especialidad), 1, pFile)){
-        if(reg.getIdEspecialidad() == especialidad){
+        if(reg.getIdEspecialidad() == especialidad){  //se fija si la especialidad se encuentra en el archivo especialidad
             fclose(pFile);
             return true;
         }
@@ -153,4 +156,51 @@ FILE *pFile;
 //Metodo ID Incremental: Devuelve un nuevo nro incremental al crear un nuevo ID Especialidad
 int EspecialidadArchivo::getNuevoId(){
     return getCantidadRegistros() + 1;
+}
+
+int EspecialidadArchivo::buscarPorNombre(string nombre){
+    FILE *pFile;
+    Especialidad reg;
+    int result = -1, pos = 0;
+    string nombreBuscado = aMinusculas(nombre);
+
+    pFile = fopen(_nombreArchivo.c_str(), "rb");
+
+    if (pFile == nullptr){
+        return -1;
+    }
+
+    while (fread(&reg, sizeof(Especialidad), 1, pFile)){
+        if (aMinusculas(reg.getNombreEspecialidad()) == nombreBuscado){
+            result = pos;
+            break;
+        }
+        pos++;
+    }
+
+    fclose(pFile);
+    return result;
+}
+
+
+bool EspecialidadArchivo::existeNombre(string nombre){
+    FILE *pFile;
+    Especialidad reg;
+    string nombreBuscado = aMinusculas(nombre);
+
+    pFile = fopen(_nombreArchivo.c_str(), "rb");
+
+    if (pFile == nullptr){
+        return false;
+    }
+
+    while (fread(&reg, sizeof(Especialidad), 1, pFile)){
+        if (aMinusculas(reg.getNombreEspecialidad()) == nombreBuscado){
+            fclose(pFile);
+            return true;
+        }
+    }
+
+    fclose(pFile);
+    return false;
 }

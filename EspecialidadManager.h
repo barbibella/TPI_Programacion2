@@ -19,7 +19,8 @@ public:
     bool listarEspInactivos(); ///LISTO!
     void modificarEspecialidad(); ///FALTA!
     void informacionEspecialidad(); /// FALTA!
-
+    int  mostrarMenuModificar();
+    void ejecutarOpcion(int opcion,Especialidad &reg);
 
 private:
     Especialidad crearEspecialidad();

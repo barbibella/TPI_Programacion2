@@ -3,6 +3,7 @@
 #include "Especialidad.h"
 #include "EspecialidadArchivo.h"
 #include "EspecialidadManager.h"
+#include "EspecialidadModificar.h"
 #include "auxiliares.h"
 
 using namespace std;
@@ -12,11 +13,7 @@ EspecialidadManager::EspecialidadManager()
 : _repoEspecialidad(){
 }
 /** =====  A RESOLVER  ======
-    Métodos:
-        Listar activos
-        Listar inactivos
-        alta lógica
-        En "MODIFICAR": que NO te deje modificar si está dado de baja.
+         En "MODIFICAR": que NO te deje modificar si está dado de baja.
         */
 
 //Agrega una nueva especialidad, la crea y la guarda.
@@ -30,11 +27,11 @@ Especialidad EspecialidadManager::cargar(){
     string nombreEspecialidad, descripcionEspecialidad;
     cout << "El ID Especialidad es: " << idEspecialidad << endl;
 
-    nombreEspecialidad = cargarCadenaValidada( "Ingrese nombre de la Especialidad: ", 25);
+    nombreEspecialidad = cargarCadenaValidada( "Ingrese nombre de la Especialidad: ", 30);
 
-    descripcionEspecialidad = cargarCadenaValidada( "Ingrese descripcion de la Especialidad: ", 50);
+    descripcionEspecialidad = cargarCadenaValidada( "Ingrese descripcion de la Especialidad: ", 300);
 
-    idFormacion = cargarEnteroValidado("Ingrese el tipo de Formacion: 1- Sin Formacion, 2 - Residencia, 3- Concurrencia", 0, 4);
+    idFormacion = cargarEnteroValidado("Ingrese el tipo de Formacion: 1- Sin Formacion, 2 - Residencia, 3- Concurrencia: ", 0, 4);
 
     return Especialidad (idEspecialidad, idFormacion, nombreEspecialidad, descripcionEspecialidad,1);
 }
@@ -135,7 +132,7 @@ void EspecialidadManager::altaEspecialidad(){
 
     cout << "--------------------------------" << endl;
 
-    if(_regEspecialidad.getEstado() == true ){  //es para que no pueda activar una esp que ya esta activa
+    if(_regEspecialidad.getEstado() == "Activo" ){  //es para que no pueda activar una esp que ya esta activa
         cout << "La Especialidad ya esta dada de alta." << endl;
         return;
     }
@@ -170,7 +167,7 @@ bool EspecialidadManager::listarEspInactivos(){
     cout <<"------Especialidades dadas de baja ------" <<endl;
     for (int i = 0; i < _cantidad; i++){
         Especialidad _regEspecialidad = _repoEspecialidad.leer(i);
-        if(_regEspecialidad.getEstado() == false){
+        if(_regEspecialidad.getEstado() == "Inactivo"){
            cout << "ID #" <<_regEspecialidad.getIdEspecialidad() <<endl;
            cout << "Nombre de Especialidad: " << _regEspecialidad.getNombreEspecialidad() << endl;
 		   cout << "Descripcion: " << _regEspecialidad.getDescripcionEspecialidad() << endl;
@@ -195,7 +192,7 @@ void EspecialidadManager::listarEspActivos(){
             //va al archivo, lo lee y asigna un objeto a la variable
             //pregunta si el estado es activo y lo muestra
            Especialidad _regEspecialidad = _repoEspecialidad.leer(i);
-            if(_regEspecialidad.getEstado() == true){
+            if(_regEspecialidad.getEstado() == "Activo"){
             mostrarEspecialidad(_regEspecialidad);
                 }
             }
@@ -205,16 +202,16 @@ void EspecialidadManager::listarEspActivos(){
     }
 }
 
-///MODIFICAR ESPECIALIDAD
-//void modificarEspecialidad();
+
+
 void EspecialidadManager::modificarEspecialidad(){
     int idEspecialidad, opcion, busqueda, pos;
-    string dni;
+
     bool modifica;
 
     listarEspActivos();
-    cout << "\nIngrese el ID de la especialidad a modificar: ";
-    cin >> idEspecialidad;
+
+    idEspecialidad = cargarEnteroValidado("\nIngrese el ID de la especialidad a modificar: ", 0,_repoEspecialidad.getCantidadRegistros());
      pos = _repoEspecialidad.buscarIdEspecialidad(idEspecialidad);
 
         if (pos == -1){
@@ -224,7 +221,7 @@ void EspecialidadManager::modificarEspecialidad(){
 
     Especialidad reg = _repoEspecialidad.leer(pos);
     //se fija si la especialidad está inactiva, si es así, no permite modificarla.
-    if (reg.getEstado == false){
+    if (reg.getEstado() == "Inactivo"){
         cout<<"No se puede modificar una especialidad inactiva"<< endl;
         return;
     }
@@ -249,8 +246,8 @@ void EspecialidadManager::modificarEspecialidad(){
 
     system("cls");
 
-    int opcionModificar = mostrarMenuModificar();
-    EjecutarOpcion(opcionModificar, reg);
+    EspecialidadModificar menuModificar(reg);
+    menuModificar.run();
 
     if (_repoEspecialidad.actualizar(pos, reg)){
             cout << "Guardado exitosamente!" << endl;
@@ -261,40 +258,24 @@ void EspecialidadManager::modificarEspecialidad(){
 
 }
 
-int EspecialidadManager::mostrarMenuModificar(){
-    int opcion;
-    do {
-    cout << "-------------------------------" << endl;
-    cout << "Seleccione opcion a modificar: " << endl;
-   		cout << "1 - Nombre Especialidad" << endl;
-		cout << "2 - Descripcion Especialidad " << endl;
-		cout << "3 - Formacion "  << endl;
-		cout << "4 - Todo " << endl;
-		cout << "Ingrese una opcion: " ;
-    cin >> opcion;
-    } while (opcion > 0 ||  opcion < 5);
-    return opcion;
-}
 
 ///INFORMACION ESPECIALIDAD - FALTA!!!
  //void informacionEspecialidad();
 
  void EspecialidadManager::informacionEspecialidad(){
     if (_repoEspecialidad.getCantidadRegistros()> 0){
+        string nombreBuscado = cargarCadenaValidada("Ingrese el nombre de especialidad a buscar: ",30);
+        int pos = _repoEspecialidad.buscarPorNombre(nombreBuscado);
 
-
-        if (_pos == -1){
-            cout << "Dato no valido" << endl;
+        if (pos == -1){
+            cout <<"No se encontró una especialidad con ese nombre."<<endl;
             return;
+            }
+        Especialidad reg = _repoEspecialidad.leer(pos);
+        mostrarEspecialidad(reg);
+
         }
 
-        _regSocio = _repoSocio.leer(_pos);
-
-        system("cls");
-
-        cout << "\t\tSOCIO " << endl;
-        mostrarSocio(_regSocio);
-    }
     else {
         cout << "\nNo se encuentran registros en el sistema..." << endl;
     }
