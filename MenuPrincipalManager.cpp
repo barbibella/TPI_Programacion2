@@ -6,7 +6,7 @@
 using namespace std;
 
 MenuPrincipalManager::MenuPrincipalManager(){
-    setCantidadOpciones(8);
+    setCantidadOpciones(9);
 }
 void MenuPrincipalManager::mostrarOpciones(){
         cout << "==================================================" << endl;
@@ -36,11 +36,11 @@ void MenuPrincipalManager::ejecutarOpcion(int opcion) {
 
         switch (opcion) {
             case 1:{
-                am.Menu();
+                am.run();
                 break;
             }
             case 2:{
-                osm.Menu();
+                osm.run();
                 break;
             }
             case 3:{

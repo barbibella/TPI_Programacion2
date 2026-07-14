@@ -688,16 +688,15 @@
 
 1782231765 c:\users\barbi\documents\github\tpi_programacion2\autorizacionmanager.h
 
-1782253849 source:c:\users\barbi\documents\github\tpi_programacion2\auxiliares.cpp
+1784001647 source:c:\users\barbi\documents\github\tpi_programacion2\auxiliares.cpp
 	"auxiliares.h"
 	"Medico.h"
 	"MedicoArchivo.h"
 	"MedicoManager.h"
 	<iostream>
 
-1783703977 c:\users\barbi\documents\github\tpi_programacion2\auxiliares.h
+1784001647 c:\users\barbi\documents\github\tpi_programacion2\auxiliares.h
 	<string>
-	"Medico.h"
 
 1783703977 c:\users\barbi\documents\github\tpi_programacion2\medico.h
 	"Persona.h"
@@ -714,11 +713,11 @@
 
 1780864287 source:c:\users\barbi\documents\github\tpi_programacion2\configuracionmanager.cpp
 
-1782248858 source:c:\users\barbi\documents\github\tpi_programacion2\especialidad.cpp
+1784001647 source:c:\users\barbi\documents\github\tpi_programacion2\especialidad.cpp
 	<iostream>
 	"Especialidad.h"
 
-1783703977 c:\users\barbi\documents\github\tpi_programacion2\especialidad.h
+1784001647 c:\users\barbi\documents\github\tpi_programacion2\especialidad.h
 	<cstring>
 
 1783719545 source:c:\users\barbi\documents\github\tpi_programacion2\fecha.cpp
@@ -732,7 +731,7 @@
 
 1782231765 c:\users\barbi\documents\github\tpi_programacion2\origendelaordenmanager.h
 
-1783962394 c:\users\barbi\documents\github\tpi_programacion2\menuprincipalmanager.h
+1784001647 c:\users\barbi\documents\github\tpi_programacion2\menuprincipalmanager.h
 	"MenuCls.h"
 	"ObraSocialArchivo.h"
 	"ObraSocialManager.h"
@@ -743,6 +742,7 @@
 	"AutorizacionManager.h"
 	"MedicoMenu.h"
 	"EspecialidadMenu.h"
+	"InformesMenu.h"
 
 1782001312 source:c:\users\barbi\documents\github\tpi_programacion2\medico.cpp
 	<iostream>
@@ -842,30 +842,32 @@
 	"TipoDeOrdenArchivo.h"
 	"TipoDeOrdenManager.h"
 
-1783962394 source:c:\users\barbi\documents\github\tpi_programacion2\especialidadarchivo.cpp
+1784001647 source:c:\users\barbi\documents\github\tpi_programacion2\especialidadarchivo.cpp
 	<iostream>
 	<cstring>
 	"Especialidad.h"
 	"EspecialidadArchivo.h"
+	"auxiliares.h"
 
-1783703977 c:\users\barbi\documents\github\tpi_programacion2\especialidadarchivo.h
+1784001647 c:\users\barbi\documents\github\tpi_programacion2\especialidadarchivo.h
 	"Especialidad.h"
 	<cstring>
 
-1783703977 source:c:\users\barbi\documents\github\tpi_programacion2\especialidadmanager.cpp
+1784001647 source:c:\users\barbi\documents\github\tpi_programacion2\especialidadmanager.cpp
 	<iostream>
 	<cstring>
 	"Especialidad.h"
 	"EspecialidadArchivo.h"
 	"EspecialidadManager.h"
+	"EspecialidadModificar.h"
 	"auxiliares.h"
 
-1783962394 c:\users\barbi\documents\github\tpi_programacion2\especialidadmanager.h
+1784001647 c:\users\barbi\documents\github\tpi_programacion2\especialidadmanager.h
 	"Especialidad.h"
 	"EspecialidadArchivo.h"
 	<cstring>
 
-1783981431 source:c:\users\barbi\documents\github\tpi_programacion2\medicomanager.cpp
+1784001647 source:c:\users\barbi\documents\github\tpi_programacion2\medicomanager.cpp
 	<iostream>
 	<cstring>
 	"Medico.h"
@@ -873,8 +875,9 @@
 	"MedicoManager.h"
 	"auxiliares.h"
 	"EspecialidadManager.h"
+	"MedicoModificar.h"
 
-1783962394 source:c:\users\barbi\documents\github\tpi_programacion2\menuprincipalmanager.cpp
+1784001647 source:c:\users\barbi\documents\github\tpi_programacion2\menuprincipalmanager.cpp
 	<iostream>
 	"MenuPrincipalManager.h"
 
@@ -1202,7 +1205,7 @@
 	<iostream>
 	"MedicoMenu.h"
 
-1783962394 source:c:\users\barbi\documents\github\tpi_programacion2\menucls.cpp
+1784001647 source:c:\users\barbi\documents\github\tpi_programacion2\menucls.cpp
 	"MenuCls.h"
 	<cstdio>
 	<iostream>
@@ -1238,19 +1241,36 @@
 	"OrdenMedica.h"
 	<cstring>
 
-1783981159 source:c:\users\barbi\documents\github\tpi_programacion2\informesmenu.cpp
+1784001647 source:c:\users\barbi\documents\github\tpi_programacion2\informesmenu.cpp
 	<cstdio>
 	<iostream>
 	"InformesMenu.h"
 
-1783966617 c:\users\barbi\documents\github\tpi_programacion2\informesmenu.h
+1784001647 c:\users\barbi\documents\github\tpi_programacion2\informesmenu.h
 	"MenuCls.h"
 	"InformesManager.h"
 
-1783981160 c:\users\barbi\documents\github\tpi_programacion2\informesmanager.h
-	"Informes.h"
-	"auxiliares.h"
-	"ObraSocialArchivo.h"
-	"AfiliadoArchivo.h"
+1784001647 c:\users\barbi\documents\github\tpi_programacion2\informesmanager.h
+
+1784001647 c:\users\barbi\documents\github\tpi_programacion2\especialidadmodificar.h
+	<string>
+	<iostream>
+	"Especialidad.h"
+	"MenuCls.h"
+
+1784001647 source:c:\users\barbi\documents\github\tpi_programacion2\informesmanager.cpp
+	<iostream>
+	"InformesManager.h"
+	"OrdenMedica.h"
 	"OrdenMedicaArchivo.h"
+	"Medico.h"
+	"MedicoArchivo.h"
+	"Especialidad.h"
+	"EspecialidadArchivo.h"
+
+1784001647 c:\users\barbi\documents\github\tpi_programacion2\medicomodificar.h
+	<string>
+	<iostream>
+	"Medico.h"
+	"MenuCls.h"
 
