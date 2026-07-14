@@ -5,6 +5,7 @@
 #include "MedicoManager.h"
 #include "auxiliares.h"
 #include "EspecialidadManager.h"
+#include "MedicoModificar.h"
 
 //--- MAI ---
 using namespace std;
@@ -21,6 +22,7 @@ Medico MedicoManager::crearMedico(){
 
     }
 
+///CREAR MEDICO
 Medico MedicoManager::cargar(){
     int matricula, especialidad;
     string nombre, apellido, dni, telefono;
@@ -38,9 +40,41 @@ Medico MedicoManager::cargar(){
         }
     }while (existe);
 
-    especialidad = cargarEnteroValidado("1 - Medicina clinica\n2 - Pediatria\n3 - Traumatologia\n4 - Oftalmologia\n5 - Cirugia\n6 - Neumonologia\n7 - Cardiologia\n8 - Neurologia\n9 - Gastroenterologia\n10- Ginecologia", 0, 11);
+    //va al archivo de especialidades y pregunta cuantas especialidades hay
+    EspecialidadArchivo repoEspecialidad;
+    int cantidadEspecialidades = repoEspecialidad.getCantidadRegistros();
+
+    //si no hay especialidades, devuelve medico vacío y pide que se ingresen especialidades.
+    if(cantidadEspecialidades == 0){
+            cout<< "No hay especialidades cargadas. Por favor ingrese especialidades."<< endl;
+            return Medico();
+
+    }
+
+    //muestra las especialidades disponibles
+    cout << "ESPECIALIDADES DISPONIBLES:" << endl;
+    cout << "ID\tNombre" << endl;
+
+    for (int i = 0; i < cantidadEspecialidades; i++){
+        Especialidad regEspecialidad = repoEspecialidad.leer(i);
+        cout << regEspecialidad.getIdEspecialidad() << "\t" << regEspecialidad.getNombreEspecialidad() << endl;
+    }
+
+    bool especialidadValida;
+
+    do {
+        //se pide cargar un ID de especialidad
+        especialidad = cargarEnteroValidado("Ingrese el ID de la especialidad: ", 1, repoEspecialidad.getCantidadRegistros());
+        especialidadValida = repoEspecialidad.existeEspecialidad(especialidad);
+
+        if (!especialidadValida){
+            cout << "Ese ID de especialidad no existe" << endl;
+        }
+    } while (!especialidadValida);
+
     return Medico(matricula, especialidad, nombre, apellido, dni, telefono, 1);
 }
+
 
 // MAI - guardarMedico es la funcion agregar O CREAR.
 void MedicoManager::guardarMedico(){
@@ -118,11 +152,7 @@ void MedicoManager::modificarMedico(){
     string dni;
     bool modifica;
 
-    do {
-        cout << "Como busca el medico? 1- Matricula 2- Dni ";
-        cin >> busqueda;
-    } while (busqueda == 1 && busqueda == 2);
-
+    busqueda = cargarEnteroValidado("Como busca el medico? 1- Matricula 2- Dni ", 0,3);
     if (busqueda == 1){
         cout << "Ingrese matricula del medico a modificar: ";
         cin >> matricula;
@@ -166,8 +196,8 @@ void MedicoManager::modificarMedico(){
 
     system("cls");
 
-    int opcionModificar = mostrarMenuModificar();
-    EjecutarOpcion(opcionModificar, reg);
+    MedicoModificar menuModificar(reg);
+    menuModificar.run();
 
     if (_repoMedico.actualizar(pos, reg)){
             cout << "Guardado exitosamente!" << endl;
@@ -178,51 +208,7 @@ void MedicoManager::modificarMedico(){
 
 }
 
-int MedicoManager::mostrarMenuModificar(){
-    int opcion;
-    do {
-    cout << "-------------------------------" << endl;
-    cout << "Seleccione opcion a modificar " << endl;
-   		cout << "1 - Matricula" << endl;
-		cout << "2 - Nombre " << endl;
-		cout << "3 - Apellido "  << endl;
-		cout << "4 - DNI " << endl;
-		cout << "5 - Telefono " << endl;
-		cout << "6 - Todo " << endl;
-		cout << "Ingrese una opcion: " ;
-    cin >> opcion;
-    } while (opcion > 0 ||  opcion < 7);
-    return opcion;
-}
 
-void MedicoManager::EjecutarOpcion(int opcion,Medico &reg){
-    do{
-
-    switch(opcion){
-    case 1:
-        modificarMatricula(reg);
-        break;
-    case 2:
-        modificarNombre(reg);
-        break;
-    case 3:
-        modificarApellido(reg);
-        break;
-    case 4:
-        modificarDni(reg);
-        break;
-    case 5:
-        modificarTelefono(reg);
-        break;
-    case 6:
-        modificarTodo(reg);
-        break;
-    case 0:
-        cout << "Saliendo..." << endl;
-        break;
-    }
-    } while (opcion != 0);
-}
 void MedicoManager::eliminarMedico(){   // MAI - DAR DE BAJA LOGICA
 
     int matricula;
