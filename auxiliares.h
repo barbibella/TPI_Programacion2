@@ -15,14 +15,3 @@ std::string aMinusculas(string texto);///funcion pasa a texto solo para hacer co
 
 
 
-/* PENDIENTES.
-
-3)Realizar InformesManager .cpp y .h
-  A)cantidad mensual de ordenes autorizadas y rechazadas.
-  b) cantidad de ordenes medicas por tipo
-  c) cantidad de ordenes emitidas por medico.
-  d) cantidad de ordenes por especialidad medica.
-  e)Obras sociales con mayor cantidad de afiliados atendidos
-
-*/
-
