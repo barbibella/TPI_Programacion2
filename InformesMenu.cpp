@@ -28,19 +28,21 @@ void InformesMenu::mostrarOpciones(){
 
 void InformesMenu::ejecutarOpcion(int opcion){
     switch(opcion){
-            case 1: _managerInformes.ObrasSocialesMasAtendidas(); break;// Informe "obras sociales mas atendidas"
-            /*case 2: TipoOrdenConMayorRegistros();
+            case 1: _managerInformes.ObrasSocialesMasAtendidas(); // Informe "obras sociales mas atendidas"
                 break;
-            case 3: MedicoCantOrdenEmitidas();
+            case 2: _managerInformes.TipoOrdenConMayorRegistros();
                 break;
-            case 4: EspecialidadCantOrdenEmitidas();
+            case 3: _managerInformes.MedicoCantOrdenEmitidas(); //MAI
                 break;
-            case 5: OrdenCantAutorizadasMensual();
+            case 4: _managerInformes.EspecialidadCantOrdenEmitidas(); //MAI
                 break;
-            case 6: OrdenCantRechazadasMensual ();
+            case 5: _managerInformes.OrdenCantAutorizadasMensual();
+                break;
+            case 6: _managerInformes.OrdenCantRechazadasMensual ();
                 break;
             case 0: cout << "Saliendo del menu" << endl;
-                break;*/
+                break;
             }
 }
+
 

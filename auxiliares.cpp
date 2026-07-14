@@ -17,6 +17,7 @@ std::string cargarCadena(){
 
     return texto;
 }
+
 std::string cargarCadenaValidada(string mensaje, int maximo){
     string texto;
 
@@ -48,6 +49,7 @@ int cargarEnteroValidado(string mensaje, int minimo){
 
     return valor;
     }
+
 //sobrecarga de funciones
 int cargarEnteroValidado(string mensaje, int minimo, int maximo){
     int valor;
@@ -66,64 +68,13 @@ int cargarEnteroValidado(string mensaje, int minimo, int maximo){
 }
 
 
-///Modificaciones Medico
-void modificarNombre(Medico &reg){
-    string nombre;
-
-    nombre = cargarCadenaValidada("Ingrese Nombre: ", 30);
-
-    reg.setNombre(nombre);
-}
-
-void modificarApellido(Medico &reg){
-    string apellido;
-
-    apellido = cargarCadenaValidada("Ingrese Apellido: ", 30);
-
-    reg.setApellido(apellido);
-}
-
-void modificarDni(Medico &reg){
-    string dni;
-
-    dni = cargarCadenaValidada("Ingrese DNI: ", 15);
-
-    reg.setDni(dni);
-}
-
-void modificarTelefono(Medico &reg){
-    string telefono;
-
-    telefono = cargarCadenaValidada("Ingrese telefono: ", 20);
-
-    reg.setTelefono(telefono);
-}
-
-void modificarMatricula(Medico &reg){
-    int matricula;
-
-    matricula = cargarEnteroValidado("Ingrese Matricula: ", 0, 7);
-
-    reg.setMatricula(matricula);
-}
-
-void modificarEspecialidad(Medico &reg){
-    int especialidad;
-
-    especialidad = cargarEnteroValidado("Ingrese Especialidad: ", 0, 10 );
-
-    reg.setEspecialidad(especialidad);
-}
-
-void modificarTodo(Medico &reg){
-
-    modificarNombre(reg);
-    modificarApellido(reg);
-    modificarDni(reg);
-    modificarTelefono(reg);
-    modificarEspecialidad(reg);
-    modificarMatricula(reg);
-
-
-
+///normaliza textos para poder compararlos entre si
+string aMinusculas(string texto){
+    for(int i = 0; i < texto.size(); i++){
+        if(texto[i] >= 'A' && texto[i] <= 'Z'){
+            texto[i] = texto[i] + 32;
+        }
     }
+    return texto;
+}//toma todo el texto que recibe,
+//por la cant de carateres que tenga el texto

@@ -4,6 +4,7 @@
 
 /// ----- MAI -----
 
+
 class InformesMenu : public Menu
 {
     public:InformesMenu();
@@ -14,3 +15,4 @@ class InformesMenu : public Menu
     private:
         InformesManager _managerInformes;
 };
+
