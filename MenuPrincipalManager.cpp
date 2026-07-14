@@ -36,11 +36,11 @@ void MenuPrincipalManager::ejecutarOpcion(int opcion) {
 
         switch (opcion) {
             case 1:{
-                am.run();
+                am.Menu();
                 break;
             }
             case 2:{
-                osm.run();
+                osm.Menu();
                 break;
             }
             case 3:{

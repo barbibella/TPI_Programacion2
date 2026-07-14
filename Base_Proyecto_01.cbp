@@ -56,10 +56,10 @@
 		<Unit filename="EspecialidadArchivo.h" />
 		<Unit filename="EspecialidadManager.cpp" />
 		<Unit filename="EspecialidadManager.h" />
+		<Unit filename="EspecialidadMenu.cpp" />
+		<Unit filename="EspecialidadMenu.h" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
-		<Unit filename="Informes.cpp" />
-		<Unit filename="Informes.h" />
 		<Unit filename="InformesManager.cpp" />
 		<Unit filename="InformesManager.h" />
 		<Unit filename="InformesMenu.cpp" />

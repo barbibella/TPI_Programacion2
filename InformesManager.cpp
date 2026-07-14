@@ -34,7 +34,7 @@ void InformesManager::ObrasSocialesMasAtendidas(){
 
         // solo se cuenta las ordenes validas/atendidas
         if(ord.getEstado() == true) {
-            int idAfiliado = ord.getIdAfiliado();
+            string idAfiliado = ord.getDniPaciente();
 
             // busca al afiliado en su archivo para saber su Obra Social
             int posAfi = archAfiliado.buscar(idAfiliado);
