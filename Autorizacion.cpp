@@ -76,7 +76,7 @@ void Autorizacion::setFechaAutorizacion(Fecha fecha){
 }
 
 void Autorizacion::setPorcentajeCobertura(float porcentaje){
-if(porcentaje>0&&porcentaje=<100){
+if(porcentaje>0&&porcentaje<=100){
     porcentajeCobertura = porcentaje;
     }
 }
@@ -107,7 +107,7 @@ int orden;
     cout << endl;
 setIdOrden(orden);
 while(idOrden==0){
-    cout << "NO SE PUDO CARGAR EL ID, INGRESE NUEVAMENTE: "
+    cout << "NO SE PUDO CARGAR EL ID, INGRESE NUEVAMENTE: ";
     cin>> orden;
 setIdOrden(orden);
 }
@@ -123,7 +123,7 @@ int obraSocial;
     cout << "INGRESE LA OBRA SOCIAL (1 a 10): ";
     cin >> obraSocial;
 
-while(obraSocial<1||obraSocial>10||obr.obraSocialActiva(ObraSocial)==false)) {
+while(obraSocial<1||obraSocial>10||obr.obraSocialActiva(obraSocial)==false) {
     cout << "RE INGRESE LA OBRA SOCIAL POR FAVOR: ";
     cin >>obraSocial;
 }
@@ -165,7 +165,7 @@ bool aprob;
     while(aprob!=1||aprob!=0){
     cout << endl;
     cout << "INGRESE 1 SI ESTA APROBADA O 0 SI NO LO ESTA : ";
-    cin aprob;
+    cin >> aprob;
     }
     setAprobada(aprob);
 
@@ -173,7 +173,7 @@ bool aprob;
     cout << "INGRESE LAS OBSERVACIONES: ";
     cin >> obs;
     while (strlen(obs) > 99) {
-        cout << "INGRESE NUEVAMENTE LAS OBSERVACIONES (HASTA 100 CARACTERES)
+        cout << "INGRESE NUEVAMENTE LAS OBSERVACIONES (HASTA 100 CARACTERES)";
         cin >> obs;
     }
     setObservaciones(obs);
