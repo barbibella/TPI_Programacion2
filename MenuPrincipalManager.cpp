@@ -20,7 +20,7 @@ void MenuPrincipalManager::mostrarOpciones(){
         cout << " 6. GESTION DE AUTORIZACIONES" << endl;
         cout << " 7. GESTION DE MEDICOS" << endl;
         cout << " 8. GESTION DE ESPECIALIDADES" << endl;
-     // cout << " 9. GESTION DE INFORMES" << endl;
+        cout << " 9. GESTION DE INFORMES" << endl;
         cout << "--------------------------------------------------" << endl;
         cout << " 0. SALIR DEL SISTEMA" << endl;
         cout << "==================================================" << endl;
@@ -60,7 +60,6 @@ void MenuPrincipalManager::ejecutarOpcion(int opcion) {
                 aut.menu();
                 break;
             }
-
             case 7:{
                 mm.run();
                 break;
@@ -69,7 +68,10 @@ void MenuPrincipalManager::ejecutarOpcion(int opcion) {
                 em.run();
                 break;
             }
-
+            case 9: {
+                im.run();
+                break;
+            }
             case 0:
                 cout << endl << "Gracias por usar el sistema. Saliendo..." << endl;
                 break;

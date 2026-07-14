@@ -9,6 +9,7 @@
 #include "AutorizacionManager.h"
 #include "MedicoMenu.h"
 #include "EspecialidadMenu.h"
+#include "InformesMenu.h"
 
 ///---- MAI ----
 
@@ -29,7 +30,7 @@ private:
     AutorizacionManager aut;
     MedicoMenu mm;
     EspecialidadMenu em;
-// informesManager im;
+    InformesMenu im;
 
     ObraSocialArchivo archObra;
 

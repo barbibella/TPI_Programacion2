@@ -15,8 +15,8 @@ void Menu::run(){
 	do{
 		system("cls"); // borra pantalla
 		mostrarOpciones();
-		opcion = seleccionarOpcion(); //muestra y toma una opcion y borra todo lo que queda en memoria y solo quede lo que ingrese el usuario.
-		ejecutarOpcion(opcion);
+		opcion = seleccionarOpcion(); //muestra y toma una opcion y borra todo lo que queda en memoria
+		ejecutarOpcion(opcion);       // y solo quede lo que ingrese el usuario.
         if(opcion != 0){
             system("pause");
         }
