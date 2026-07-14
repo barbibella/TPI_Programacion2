@@ -14,6 +14,9 @@ public:
     void listarPorOrdenMedica();
     void CantidadMensualAprobadoRechazado();
     void proximoCod();
+    void eliminar();
+    void modificar();////falta hacer
+    void alta(); ////falta hacer
 
 
 };

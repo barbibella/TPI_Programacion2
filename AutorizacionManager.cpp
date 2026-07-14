@@ -83,8 +83,11 @@ void AutorizacionManager::listarTodos(){
 
         reg = archivo.leer(i);
 
+
+        if(reg.getEstado()){
+
         reg.Mostrar();
-    }
+    }}
 }
 
 void AutorizacionManager::agregar(){
@@ -163,7 +166,7 @@ void AutorizacionManager::listarPorEstado(){
 
         reg = arch.leer(i);
 
-        if(reg.getAprobada() == estadoBuscado){
+        if(reg.getAprobada() == estadoBuscado&&reg.getEstado()){
 
             reg.Mostrar();
             cout << endl;
@@ -204,7 +207,7 @@ int cantidad=arch.contarRegistros();
 
 for(int i=0;i<cantidad;i++){
 reg=arch.leer(i);
-if(reg.getPorcentajeCobertura()==CoberturaBuscada){
+if(reg.getPorcentajeCobertura()==CoberturaBuscada&&reg.getEstado()){
 reg.Mostrar();
 cout << endl;
 Encontrado=true;
@@ -233,7 +236,7 @@ Autorizacion reg;
 int cantidad=arch.contarRegistros();
 for(int i=0;i<cantidad;i++){
 reg=arch.leer(i);
-if(reg.getIdOrden()==nuOrden){
+if(reg.getIdOrden()==nuOrden&&reg.getEstado()){
 reg.Mostrar();
 cout << endl;
 Encontrado=true;
@@ -311,6 +314,40 @@ void AutorizacionManager::CantidadMensualAprobadoRechazado()
     }
 
     }
+ void AutorizacionManager::eliminar(){
+
+ int AutAeliminar;
+ cout << "INGRESE EL NUMERO DE AUTORIZACIÓN A ELIMINAR: ";
+ cin >> AutAeliminar;
+ Autorizacion reg;
+ AutorizacionArchivo arch;
+ int cantidad=arch.contarRegistros();
+ bool encontrado=false;
+
+for(int i=0;i<cantidad;i++){
+reg=arch.leer(i);
+if(AutAeliminar==reg.getCodAutorizacion()) {
+if(reg.getEstado()==false) {
+    cout << "LA AUTORIZACION YA ESTABA ELIMINADA" << endl;
+    encontrado=true;
+    break;
+}
+    else {
+reg.setEstado(false);
+arch.modificar(reg, i);
+cout << "SE ELIMINO CORRECTAMENTE LA AUTORIZACIÓN" << endl;
+encontrado=true;
+break;
+}
+
+}
+
+ }
+if(!encontrado){
+    cout << "NO EXISTE UNA AUTORIZACION CON ESE CODIGO." << endl;
+}
+
+ }
 
 
 

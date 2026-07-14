@@ -16,6 +16,7 @@ Autorizacion::Autorizacion(){
     aprobada = true;
 
     strcpy(observaciones, "");
+    _estado=true;
 }
 
 
@@ -46,6 +47,10 @@ bool Autorizacion::getAprobada(){
 const char* Autorizacion::getObservaciones(){
     return observaciones;
 }
+bool Autorizacion::getEstado(){
+return _estado;
+}
+
 
 
 /////sets
@@ -96,6 +101,14 @@ void Autorizacion::setObservaciones(const char* obs){
     }
 }
 
+
+void  Autorizacion::setEstado(bool estado){
+if(estado!=getEstado()){
+_estado=estado;
+}
+
+
+}
 
 /////metodos (cargar y mostrar)
 
@@ -180,6 +193,8 @@ bool aprob;
 
     cout << "Fecha de autorizacion:" << endl;
     fechaAutorizacion.CargarAut();
+   setEstado(true);
+
 }
 
 void Autorizacion::Mostrar(){
@@ -208,6 +223,13 @@ void Autorizacion::Mostrar(){
 
     cout << "OBSERVACIONES: " << observaciones << endl;
     cout << "-------------------------------------------" << endl;
+
+   if(_estado){
+   cout << "AUTORIZACION ACTIVA" << endl;
+   }
+   else{
+    cout << "AUTORIZACION INACTIVA" << endl;
+   }
 }
 
 
