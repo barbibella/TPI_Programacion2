@@ -13,12 +13,12 @@ public:
     Especialidad cargar();
     void guardarEspecialidad();//crear
     void listarEspecialidad();/// LISTAR TODOS
-    void eliminarEspecialidad();  ///listo!
-    void altaEspecialidad(); /// LISTO!
-    void listarEspActivos(); /// LISTO!
-    bool listarEspInactivos(); ///LISTO!
-    void modificarEspecialidad(); ///FALTA!
-    void informacionEspecialidad(); /// FALTA!
+    void eliminarEspecialidad();
+    void altaEspecialidad();
+    void listarEspActivos();
+    bool listarEspInactivos();
+    void modificarEspecialidad();
+    void informacionEspecialidad();
     int  mostrarMenuModificar();
     void ejecutarOpcion(int opcion,Especialidad &reg);
 
