@@ -27,6 +27,7 @@ void AutorizacionManager::menu(){
         cout << "5.CONSULTAR AUTORIZACIONES PORCENTAJE COBERTURA" << endl;
         cout << "6.CONSULTAR POR NRO DE ORDEN" << endl;
         cout << "7.CONSULTAR AUTORIZACIONES APROBADAS Y RECHAZADAS POR ANIO" << endl;
+        cout << "------------------------------------------------------------" << endl;
         cout << "0. SALIR" << endl;
         cout << "OPCION: ";
 
@@ -58,8 +59,7 @@ void AutorizacionManager::menu(){
             break;
         case 7:
             CantidadMensualAprobadoRechazado();
-        case 0:
-            break;
+        case 0:break;
 
         default:
             cout << "OPCION INCORRECTA" << endl;

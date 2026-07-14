@@ -4,8 +4,6 @@
 
 class Autorizacion {
 
-/////atrib
-
 private:
 
     int idOrden;
@@ -15,8 +13,6 @@ private:
     bool aprobada;
     char observaciones[100];
 
-    //////Cons,met
-
 public:
     Autorizacion();
     int getIdOrden();
@@ -25,15 +21,12 @@ public:
     float getPorcentajeCobertura();
     bool getAprobada();
     const char* getObservaciones();
-
     void setIdOrden(int id);
     void setCodAutorizacion(int cod);
     void setFechaAutorizacion(Fecha fecha);
     void setPorcentajeCobertura(float porcentaje);
     void setAprobada(bool estado);
     void setObservaciones(const char* obs);
-
-
     void Mostrar();
     void Cargar();
 

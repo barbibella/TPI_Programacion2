@@ -4,11 +4,8 @@
 #include "OrdenMedicaArchivo.h"
 #include "OrdenMedicaManager.h"
 #include "AutorizacionArchivo.h"
+#include "ObraSocialArchivo.h"
 using namespace std;
-
-/////prueba de que se cambio algo
-
-///////Cons
 
 Autorizacion::Autorizacion(){
 
@@ -16,7 +13,7 @@ Autorizacion::Autorizacion(){
     codAutorizacion = 0;
     porcentajeCobertura = 0;
 
-    aprobada = false;
+    aprobada = true;
 
     strcpy(observaciones, "");
 }
@@ -55,62 +52,78 @@ const char* Autorizacion::getObservaciones(){
 
 
 void Autorizacion::setIdOrden(int id){
-    idOrden = id;
+
+OrdenMedicaArchivo archOrden ;
+
+if(archOrden.buscarId(id)==-1||id<0){
+idOrden=0;
+}
+else {
+idOrden = id;
+}
 }
 
 
 
 void Autorizacion::setCodAutorizacion(int cod){
+if(cod>0){
     codAutorizacion = cod;
 }
-
+}
 
 void Autorizacion::setFechaAutorizacion(Fecha fecha){
     fechaAutorizacion = fecha;
 }
 
 void Autorizacion::setPorcentajeCobertura(float porcentaje){
+if(porcentaje>0&&porcentaje=<100){
     porcentajeCobertura = porcentaje;
+    }
 }
 
 void Autorizacion::setAprobada(bool estado){
+if(estado==0||estado==1){
     aprobada = estado;
+    }
 }
 
 void Autorizacion::setObservaciones(const char* obs){
+ if(strlen(obs)<100){
     strcpy(observaciones, obs);
+    }
+    else {
+    strcpy(observaciones,"");
+    }
 }
 
 
 /////metodos (cargar y mostrar)
 
 void Autorizacion::Cargar(){
+int orden;
 
     cout << "INGRESE EL ID DE LA ORDEN: ";
-    cin >> idOrden;
+    cin >> orden;
     cout << endl;
-
-////validacion que exista el id de la orden
-
-OrdenMedicaArchivo archOrden ;
-
-while(archOrden.buscarId(idOrden)==-1){
- cout << "ID DE LA ORDEN INVALIDO, REINGRESE EL ID DE LA ORDEN: " << endl;
- cin >> idOrden;
+setIdOrden(orden);
+while(idOrden==0){
+    cout << "NO SE PUDO CARGAR EL ID, INGRESE NUEVAMENTE: "
+    cin>> orden;
+setIdOrden(orden);
 }
-
-
 
 AutorizacionArchivo archAuto;
 codAutorizacion=archAuto.proximoCodigo();
 
 
-    cout << "COD DE AUTORIZACION : " << codAutorizacion << endl;
+// cout << "COD DE AUTORIZACION : " << codAutorizacion << endl;
 
+ObraSocialArchivo obr;
 int obraSocial;
     cout << "INGRESE LA OBRA SOCIAL (1 a 10): ";
     cin >> obraSocial;
-while(obraSocial<1||obraSocial>10) {
+
+while(obraSocial<1||obraSocial>10||obr.obraSocialActiva(ObraSocial)==false)) {
     cout << "RE INGRESE LA OBRA SOCIAL POR FAVOR: ";
     cin >>obraSocial;
 }
@@ -145,15 +158,25 @@ default :
 }
 
 //// no hace falta mostrar cout << "PORCENTAJE DE COBERTURA: " << porcentajeCobertura << " %" << endl;
-
+bool aprob;
 
     cout << "ESTA APROBADA? (1 si o 0 no ): ";
-    cin >> aprobada;
+    cin >> aprob;
+    while(aprob!=1||aprob!=0){
+    cout << endl;
+    cout << "INGRESE 1 SI ESTA APROBADA O 0 SI NO LO ESTA : ";
+    cin aprob;
+    }
+    setAprobada(aprob);
 
-    cin.ignore();
-
-    cout << "Ingrese las observaciones (100 caract): ";
-    cin.getline(observaciones, 100);
+    char obs[100];
+    cout << "INGRESE LAS OBSERVACIONES: ";
+    cin >> obs;
+    while (strlen(obs) > 99) {
+        cout << "INGRESE NUEVAMENTE LAS OBSERVACIONES (HASTA 100 CARACTERES)
+        cin >> obs;
+    }
+    setObservaciones(obs);
 
     cout << "Fecha de autorizacion:" << endl;
     fechaAutorizacion.CargarAut();
@@ -169,7 +192,7 @@ void Autorizacion::Mostrar(){
 
     cout << endl;
 
-    cout << "PORCENTAJE DE COB: "
+    cout << "PORCENTAJE DE COBERTURA: "
          << porcentajeCobertura << "%" << endl;
 
     cout << "ESTADO DE APROBACION: ";
